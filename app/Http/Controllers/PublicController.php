@@ -19,6 +19,6 @@ class PublicController extends Controller
         
         $category = Category::find($category_id);
         $announcements = $category->announcements()->paginate(5);
-        return view('announcements' , compact('category', 'announcements'));
+        return view('category.announcements' , compact('category', 'announcements'));
     }
 }
