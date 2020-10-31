@@ -23,4 +23,4 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])/* ->name('home') */;
 Route::get('/', [PublicController::class, 'index'])->name('home');
 
-Route::get('category/{name}/{id}/announcements', PublicController::class, 'announcementsByCategory')->name('public.announcements.category');
+Route::get('/category/{name}/{id}/announcements', [PublicController::class, 'announcementsByCategory'])->name('public.announcements.category');
