@@ -3,10 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-<<<<<<< HEAD
 use App\Http\Controllers\PublicController;
-=======
->>>>>>> 6fe9667c27138f82dbd6073570eb84ebfd053b99
 
 /*
 |--------------------------------------------------------------------------
@@ -19,16 +16,11 @@ use App\Http\Controllers\PublicController;
 |
 */
 
-<<<<<<< HEAD
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])/* ->name('home') */;
 Route::get('/', [PublicController::class, 'index'])->name('home');
-=======
 
-Auth::routes();
-
-Route::get('/', [HomeController::class, 'index'])->name('home');
->>>>>>> 6fe9667c27138f82dbd6073570eb84ebfd053b99
+Route::get('category/{name}/{id}/announcements', PublicController::class, 'announcementsByCategory')->name('public.announcements.category');
