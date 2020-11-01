@@ -11,7 +11,19 @@
 
 @foreach ($announcements as $announcement)
 <div class="row justify-content-center mb-5">
-    <div class="col-12 col-md-8">
+
+  <x-card
+        title="{{ $announcement['title'] }}"
+        body="{{ $announcement['body'] }}"
+        categoryName="{{ $announcement->category->name }}"
+        categoryId="{{ $announcement->category->id }}"
+        createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
+        userName="{{ $announcement->user->name }}"
+        
+        
+        />
+
+   {{--  <div class="col-12 col-md-8">
         <div class="card">
             <div class="card-header">
                 {{ $announcement->title }}
@@ -29,7 +41,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
     
 @endforeach
