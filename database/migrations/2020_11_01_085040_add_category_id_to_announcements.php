@@ -15,7 +15,7 @@ class AddCategoryIdToAnnouncements extends Migration
     {
         Schema::table('announcements', function (Blueprint $table) {
 
-            $table->unsignedBigInteger('category_id')->default(1);
+            $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
 
         });
