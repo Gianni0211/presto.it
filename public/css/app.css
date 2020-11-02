@@ -11013,7 +11013,7 @@ a.linkReset {
 .header {
   height: 750px;
   min-height: 500px;
-  background: linear-gradient(black, transparent, black), url(/public/media/bg-header.jpg);
+  background: linear-gradient(black, transparent, black), url(/media/bg-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11151,7 +11151,7 @@ a.singleCategory:hover p:first-of-type {
 .subscribe {
   height: 450px;
   min-height: 300px;
-  background: linear-gradient(black, rgba(0, 0, 0, 0.5), black), url(/public/media/bg-header.jpg);
+  background: linear-gradient(black, rgba(0, 0, 0, 0.5), black), url(/media/bg-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11374,7 +11374,7 @@ div#modList .modListActions span.fa-stack:hover i.fa-stack-1x {
 .header-utente {
   height: 400px;
   min-height: 400px;
-  background: linear-gradient(black, rgba(1, 0, 0, 0.5), lightgrey), url(/public/media/bg-header.jpg);
+  background: linear-gradient(black, rgba(1, 0, 0, 0.5), lightgrey), url(/media/bg-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
