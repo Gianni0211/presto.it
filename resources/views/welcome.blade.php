@@ -550,7 +550,7 @@
   <div class="container">
     <div class="row py-2">
       <div class="col-12 col-lg-12 text-center heading">
-        <h3 class="title"> Iscriviti a cerco-fatto.it</h3>
+        <h3 class="title"> Iscriviti a presto.it</h3>
         <p class="title-desc">Riceverai tutte le news su nuovi annunci e offerte dedicate a te</p>
       </div>
     </div>

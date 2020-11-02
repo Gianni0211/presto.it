@@ -491,3 +491,16 @@ a.nav-description {
 a.nav-dettagli {
   color: var(--title) !important;
 }
+
+.header-page {
+  height: 30vh;
+  background: linear-gradient(black, rgb(0.5 0 0.2 / 0.5), lightgrey),
+  url(/media/bg-header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.top {
+  margin-top: 80px;
+}

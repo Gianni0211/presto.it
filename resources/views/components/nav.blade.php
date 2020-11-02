@@ -16,7 +16,7 @@
             <ul class="navbar-nav mr-auto">
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle title-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categorie
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -35,7 +35,7 @@
             <ul class="navbar-nav ml-auto">
                 <ul class="navbar-nav mr-right">
                     <li class="nav-item">
-                        <a class="nav-link btn btn-info" href="{{ route('announcement.new') }}">Inserisci annuncio  <i class="fas fa-plus"></i></a>
+                        <a class="nav-link bg-orange text-white" href="{{ route('announcement.new') }}">Inserisci annuncio  <i class="fas fa-plus"></i></a>
                     </li>
                 </ul>
                 <!-- Authentication Links -->
