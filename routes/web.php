@@ -25,8 +25,6 @@ Auth::routes();
 Route::get('/announcement/new', [AnnouncementController::class, 'create'])->name('announcement.new')->middleware('auth');
 
 Route::post('/announcement/store', [AnnouncementController::class, 'store'])->name('announcement.store')->middleware('auth');
-Auth::routes();
-
 
 Route::get('/', [PublicController::class, 'index'])->name('home');
 

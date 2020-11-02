@@ -31,15 +31,15 @@
 
                 <div class="form-group">
                    <label for="category" class="col-md-4 col-form-label text-md-right">Categoria</label>
-                   <select name="category" id="category">
+                   <select name="category_id" id="category">
                      @foreach ($categories as $category)
                       <option value="{{ $category->id }}"
-                       {{ old('category') == $category->id ? 'selected' : '' }}
+                       {{ old('category_id') == $category->id ? 'selected' : '' }}
                        >{{ $category->name }}</option>
                      @endforeach
                    </select>
 
-                  @error('category')
+                  @error('category_id')
                    <span class="invalid-feedback" role="alert">
                      <strong>{{ $message }}</strong>
                    </span>

@@ -44,6 +44,8 @@ class AnnouncementController extends Controller
      */
     public function store(AnnouncementRequest $request)
     {
+        // dd(Auth::id());
+        // dd($request->input('category_id'));
         $title = $request->input('title');
         $body = $request->input('body');
         $category_id = $request->input('category_id');
