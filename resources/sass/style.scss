@@ -1,0 +1,145 @@
+:root {
+    --accent: #f7bd09;
+    --title: #f78109;
+    --light1: #eeeeee;
+    --light2: #bbbbbb;
+    --main: #555555;
+    --text: #232323;
+    --minText: 1.125rem; /* ca. 18px */
+    --maxText: 1.4rem; /* ca. 23px */
+    --minLineH: 1.25rem; /* ca. 20px */
+    --maxLineH: 1.6rem; /* ca. 26 px */
+}
+
+body {
+    line-height: var(--minLineH);
+    font-size: var(--minText);
+    font-family: "Noto Sans", sans-serif;
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+.btn:focus, .form-control:focus, input:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.header {
+    height: 80vh;
+    /* min-height: 500px; */
+    background: linear-gradient(black, transparent, black),
+    url('https://picsum.photos/200/200');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.txtAccent {
+    color: var(--title);
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .txtTitle {
+    color: var(--text);
+    font-weight: bold;
+  }
+  
+  .title-primary {
+    color: var(--title);
+  }
+  
+  .title-secondary {
+    color: var(--accent);
+  }
+  
+  .bg-orange {
+    background-color: var(--title);
+  }
+  .bg-yellow {
+    background-color: var(--accent);
+  }
+  
+  .bg-yellow:hover {
+    background-color: var(--accent);
+  }
+
+  
+.overflowSliderBG {
+    background-color: var(--light1);
+  }
+  
+  #overflowSlider {
+    scroll-behavior: smooth;
+  }
+  
+  #overflowSlider .card-title {
+    color: var(--title);
+  }
+  
+  @media screen and (max-width: 600px) {
+    #overflowSlider .col-6 {
+      min-width: 280px;
+      margin: 0px 1%;
+    }
+  }
+  
+  #overflowSlider a.btn,
+  #overflowSlider a.btn:focus {
+    background: var(--accent);
+    outline: none;
+    box-shadow: none;
+    color: white;
+  }
+  
+  #overflowSlider:hover {
+    cursor: grab;
+  }
+  
+  #overflowSlider div.ofs-img-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #overflowSlider div.ofs-img-effect::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: var(--title);
+    opacity: 0.3;
+    transition: 1s;
+  }
+  
+  #overflowSlider div.ofs-img-effect img.card-img-top {
+    /* width: 320;
+    height: 200; */
+    filter: grayscale(30%);
+    transition: 1s;
+  }
+  
+  #overflowSlider div:hover.card.neumorphism img.card-img-top {
+    filter: grayscale(0%);
+    transform: scale(1.3) rotate(5deg);
+  }
+  
+  #overflowSlider div:hover.card.neumorphism div.ofs-img-effect::before {
+    opacity: 0;
+  }
+
+.size-img{
+    max-width: 320;
+    max-height: 200;
+}
+.size-card{
+    max-width: 50;
+    max-height: 50;
+}
+
+.neumorphism {
+    box-shadow: 10px 10px 20px var(--light2), -10px -10px 20px var(--light1);
+  }

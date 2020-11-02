@@ -1,6 +1,6 @@
 
 
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top" id="nav">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -27,12 +27,15 @@
                         @endforeach
                         
                     </div>
-                </li>
-                
+                </li>    
             </ul>
-            
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-info" href="{{ route('announcement.new') }}">Inserisci annuncio  <i class="fas fa-plus"></i></a>
+                    </li>
+                </ul>
                 <!-- Authentication Links -->
                 @guest
                 <li class="nav-item">
@@ -55,12 +58,6 @@
                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
-                    
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('announcement.new') }}">inserisci un annuncio</a>
-                        </li>
-                    </ul>
                     
                     
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

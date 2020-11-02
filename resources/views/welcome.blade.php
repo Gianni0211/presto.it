@@ -1,16 +1,23 @@
 <x-app>
 
+<x-header 
+title="Presto.it"
+body="Il miglior sito di annunci"
+/>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
-            <h1>Benvenuti in Presto</h1>
+<div class="container my-5 py-5">
+    <div class="row text-center">
+        <div class="col-12">
+            <h1 class="txtTitle font-weight-bold">Gli ultimi annunci</h1>
         </div>
     </div>
 </div>
 
-@foreach ($announcements as $announcement)
-<div class="row justify-content-center mb-5">
+
+<div class="container-fluid">
+    <div class="row">
+
+        @foreach ($announcements as $announcement)
 
   <x-card
         title="{{ $announcement['title'] }}"
@@ -19,7 +26,6 @@
         categoryId="{{ $announcement->category->id }}"
         createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
         userName="{{ $announcement->user->name }}"
-        
         
         />
 
@@ -42,9 +48,11 @@
             </div>
         </div>
     </div> --}}
-</div>
+
     
 @endforeach
+    </div>
+</div>
 
 
 
