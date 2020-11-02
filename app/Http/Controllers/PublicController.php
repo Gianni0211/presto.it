@@ -18,7 +18,8 @@ class PublicController extends Controller
     public function announcementsByCategory($name, $category_id){
         
         $category = Category::find($category_id);
-        $announcements = $category->announcements()->paginate(5);
+        $announcements = $category->announcements()->orderBy('created_at', 'desc')->paginate(5);
         return view('category.announcements' , compact('category', 'announcements'));
+        
     }
 }

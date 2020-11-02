@@ -24,16 +24,14 @@
         />
     </div>
      
-     {{-- <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
-            {{ $announcement->links() }}
-        </div> --}}
     @endforeach
 
- {{--    <div class="row justify-content-center">
+   
+
+   <div class="row justify-content-center">
         <div class="col-12 col-md-8">
-            {{ $announcement->links() }}
+            {{ $announcements->links() }}
         </div>
-    </div> --}}
+    </div> 
 
 </x-app>
