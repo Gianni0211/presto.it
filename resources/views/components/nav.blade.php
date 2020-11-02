@@ -1,10 +1,12 @@
 
-
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top" id="nav">
+<nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-trasparent">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+          <img id="navbarBrand" src="./Media/logo.png" width="190" height="80" class="img-fluid" alt="presto.it"/>
         </a>
+        {{-- <a class="navbar-brand" href="{{ url('/') }}">
+            {{ config('app.name', 'Laravel') }}
+        </a> --}}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -70,3 +72,38 @@
     </div>
 </div>
 </nav>
+
+
+{{-- <nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-trasparent">
+    <a class="navbar-brand" href="#">
+      <img id="navbarBrand" src="./Media/logo.png" width="190" height="80" class="img-fluid" alt="cerco-fatto.it"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCercoFatto" aria-controls="navbarCercoFatto" aria-expanded="false" aria-label="Toggle navigation" >
+    <span class="navbar-toggler-icon bg-orange"></span>
+    </button>
+  
+  <div class="collapse navbar-collapse" id="navbarCercoFatto">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link title-primary" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link title-primary" href="#">Link1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link title-primary" href="#">Link2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link title-primary" href="#">Link3</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mr-sm-5">
+    <a data-toggle="modal" data-target="#exampleModal" class="float-right user" title="Area Utenti" >
+        <span class="fa-stack title-primary">
+        <i class="fas fa-square fa-stack-2x"></i>
+        <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+    </div>
+</nav> --}}

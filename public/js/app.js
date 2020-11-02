@@ -37274,7 +37274,7 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./scripts.js */ "./resources/js/scripts.js");
+__webpack_require__(/*! ./scripts */ "./resources/js/scripts.js");
 
 /***/ }),
 
@@ -37330,14 +37330,52 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-document.addEventListener('scroll', function () {
-  var navbar = document.querySelector('nav');
+// document.addEventListener('scroll', ()=>{
+//     let navbar = document.querySelector('nav')
+//     if (window.pageYOffset > 80) {
+//         navbar.classList.add ('shadow')
+//     }
+//     else {
+//         navbar.classList.remove ('shadow')
+//     }
+// } )
+function navbarShowOnScroll() {
+  // navbar scroll
+  var navbar = document.querySelector('#navbar'); // let navbarBrand = document.querySelector('#navbarBrand')
 
-  if (window.pageYOffset > 80) {
-    navbar.classList.add('shadow');
-  } else {
-    navbar.classList.remove('shadow');
+  if (window.innerWidth > 576) {
+    document.addEventListener('scroll', function () {
+      //aggiungimi le cose di sotto all'evento scroll 
+      if (window.pageYOffset > 50) {
+        // se scrolli più di 100 px 
+        navbar.classList.remove('bg-transparent');
+        navbar.classList.add('bg-white', 'shadow'); // navbarBrand.src = "./media/nero.png"
+        // document.getElementById("navbarBrand").style.width = "60px" //intervengo sul CSS
+        // document.getElementById("navbarBrand").style.height = "60px" //intervengo sul CSS
+      } else {
+        navbar.classList.remove('bg-white', 'shadow');
+        navbar.classList.add('bg-transparent'); // navbarBrand.src = "./media/bianco.png"
+      }
+    });
   }
+}
+
+navbarShowOnScroll(); // slick carousel
+
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
 });
 
 /***/ }),
@@ -37360,8 +37398,8 @@ document.addEventListener('scroll', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/sandro_ottoveggio/wa/hack18/presto.it/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/sandro_ottoveggio/wa/hack18/presto.it/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/micaelacataldo/wa/hack18/presto.it_404/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/micaelacataldo/wa/hack18/presto.it_404/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

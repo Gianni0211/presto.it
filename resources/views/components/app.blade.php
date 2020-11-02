@@ -30,9 +30,11 @@
             {{ $slot }}
         </main>
 
+        <x-footer />
+
     </div>
 
 
-    
+<script src="https://kit.fontawesome.com/22648a38fc.js" crossorigin="anonymous"></script>
 </body>
 </html>
