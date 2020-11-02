@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\View;
+use App\Http\Requests\AnnouncementRequest;
 
 class AnnouncementController extends Controller
 {
@@ -22,9 +27,13 @@ class AnnouncementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
-        //
+        $categories = Category::all();
+        View::share('categories', $categories);
+
+        return view('announcement.new');
     }
 
     /**
@@ -33,18 +42,30 @@ class AnnouncementController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AnnouncementRequest $request)
     {
-        //
+        $title = $request->input('title');
+        $body = $request->input('body');
+        $category_id = $request->input('category_id');
+
+
+        $post = Announcement::create([
+           'title' => $title,
+           'body' => $body,
+           'category_id' => $category_id,
+           'user_id' => Auth::user()->id
+           ]);
+
+        return redirect(route('home'))->with('message', "il tuo post è stato aggiunto all' elenco");
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Announcement  $announcement
+     * @param  \App\Models\announcement  $announcement
      * @return \Illuminate\Http\Response
      */
-    public function show(Announcement $announcement)
+    public function show(announcement $announcement)
     {
         //
     }
@@ -52,10 +73,10 @@ class AnnouncementController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Announcement  $announcement
+     * @param  \App\Models\announcement  $announcement
      * @return \Illuminate\Http\Response
      */
-    public function edit(Announcement $announcement)
+    public function edit(announcement $announcement)
     {
         //
     }
@@ -64,10 +85,10 @@ class AnnouncementController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Announcement  $announcement
+     * @param  \App\Models\announcement  $announcement
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Announcement $announcement)
+    public function update(Request $request, announcement $announcement)
     {
         //
     }
@@ -75,10 +96,10 @@ class AnnouncementController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Announcement  $announcement
+     * @param  \App\Models\announcement  $announcement
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Announcement $announcement)
+    public function destroy(announcement $announcement)
     {
         //
     }
