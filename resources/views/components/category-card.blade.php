@@ -3,7 +3,7 @@
         'background',
 ])
 
-<div class="col-sm-6 col-md-6 col-lg-2 mx-1 my-3 bg-{{ $name }}">
+<div class="col-md-2 mx-1 my-3 bg-{{ $name }}">
     <a href="#" class="d-block w-100 h-100 neumorphism singleCategory">
       <span class="fa-stack fa-2x">
         <i class="fas fa-circle fa-stack-2x"></i>
