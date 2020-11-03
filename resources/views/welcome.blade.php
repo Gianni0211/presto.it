@@ -137,89 +137,15 @@
       <h2 class="txtTitle h1 font-italic">Categorie</h2>
     </div>
   </div>
-  <div class="row justify-content-center justify-content-center">
-    <div class="col-sm-3 mx-sm-0 col-md mx-1 my-3">
-      <a href="#" class="d-block w-100 h-100 neumorphism singleCategory">
-        <span class="fa-stack fa-2x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-building fa-stack-1x"></i>
-        </span>
-        <p class="mt-3 mb-1">Immobili</p>
-        <p>7 annunci</p>
-      </a>
-    </div>
-    <div class="col-sm-3 mx-sm-0 col-md mx-1 my-3">
-      <a href="#" class="d-block w-100 h-100 neumorphism singleCategory">
-        <span class="fa-stack fa-2x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-car-alt fa-stack-1x"></i>
-        </span>
-        <p class="mt-3 mb-1">Veicoli</p>
-        <p>13 annunci</p>
-      </a>
-    </div>
-    <div class="col-sm-3 mx-sm-0 col-md mx-1 my-3">
-      <a href="#" class="d-block w-100 h-100 neumorphism singleCategory">
-        <span class="fa-stack fa-2x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-laptop fa-stack-1x"></i>
-        </span>
-        <p class="mt-3 mb-1">Computer</p>
-        <p>18 annunci</p>
-      </a>
-    </div>
-    <div class="col-sm-3 mx-sm-0 col-md mx-1 my-3">
-      <a href="#" class="d-block w-100 h-100 neumorphism singleCategory">
-        <span class="fa-stack fa-2x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-suitcase fa-stack-1x"></i>
-        </span>
-        <p class="mt-3 mb-1">Lavoro</p>
-        <p>16 annunci</p>
-      </a>
-    </div>
-  </div>
   <div class="row justify-content-center">
-    <div class="col-sm-3 mx-sm-0 col-md mx-1 my-3">
-      <a href="#" class="d-block w-100 h-100 neumorphism singleCategory">
-        <span class="fa-stack fa-2x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-book fa-stack-1x"></i>
-        </span>
-        <p class="mt-3 mb-1">Libri</p>
-        <p>4 annunci</p>
-      </a>
-    </div>
-    <div class="col-sm-3 mx-sm-0 col-md mx-1 my-3">
-      <a href="#" class="d-block w-100 h-100 neumorphism singleCategory">
-        <span class="fa-stack fa-2x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-futbol fa-stack-1x"></i>
-        </span>
-        <p class="mt-3 mb-1">Sport</p>
-        <p>19 annunci</p>
-      </a>
-    </div>
-    <div class="col-sm-3 mx-sm-0 col-md mx-1 my-3">
-      <a href="#" class="d-block w-100 h-100 neumorphism singleCategory">
-        <span class="fa-stack fa-2x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-paw fa-stack-1x"></i>
-        </span>
-        <p class="mt-3 mb-1">Animali</p>
-        <p>6 annunci</p>
-      </a>
-    </div>
-    <div class="col-sm-3 mx-sm-0 col-md mx-1 my-3">
-      <a href="#" class="d-block w-100 h-100 neumorphism singleCategory">
-        <span class="fa-stack fa-2x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-plus fa-stack-1x"></i>
-        </span>
-        <p class="mt-3 mb-1">Altro</p>
-        <p>9 annunci</p>
-      </a>
-    </div>
+
+    @foreach ($categories as $category)
+        <x-category-card 
+        name="{{ $category['name'] }}"
+        count="{{ $category['announcementCount'] }}"
+        />
+    @endforeach
+
   </div>
 </section>
 
