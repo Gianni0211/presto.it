@@ -131,7 +131,7 @@
 </section> --}}
 
 
-<section class="container text-center my-5" id="HomeCategories">
+<section class="container text-center mb-5" id="HomeCategories">
   <div class="row py-5">
     <div class="col">
       <h2 class="txtTitle h1 font-italic">Esplora le nostre sezioni</h2>
