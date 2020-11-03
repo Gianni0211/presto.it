@@ -2,7 +2,7 @@
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-white py-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-          <img id="navbarBrand" src="./Media/logo.png" width="190" height="80" class="img-fluid" alt="presto.it"/>
+          <img id="navbarBrand" src="{{ asset('/media/logo1.png') }}" width="190" height="80" class="img-fluid" alt="presto.it"/>
         </a>
         {{-- <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}

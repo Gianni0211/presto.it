@@ -193,6 +193,9 @@
 
 
 <div class="container-fluid py-3 overflowSliderBG">
+  <div class="container">
+
+  
   <section id="overflowSlider" class="w-100">
     <div class="row py-5">
       <div class="col">
@@ -200,7 +203,7 @@
       </div>
     </div>
     
-    <div class="row flex-nowrap overflow-auto px-5">
+    <div class="row flex-nowrap overflow-auto">
       
       @foreach ($announcements as $announcement)
       <x-card
@@ -246,6 +249,7 @@
       
     </div>
   </section>
+  </div>
 </div>
 
 <!-- Recensioni-->
