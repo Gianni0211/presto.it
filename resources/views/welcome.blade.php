@@ -69,17 +69,29 @@
       </p> --}}
       <div class="search-box-layout1 mt-4">
         <form action="#">
-          <div class="row no-gutters">
+          <div class="row no-gutters justify-content-center align-items-center">
             <div class="col-lg-3 form-group">
               <div class="input-search-btn search-location">
                 <i class="fas fa-map-marker-alt"></i>
                 <label>Luogo</label>
               </div>
             </div>
-            <div class="col-lg-3 form-group">
-              <div class="input-search-btn search-category">
+
+            <div class="col-lg-3 form-group d-flex justify-content-center align-items-center ">
+              
+              <div class="dropdown input-search-btn">
                 <i class="fas fa-tags"></i>
-                <label>Categoria</label>
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Categorie
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  @foreach ($categories as $category)
+                        <a href="{{ route('category.announcements', [
+                        $category->name,
+                        $category->id
+                        ]) }}" class="nav-link">{{ $category->name }}</a>    
+                        @endforeach
+                </div>
               </div>
             </div>
             <div class="col-lg-4 form-group">
