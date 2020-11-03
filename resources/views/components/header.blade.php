@@ -1,4 +1,4 @@
-@props(['title', 'body'])
+{{-- @props(['title', 'body'])
 
 <header class="header overlay">
   <div class="container-fluid h-100">
@@ -15,4 +15,18 @@
     </div>
   </div>
 </div>
+</header> --}}
+
+@props([
+    'title'
+
+])
+<header class="header-page text-white">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="font-weight-light">{{$title}}</h1>
+      </div>
+    </div>
+  </div>
 </header>
