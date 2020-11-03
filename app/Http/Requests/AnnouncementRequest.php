@@ -26,8 +26,8 @@ class AnnouncementRequest extends FormRequest
         return [
             'title' => "required|max:120",
             'body' => "required|max: 1000",
-            'user_id' => "required",
-            'category_id' => "required",
+            // 'user_id' => "required",
+            // 'category_id' => "required",
         ];
     }
 
