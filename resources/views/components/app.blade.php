@@ -55,11 +55,11 @@
           <a href="{{ route('category.announcements', [
           $category->name,
           $category->id
-          ]) }}" class="nav-link bg-modal my-2"><span class="text-modal">{{ $category->name }}</span></a>    
+          ]) }}" class="nav-link border-{{ $category->name }} my-2 txtTitle"><span class="text-modal">{{ $category->name }}</span></a>    
           @endforeach
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bg-info" data-dismiss="modal">Chiudi</button>
+          <button type="button" class="bg-yellow border-0 text-white p-2" data-dismiss="modal">Chiudi</button>
         </div>
       </div>
     </div>

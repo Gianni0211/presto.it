@@ -10972,7 +10972,6 @@ input:focus {
 
 .txtTitle {
   color: var(--text);
-  font-weight: bold;
 }
 
 .title-primary {
@@ -11430,7 +11429,7 @@ a.btn-hover:hover {
 
 /* bg categorie home*/
 
-.bg-Elletronica {
+.bg-Elettronica {
   background-color: #5463a3;
 }
 
@@ -11477,5 +11476,45 @@ a.btn-hover:hover {
 a#navbarDropdown {
   color: var(--title);
   border: 1px solid var(--title);
+}
+
+.border-Elettronica {
+  border-left: 5px solid #5463a3;
+}
+
+.border-Motori {
+  border-left: 5px solid #848383;
+}
+
+.border-Giardinaggio {
+  border-left: 5px solid #3b7c56;
+}
+
+.border-Lavoro {
+  border-left: 5px solid #f3b544;
+}
+
+.border-Musica {
+  border-left: 5px solid #ad68ad;
+}
+
+.border-Sport {
+  border-left: 5px solid #8fc6ff;
+}
+
+.border-Fai.da.te {
+  border-left: 5px solid #38c0c0;
+}
+
+.border-Abbigliamento {
+  border-left: 5px solid #6161ed;
+}
+
+.border-Immobili {
+  border-left: 5px solid #ab6666;
+}
+
+.border-Esterni {
+  border-left: 5px solid #c0c05e;
 }
 

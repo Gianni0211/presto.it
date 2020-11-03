@@ -1,5 +1,5 @@
 
-<nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-trasparent py-3">
+<nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-white py-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
           <img id="navbarBrand" src="./Media/logo.png" width="190" height="80" class="img-fluid" alt="presto.it"/>
@@ -19,10 +19,10 @@
                     <a class="nav-link dropdown-toggle title-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categorie
                     </a> --}}
-                    <button type="button" class="btn btn-white mx-5 font-weight-bold text-muted" data-toggle="modal" data-target="#exampleModalCenter">
+                    <a type="button" class="nav-link title-primary" data-toggle="modal" data-target="#exampleModalCenter">
                         <i class="fas fa-tags"></i>
                         Categorie
-                      </button>
+                      </a>
                       </div>
                     {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
