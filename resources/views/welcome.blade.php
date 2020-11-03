@@ -61,12 +61,12 @@
   <div class="container-fluid h-100">
     <div class="row h-100 justify-content-center align-items-center">
       <div class="col-12 col-md-8 text-center text-white">
-        <h1 class="title-primary font-weight-bold display-4 font-italic txt-shadow" > presto.it </h1>
-      <p class="lead txt-shadow font-weight-bold">
+        <h1 class="title-primary font-weight-bold display-4 font-italic txt-shadow mb-5" > presto.it </h1>
+      {{-- <p class="lead txt-shadow font-weight-bold">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
         deserunt ullam officia porro repellat maxime unde tempore labore
         placeat sapiente inventore.
-      </p>
+      </p> --}}
       <div class="search-box-layout1 mt-4">
         <form action="#">
           <div class="row no-gutters">
@@ -107,7 +107,7 @@
 </div>
 </header>
 
-<section>
+{{-- <section>
   <div class="container-fluid bg-grigio">
     <div class="row justify-content-center align-items-center text-center p-4">
       <div class="col-sm-12 col-md-4 mt-0">
@@ -128,13 +128,13 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 
 
 <section class="container text-center my-5" id="HomeCategories">
   <div class="row py-5">
     <div class="col">
-      <h2 class="txtTitle h1 font-italic">Categorie</h2>
+      <h2 class="txtTitle h1 font-italic">Esplora le nostre sezioni</h2>
     </div>
   </div>
   <div class="row justify-content-center justify-content-center">

@@ -1,6 +1,6 @@
 {{-- @props(['title', 'body'])
 
-<header class="header overlay">
+<header class="header">
   <div class="container-fluid h-100">
     <div class="row h-100 justify-content-center align-items-center">
       <div class="col-12 col-md-8 text-center text-white">

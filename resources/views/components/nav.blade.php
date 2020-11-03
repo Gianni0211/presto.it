@@ -1,5 +1,5 @@
 
-<nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-trasparent">
+<nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-trasparent py-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
           <img id="navbarBrand" src="./Media/logo.png" width="190" height="80" class="img-fluid" alt="presto.it"/>
@@ -16,7 +16,7 @@
             <ul class="navbar-nav mr-auto">
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle title-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle title-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categorie
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -34,18 +34,18 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <ul class="navbar-nav mr-right">
-                    <li class="nav-item">
-                        <a class="nav-link bg-orange text-white" href="{{ route('announcement.new') }}">Inserisci annuncio  <i class="fas fa-plus"></i></a>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link bg-yellow text-white rounded btn-hover" href="{{ route('announcement.new') }}">Inserisci annuncio  <i class="fas fa-plus"></i></a>
                     </li>
                 </ul>
                 <!-- Authentication Links -->
                 @guest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                <li class="nav-item mr-3">
+                    <a class="nav-link title-primary rounded border-btn" href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
                 @if (Route::has('register'))
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                <li class="nav-item mr-3">
+                    <a class="nav-link title-primary rounded border-btn" href="{{ route('register') }}">{{ __('Register') }}</a>
                 </li>
                 @endif
                 @else
