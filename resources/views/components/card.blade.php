@@ -8,14 +8,14 @@
 ])
 
 {{-- II CARD --}}
-<div class="col-6 col-md-4 my-3 p-3">
+  <div class="col-6 col-md-4 my-3 p-3">
     <div class="card neumorphism">
-      <div class="">
-        <img class="card-img-top" src="https://picsum.photos/310/200" alt="Card image cap">
+      <div class="ofs-img-effect">
+        <img class="card-img-top" src="https://picsum.photos/320/201" alt="Card image cap">
       </div>
       <div class="card-body">
         <h4 class="card-title mb-0">
-          <a href="#" class="linkReset text-decoration-none text-dark">{{ $title }}</a>
+          <a href="#" class="linkReset">{{ $title }}</a>
         </h4>
         <span class="small text-uppercase">
           <a href="{{ route('category.announcements',[
@@ -29,13 +29,14 @@
               <i class="fas fa-map-marker-alt"></i> Città
             </div>
             <div class="small p-1">
-              <i class="far fa-calendar-alt"></i> {{ $createdAt }}
+              <i class="far fa-calendar-alt"></i>{{ $createdAt }}
             </div>
           </div>
-          <p class="lead mb-0">
-              {{ $userName }}
-          </p>
+          <a href="#" class="btn">&euro; 123</a>
         </div>
+        <p class="lead mb-0">
+          {{ $userName }}
+      </p>
       </div>
     </div>
   </div>
