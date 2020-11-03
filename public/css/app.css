@@ -11424,3 +11424,22 @@ a.btn-hover:hover {
   }
 }
 
+.bg-modal {
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+.bg-modal:hover {
+  border: 1px solid var(--accent);
+  box-shadow: 2px 2px 2px gray;
+}
+
+.text-modal {
+  color: black;
+  transition: 0.3s;
+}
+
+.text-modal:hover {
+  color: var(--accent);
+}
+

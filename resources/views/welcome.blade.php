@@ -70,30 +70,60 @@
       <div class="search-box-layout1 mt-4">
         <form action="#">
           <div class="row no-gutters justify-content-center align-items-center">
-            <div class="col-lg-3 form-group">
+            <div class="col-lg-2 form-group">
               <div class="input-search-btn search-location">
                 <i class="fas fa-map-marker-alt"></i>
-                <label>Luogo</label>
+                <label class=" font-weight-bold">Luogo</label>
               </div>
             </div>
 
-            <div class="col-lg-3 form-groupcenter d-flex justify-content-center align-items- ">
-              
-              <div class="dropdown input-search-btn">
-                <i class="fas fa-tags"></i>
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Categorie
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  @foreach ($categories as $category)
-                        <a href="{{ route('category.announcements', [
-                        $category->name,
-                        $category->id
-                        ]) }}" class="nav-link">{{ $category->name }}</a>    
-                        @endforeach
-                </div>
-              </div>
-            </div>
+
+
+<!-- Button trigger modal -->
+<div class="dropdown input-search-btn">
+
+<button type="button" class="btn btn-white mx-5 font-weight-bold text-muted" data-toggle="modal" data-target="#exampleModalCenter">
+  <i class="fas fa-tags"></i>
+  Categorie
+</button>
+</div>
+
+<!-- Modal -->
+{{-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title text-dark text-uppercase offset-3 font-weight-bold"></i>seleziona la categoria:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        @foreach ($categories as $category)
+        <a href="{{ route('category.announcements', [
+        $category->name,
+        $category->id
+        ]) }}" class="nav-link bg-modal my-2"><span class="text-modal">{{ $category->name }}</span></a>    
+        @endforeach
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary bg-info" data-dismiss="modal">Chiudi</button>
+      </div>
+    </div>
+  </div>
+</div> --}}
+
+
+
+
+
+
+
             <div class="col-lg-4 form-group">
               <div class="input-search-btn search-keyword">
                 <i class="fas fa-text-width"></i>
@@ -108,7 +138,7 @@
             </div>
             <div class="col-lg-2 form-group overflow-hidden">
               <button type="submit" class="submit-btn">
-                <i class="fas fa-search txt-shadow"></i>cerca
+                <i class="fas fa-search txt-shadow"></i> <span class="txt-shadow">cerca</span> 
               </button>
             </div>
           </div>
