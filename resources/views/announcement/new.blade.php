@@ -1,9 +1,16 @@
 <x-app>
 
-<div class="container">
+<x-header 
+
+title="Crea il tuo annuncio"
+
+/>
+
+  
+<div class="container my-5 py-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h1>Crea il tuo annuncio</h1>
+            {{-- <h1>Crea il tuo annuncio</h1> --}}
 
             @if ($errors->any())
               <div class="alert alert-danger">
@@ -24,21 +31,21 @@
                    <input name="title" type="text" id="title" class="form-control">
               </div>
 
-                <div class="form-group">
+                <div class="form-group mt-3">
                   <label>Descrizione</label>
                   <textarea name="body" id="body" class="form-control"></textarea>
                 </div>
 
-                <div class="form-group">
-                   <label for="category" class="col-md-4 col-form-label text-md-right">Categoria</label>
-                   <select name="category_id" id="category">
+                <div class="form-group mt-3">
+                   <label>Scegli la categoria</label>
+                   <select class="form-control" name="category_id" id="category">
                      @foreach ($categories as $category)
                       <option value="{{ $category->id }}"
                        {{ old('category_id') == $category->id ? 'selected' : '' }}
                        >{{ $category->name }}</option>
                      @endforeach
-                   </select>
-
+                  </select>
+                   
                   @error('category_id')
                    <span class="invalid-feedback" role="alert">
                      <strong>{{ $message }}</strong>
@@ -48,7 +55,7 @@
                 
 
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="my-3 bg-orange text-white">Inserisci annuncio</button>
 
               </form>
         </div>

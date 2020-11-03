@@ -18,15 +18,23 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
         
         <x-nav />
 
-        <main class="py-4">
+        <main class="">
             {{ $slot }}
         </main>
+
+        <x-footer />
+
     </div>
+
+
+<script src="https://kit.fontawesome.com/22648a38fc.js" crossorigin="anonymous"></script>
 </body>
 </html>
