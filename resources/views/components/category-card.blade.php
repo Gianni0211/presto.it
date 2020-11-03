@@ -1,5 +1,6 @@
 @props(['name',
-        'count'
+        'count',
+        'background',
 ])
 
 <div class="col-sm-6 col-md-6 col-lg-2 mx-1 my-3 bg-{{ $name }}">
@@ -9,7 +10,6 @@
         <i class="fas fa-building fa-stack-1x"></i>
       </span>
       <p class="mt-3 mb-1">{{ $name }}</p>
-      <p>Annuncio:{{ $count }}
-      </p>
+      <p> <span class="txtAccent txtAccentHover">Annunci:</span>  {{ $count }}</p> 
     </a>
   </div>
