@@ -9,7 +9,7 @@
         <i class="fas fa-building fa-stack-1x"></i>
       </span>
       <p class="mt-3 mb-1">{{ $name }}</p>
-      <p>{{ $count }}
+      <p>Annuncio:{{ $count }}
       </p>
     </a>
   </div>

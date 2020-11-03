@@ -22,7 +22,7 @@ class CreateCategoriesTable extends Migration
 
         $categories = [
 
-            'Elletronica', 'Motori', 'Giardinaggio', 'Lavoro', 'Musica',
+            'Eletronica', 'Motori', 'Giardinaggio', 'Lavoro', 'Musica',
             'Sport', 'Fai da te', 'Abbigliamento', 'Immobili', 'Esterni'
         ];
         foreach ($categories as $category){
