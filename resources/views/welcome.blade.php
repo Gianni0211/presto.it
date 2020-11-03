@@ -77,7 +77,7 @@
               </div>
             </div>
 
-            <div class="col-lg-3 form-group d-flex justify-content-center align-items-center ">
+            <div class="col-lg-3 form-groupcenter d-flex justify-content-center align-items- ">
               
               <div class="dropdown input-search-btn">
                 <i class="fas fa-tags"></i>
@@ -153,8 +153,8 @@
 
     @foreach ($categories as $category)
         <x-category-card 
-        name="{{ $category['name'] }}"
-        count="{{ $category['announcementCount'] }}"
+        name="{{ $category->name }}"
+        count="{{ $category->announcementCount() }}"
         />
     @endforeach
 

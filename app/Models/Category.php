@@ -16,4 +16,8 @@ class Category extends Model
 
         return $this->hasMany(Announcement::class);
     }
+
+    public function announcementCount(){
+        return Announcement::where('category_id', $this->id)->count();
+    }
 }
