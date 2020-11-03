@@ -149,7 +149,7 @@
       <h2 class="txtTitle h1 font-italic">Esplora le nostre sezioni</h2>
     </div>
   </div>
-  <div class="row justify-content-center">
+  <div class="row justify-content-between">
 
     @foreach ($categories as $category)
         <x-category-card 

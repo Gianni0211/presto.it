@@ -11103,6 +11103,7 @@ a.singleCategory {
   color: inherit;
   text-decoration: none;
   transition: 0.2s;
+  width: 125% !important;
 }
 
 @media screen and (min-width: 319px) {
