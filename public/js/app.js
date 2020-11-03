@@ -37330,15 +37330,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// document.addEventListener('scroll', ()=>{
-//     let navbar = document.querySelector('nav')
-//     if (window.pageYOffset > 80) {
-//         navbar.classList.add ('shadow')
-//     }
-//     else {
-//         navbar.classList.remove ('shadow')
-//     }
-// } )
 function navbarShowOnScroll() {
   // navbar scroll
   var navbar = document.querySelector('#navbar'); // let navbarBrand = document.querySelector('#navbarBrand')

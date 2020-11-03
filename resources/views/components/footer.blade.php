@@ -1,3 +1,30 @@
+<div class="container-fluid bg-footer py-0 my-0 px-5">
+  <div class="row py-4 d-flex align-items-center ">
+    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+      <h4 class="text-white font-weight-bold">Seguici sui social network!</h4>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-7 text-center text-md-right linkReset">             
+      <a class="a fb-ic">
+        <i class="fab fa-facebook-f text-white mr-4 "> </i>
+      </a>
+      <a class="a tw-ic">
+        <i class="fab fa-twitter text-white mr-4 "> </i>
+      </a>
+      <a class="a gplus-ic">
+        <i class="fab fa-google-plus-g text-white mr-4 "> </i>
+      </a>
+      <a class="a li-ic">
+        <i class="fab fa-linkedin-in text-white mr-4 "> </i>
+      </a>
+      <a class="a ins-ic">
+        <i class="fab fa-instagram text-white "> </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+
 <footer class="page-footer">
   
     <!-- Footer Links -->

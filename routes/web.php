@@ -29,3 +29,5 @@ Route::post('/announcement/store', [AnnouncementController::class, 'store'])->na
 Route::get('/', [PublicController::class, 'index'])->name('home');
 
 Route::get('/category/{name}/{id}/announcements', [PublicController::class, 'announcementsByCategory'])->name('category.announcements');
+
+Route::get('/category/count', [PublicController::class, 'countCategory'])->name('count.category');

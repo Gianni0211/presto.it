@@ -11013,7 +11013,7 @@ a.linkReset {
 .header {
   height: 750px;
   min-height: 500px;
-  background: linear-gradient(black, transparent, black), url(/media/bg-header.jpg);
+  background: linear-gradient(black, rgba(255, 255, 255, 0.3), black), url(/media/slider-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11402,5 +11402,17 @@ a.nav-dettagli {
 
 .top {
   margin-top: 80px;
+}
+
+a.border-btn {
+  border: 1px solid var(--title);
+}
+
+a.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+a.btn-hover:hover {
+  color: #fff !important;
 }
 
