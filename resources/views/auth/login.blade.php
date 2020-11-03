@@ -1,5 +1,5 @@
 <x-app>
-<div class="container my-5 py-5">
+<div class="container top py-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

@@ -211,6 +211,7 @@ a.singleCategory {
 
 a.singleCategory p:first-of-type {
   font-weight: bold;
+  color: white;
   // transform: scale(1);
   // transition: 200ms;
 }
@@ -228,10 +229,10 @@ a.singleCategory i.fa-stack-1x {
   color: var(--title);
 }
 
-a.singleCategory:hover {
-  background-color: var(--title);
-  color: white;
-}
+// a.singleCategory:hover {
+//   background-color: var(--title);
+//   color: white;
+// }
 
 a.singleCategory:hover p:first-of-type {
   font-weight: bold;
@@ -534,4 +535,48 @@ a.btn-hover:hover {
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 2px solid rgba(0, 0, 0, 0.125);
   border-color: var(--accent);
+}
+
+
+/* bg categorie home*/
+
+.bg-Elletronica {
+  background-color: #5463a3;
+}
+.bg-Motori {
+  background-color: #848383;
+}
+.bg-Giardinaggio {
+  background-color: #3b7c56;
+}
+.bg-Lavoro {
+  background-color: #f3b544;
+}
+.bg-Musica {
+  background-color: #ad68ad;
+}
+.bg-Sport {
+  background-color: #8fc6ff;
+}
+.bg-Fai.da.te{
+  background-color: #38c0c0;
+}
+.bg-Abbigliamento {
+  background-color: #6161ed;
+}
+.bg-Immobili {
+  background-color: #ab6666;
+}
+.bg-Esterni {
+  background-color: #c0c05e;
+}
+
+
+.border-b {
+  border-bottom: 2px solid white;
+}
+
+a#navbarDropdown {
+  color: var(--title);
+  border: 1px solid var(--title);
 }

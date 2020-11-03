@@ -13,7 +13,7 @@
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
+            {{-- <ul class="navbar-nav mr-auto">
                 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle title-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,7 +30,7 @@
                         
                     </div>
                 </li>    
-            </ul>
+            </ul> --}}
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <ul class="navbar-nav mr-right">
