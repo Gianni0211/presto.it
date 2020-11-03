@@ -1,6 +1,6 @@
 <x-app>
 
-    {{-- <x-header 
+  {{--    <x-header 
     title="Presto.it"
     body="Il miglior sito di annunci"
     />
@@ -27,7 +27,7 @@
         createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
         userName="{{ $announcement->user->name }}"
         
-        /> --}}
+        /> 
 
    {{--  <div class="col-12 col-md-8">
         <div class="card">
@@ -233,35 +233,19 @@
     
     <div class="row flex-nowrap overflow-auto px-5">
       
-      <div class="col-6 col-md-4 my-3 p-3">
-        <div class="card neumorphism">
-          <div class="ofs-img-effect">
-            <img class="card-img-top" src="https://picsum.photos/321/200" alt="Card image cap">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title mb-0">
-              <a href="#" class="linkReset">Titolo annuncio</a>
-            </h4>
-            <span class="small text-uppercase">
-              <a href="#" class="linkReset">Immobili</a>
-            </span>
-            <p class="card-text py-3 pt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab nemo voluptatibus&hellip;</p>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <div class="small p-1">
-                  <i class="fas fa-map-marker-alt"></i> Città
-                </div>
-                <div class="small p-1">
-                  <i class="far fa-calendar-alt"></i> 01-10-2020
-                </div>
-              </div>
-              <a href="#" class="btn">&euro; 123</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      @foreach ($announcements as $announcement)
+      <x-card
+        title="{{ $announcement['title'] }}"
+        body="{{ $announcement['body'] }}"
+        categoryName="{{ $announcement->category->name }}"
+        categoryId="{{ $announcement->category->id }}"
+        createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
+        userName="{{ $announcement->user->name }}"
+        /> 
+      @endforeach
       
-      <div class="col-6 col-md-4 my-3 p-3">
+      
+      {{-- <div class="col-6 col-md-4 my-3 p-3">
         <div class="card neumorphism">
           <div class="ofs-img-effect">
             <img class="card-img-top" src="https://picsum.photos/320/201" alt="Card image cap">
@@ -287,119 +271,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
       
-      <div class="col-6 col-md-4 my-3 p-3">
-        <div class="card neumorphism">
-          <div class="ofs-img-effect">
-            <img class="card-img-top" src="https://picsum.photos/321/201" alt="Card image cap">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title mb-0">
-              <a href="#" class="linkReset">Titolo annuncio</a>
-            </h4>
-            <span class="small text-uppercase">
-              <a href="#" class="linkReset">Libri</a>
-            </span>
-            <p class="card-text py-3 pt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab nemo voluptatibus&hellip;</p>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <div class="small p-1">
-                  <i class="fas fa-map-marker-alt"></i> Città
-                </div>
-                <div class="small p-1">
-                  <i class="far fa-calendar-alt"></i> 01-10-2020
-                </div>
-              </div>
-              <a href="#" class="btn">&euro; 123</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-6 col-md-4 my-3 p-3">
-        <div class="card neumorphism">
-          <div class="ofs-img-effect">
-            <img class="card-img-top" src="https://picsum.photos/322/200" alt="Card image cap">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title mb-0">
-              <a href="#" class="linkReset">Titolo annuncio</a>
-            </h4>
-            <span class="small text-uppercase">
-              <a href="#" class="linkReset">Animali</a>
-            </span>
-            <p class="card-text py-3 pt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab nemo voluptatibus&hellip;</p>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <div class="small p-1">
-                  <i class="fas fa-map-marker-alt"></i> Città
-                </div>
-                <div class="small p-1">
-                  <i class="far fa-calendar-alt"></i> 01-10-2020
-                </div>
-              </div>
-              <a href="#" class="btn">&euro; 123</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-6 col-md-4 my-3 p-3">
-        <div class="card neumorphism">
-          <div class="ofs-img-effect">
-            <img class="card-img-top" src="https://picsum.photos/320/202" alt="Card image cap">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title mb-0">
-              <a href="#" class="linkReset">Titolo annuncio</a>
-            </h4>
-            <span class="small text-uppercase">
-              <a href="#" class="linkReset">Veicoli</a>
-            </span>
-            <p class="card-text py-3 pt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab nemo voluptatibus&hellip;</p>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <div class="small p-1">
-                  <i class="fas fa-map-marker-alt"></i> Città
-                </div>
-                <div class="small p-1">
-                  <i class="far fa-calendar-alt"></i> 01-10-2020
-                </div>
-              </div>
-              <a href="#" class="btn">&euro; 123</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-6 col-md-4 my-3 p-3">
-        <div class="card neumorphism">
-          <div class="ofs-img-effect">
-            <img class="card-img-top" src="https://picsum.photos/321/202" alt="Card image cap">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title mb-0">
-              <a href="#" class="linkReset">Titolo annuncio</a>
-            </h4>
-            <span class="small text-uppercase">
-              <a href="#" class="linkReset">Altro</a>
-            </span>
-            <p class="card-text py-3 pt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab nemo voluptatibus&hellip;</p>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <div class="small p-1">
-                  <i class="fas fa-map-marker-alt"></i> Città
-                </div>
-                <div class="small p-1">
-                  <i class="far fa-calendar-alt"></i> 01-10-2020
-                </div>
-              </div>
-              <a href="#" class="btn">&euro; 123</a>
-            </div>
-          </div>
-        </div>
-      </div>
+
       
     </div>
   </section>
@@ -570,31 +444,6 @@
 </div>
 </div>
 
-<div class="container-fluid bg-footer py-0 my-0 px-5">
-  <div class="row py-4 d-flex align-items-center ">
-    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-      <h4 class="text-white font-weight-bold">Seguici sui social network!</h4>
-    </div>
-    
-    <div class="col-12 col-md-6 col-lg-7 text-center text-md-right linkReset">             
-      <a class="a fb-ic">
-        <i class="fab fa-facebook-f text-white mr-4 "> </i>
-      </a>
-      <a class="a tw-ic">
-        <i class="fab fa-twitter text-white mr-4 "> </i>
-      </a>
-      <a class="a gplus-ic">
-        <i class="fab fa-google-plus-g text-white mr-4 "> </i>
-      </a>
-      <a class="a li-ic">
-        <i class="fab fa-linkedin-in text-white mr-4 "> </i>
-      </a>
-      <a class="a ins-ic">
-        <i class="fab fa-instagram text-white "> </i>
-      </a>
-      
-    </div>
-  </div>
-</div>
+
 
 </x-app>
