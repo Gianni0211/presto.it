@@ -68,7 +68,7 @@
             <p>
               <i class="fas fa-envelope mr-3"></i> cerco-fatto@cercofatto.com </p>
               <p>
-                <i class="fas fa-phone-alt mr-3"></i>+39 333 333 333 3333</p>
+                <i class="fas fa-phone-alt mr-3"></i>+39 899700809</p>
               </div>
             </div>  
           </div>       
