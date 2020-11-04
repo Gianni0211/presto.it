@@ -521,6 +521,9 @@ a.nav-link:hover {
   color: var(--accent) !important;
 }
 
+a.accent:hover {
+  color: var(--accent) !important;
+}
 a.btn-hover:hover {
   color:#fff !important;
 }
@@ -622,4 +625,9 @@ a#navbarDropdown {
     border-radius: 0.125rem;
     box-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 1.875rem;
+}
+
+.btn-border {
+  border: 1px solid var(--accent);
+  background-color: #fbf8f8;
 }

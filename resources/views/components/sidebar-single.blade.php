@@ -25,22 +25,24 @@
                 </div>
                 <div class=" p-1">
                     <i class="fas fa-bullhorn"></i> Annunci pubblicati 10
-                  </div>
+                </div>
+                <div class=" p-1 mt-2">
+                    <i class="fas fa-star star" aria-hidden="true"></i>
+                    <i class="fas fa-star star" aria-hidden="true"></i>
+                    <i class="fas fa-star star" aria-hidden="true"></i>
+                    <i class="fas fa-star star" aria-hidden="true"></i>
+                </div>
             </div>
+            
+                <div class="bg-yellow py-4 mb-3 mt-3">
+                    <i class="fas fa-phone-volume text-white"></i><a href="#" class="text-white rounded text-decoration-none"> +39 3439374638</a>
+                </div>
+                <div class="btn-border py-4">
+                    <i class="fas fa-envelope title-secondary"></i> <a href="#" class="title-secondary rounded text-decoration-none accent"> Contatta inserzionista</a>
+                </div>
         </div>
     </div>
-    <div class="row cta-sidebar mt-4 text-center ">
-        <div class="col-12 col-md-6 col-lg-12">
-            <div class="bg-yellow py-4 mb-3">
-                <i class="fas fa-phone-volume text-white mx-3 "></i><a href="#" class="text-white rounded text-decoration-none">+39 3439374638</a>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-12">
-            <div class="bg-yellow py-4">
-                <i class="fas fa-envelope text-white mx-3"></i> <a href="#" class="text-white rounded text-decoration-none">Contatta inserzionista</a>
-            </div>
-    
-        </div>
+    {{-- <div class="row cta-sidebar mt-4 text-center ">
 
-    </div>
+    </div> --}}
 </div>
