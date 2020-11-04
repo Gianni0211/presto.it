@@ -28,15 +28,5 @@ class AnnouncementRequest extends FormRequest
             'body' => "required|max: 1000",
         ];
     }
-    public function messages(){
-        return [
-            'title.required' => 'Il titolo è obbligatorio',
-            'title.max:120' => 'Il titolo è troppo lungo',
-            'body.required' => 'La descrizione è obbligatoria',
-            'body.max:1000' => 'La descrizione è troppo lunga'
-
-
-        ];
-    }
 
 }
