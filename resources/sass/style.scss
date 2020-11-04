@@ -631,3 +631,33 @@ a#navbarDropdown {
   border: 1px solid var(--accent);
   background-color: #fbf8f8;
 }
+
+.category-box-layout2 {
+  border: 0.0625rem solid #d8d8d8;
+  border-radius: 0.125rem;
+  height: 100%;
+}
+
+.category-box-layout2 .item-heading-area {
+  display: block;
+  padding: 1.25rem 1.25rem 0.9375rem 1.875rem;
+  background-color: #f5f7fa;
+  border-bottom: 0.0625rem solid #d8d8d8;
+}
+
+.category-box-layout2 .item-sub-category {
+  padding: 1.25rem;
+}
+
+.category-box-layout2 .item-sub-category li a:before {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 0.625rem;
+  color: var(--title);
+  font-weight: 600;
+}
+
+ul {
+  list-style: outside none none;
+  margin: 0;
+}

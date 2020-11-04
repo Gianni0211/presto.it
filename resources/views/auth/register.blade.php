@@ -75,11 +75,7 @@
 </x-app> --}}
 
 
-<<<<<<< HEAD
-<x-app>
-=======
  <x-app>
->>>>>>> 745a2717a8877a6d53274f01c81e0515b94e9e1d
     
     <div class="container py-5 top">
         <div class="row justify-content-center">
@@ -114,15 +110,6 @@
                                     <input type="password"  class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
                             </div>
 
-<<<<<<< HEAD
-                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input">
-                                <label class="custom-control-label">Privacy Policy</label>
-                            </div>
-                             <button class="btn btn-info my-4 btn-block" type="submit">Registrati</button>
-
-                             <p>oppure accedi con:</p>
-=======
                            <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input">
                                 <label class="custom-control-label">Privacy Policy</label>
@@ -130,7 +117,6 @@
                              <button class="btn btn-info my-4 btn-block" type="submit">Registrati</button> 
 
                             <p>oppure accedi con:</p>
->>>>>>> 745a2717a8877a6d53274f01c81e0515b94e9e1d
                             
                             <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
                             <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
@@ -145,8 +131,4 @@
             </div>
         </div> 
         
-<<<<<<< HEAD
-     </x-app> 
-=======
     </x-app> 
->>>>>>> 745a2717a8877a6d53274f01c81e0515b94e9e1d

@@ -10,7 +10,7 @@
         </div>
         <div class="d-block mx-auto text-md-center ">
             <div>
-                <img src="https://picsum.photos/200" class="img-fluid rounded-circle mb-3" alt="">
+                <img src="https://picsum.photos/200" class="img-fluid rounded mb-3" alt="">
                 <h3 class="font-italic title-primary">Pinco Pallino</h3>
                 {{-- <p class="lead">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
