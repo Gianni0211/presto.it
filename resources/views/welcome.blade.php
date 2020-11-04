@@ -185,6 +185,8 @@
         <x-category-card 
         name="{{ $category->name }}"
         count="{{ $category->announcementCount() }}"
+        categoryName="{{ $category->name }}"
+        categoryId="{{ $category->id }}"
         />
     @endforeach
 

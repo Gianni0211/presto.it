@@ -1,10 +1,14 @@
 @props(['name',
         'count',
         'background',
+        'categoryName',
+        'categoryId'
 ])
 
 <div class="col-md-2 mx-1 my-3">
-    <a href="#" class="d-block w-100 h-100 neumorphism singleCategory bg-{{ $name }}">
+    <a href="{{ route('category.announcements',[
+            $categoryName,
+            $categoryId]) }}" class="d-block w-100 h-100 neumorphism singleCategory bg-{{ $name }}">
       <span class="fa-stack fa-2x border-b">
         {{-- <i class="fas fa-circle fa-stack-2x"></i> --}}
         <i class="fas fa-building fa-stack-1x text-white"></i>
