@@ -8,14 +8,14 @@
   --main: #555555;
   --text: #232323;
   --minText: 1.125rem; /* ca. 18px */
-  --maxText: 1.4rem; /* ca. 23px */
+  --maxText: 1.2rem; /* ca. 23px */
   --minLineH: 1.25rem; /* ca. 20px */
   --maxLineH: 1.6rem; /* ca. 26 px */
 }
 
 body {
-  line-height: var(--minLineH);
-  font-size: var(--minText);
+  // line-height: var(--minLineH);
+  // font-size: var(--minText);
   font-family: "Noto Sans", sans-serif;
   color: var(--text);
   scroll-behavior: smooth;
@@ -30,24 +30,24 @@ body {
 /* ============== MEDIA QUERY ================== */
 /* Rimesse in alto per sovrascriverle più facilmente */
 
-@media screen and (min-width: 576px) {
-  body {
-    font-size: calc(
-      var(--minText) + (var(--maxText) - var(--minText)) *
-        ((100vw - 576px) / (1200px -576px))
-    );
-    line-height: calc(
-      var(--minLineH) + (var(--maxLineH) - var(--minLineH)) *
-        ((100vw - 576px) / (1200px -576px))
-    );
-  }
-}
-@media screen and (min-width: 1200px) {
-  body {
-    line-height: var(--maxLineH);
-    font-size: var(--maxText);
-  }
-}
+ @media screen and (min-width: 576px) {
+   body {
+     font-size: calc(
+       var(--minText) + (var(--maxText) - var(--minText)) *
+         ((100vw - 576px) / (1200px -576px))
+     );
+     line-height: calc(
+       var(--minLineH) + (var(--maxLineH) - var(--minLineH)) *
+         ((100vw - 576px) / (1200px -576px))
+     );
+   }
+ }
+ @media screen and (min-width: 1200px) {
+   body {
+     line-height: var(--maxLineH);
+     font-size: var(--maxText);
+   }
+ }
 
 
 /* EXTENDED CLASSES - START */
@@ -91,8 +91,10 @@ body {
   box-shadow: 10px 10px 20px var(--light2), -10px -10px 20px var(--light1);
 }
 
-.bg-light1 {
-  background-color:var(--light1);
+  .bg-light1 {
+    background-color: #fff;
+    box-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
+
 }
 
 a.linkReset {
@@ -611,4 +613,13 @@ a#navbarDropdown {
 }
 .border-Esterni {
   border-left: 5px solid #c0c05e;
+}
+
+
+.body-ann {
+  padding: 20px;
+    background-color: #ffffff;
+    border-radius: 0.125rem;
+    box-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.875rem;
 }

@@ -10914,7 +10914,7 @@ a.text-dark:focus {
   --text: #232323;
   --minText: 1.125rem;
   /* ca. 18px */
-  --maxText: 1.4rem;
+  --maxText: 1.2rem;
   /* ca. 23px */
   --minLineH: 1.25rem;
   /* ca. 20px */
@@ -10923,8 +10923,6 @@ a.text-dark:focus {
 }
 
 body {
-  line-height: var(--minLineH);
-  font-size: var(--minText);
   font-family: "Noto Sans", sans-serif;
   color: var(--text);
   scroll-behavior: smooth;
@@ -10999,7 +10997,8 @@ input:focus {
 }
 
 .bg-light1 {
-  background-color: var(--light1);
+  background-color: #fff;
+  box-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
 }
 
 a.linkReset {
@@ -11516,5 +11515,13 @@ a#navbarDropdown {
 
 .border-Esterni {
   border-left: 5px solid #c0c05e;
+}
+
+.body-ann {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0.125rem;
+  box-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.875rem;
 }
 

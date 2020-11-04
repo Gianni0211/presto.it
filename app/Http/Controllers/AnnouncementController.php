@@ -105,4 +105,10 @@ class AnnouncementController extends Controller
     {
         //
     }
+
+
+
+    public function single () {
+        return view ('announcement.single');
+    }
 }
