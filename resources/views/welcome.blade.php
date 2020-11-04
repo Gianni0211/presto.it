@@ -184,7 +184,9 @@
     @foreach ($categories as $category)
         <x-category-card 
         name="{{ $category->name }}"
-        count="{{ $category->announcementCount() }}" 
+        count="{{ $category->announcementCount() }}"
+        categoryName="{{ $category->name }}"
+        categoryId="{{ $category->id }}"
         />
     @endforeach
 
