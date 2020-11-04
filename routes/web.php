@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,8 @@ Route::get('/', [PublicController::class, 'index'])->name('home');
 Route::get('/category/{name}/{id}/announcements', [PublicController::class, 'announcementsByCategory'])->name('category.announcements');
 
 Route::get('/category/count', [PublicController::class, 'countCategory'])->name('count.category');
+
+Route::get('/tutti', function () {
+    $user=User::all();
+    return $user;
+})->middleware('auth.revisor');
