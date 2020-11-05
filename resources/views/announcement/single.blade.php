@@ -54,6 +54,8 @@
                     </div>
                 </div>
                 {{-- end slick carouserl --}}
+                
+                
                 <div class="row p-3 my-4">
                     <h3 class="title-primary">Dettagli annuncio</h3>
                     <p class="lead mt-3">
