@@ -11564,3 +11564,7 @@ ul {
   margin: 0;
 }
 
+.slick-slide img {
+  cursor: pointer !important;
+}
+
