@@ -33,3 +33,7 @@ Route::get('/category/{name}/{id}/announcements', [PublicController::class, 'ann
 Route::get('/category/count', [PublicController::class, 'countCategory'])->name('count.category');
 
 Route::get('/announcement/single', [AnnouncementController::class, 'single'])->name('announcement.single');
+
+
+
+

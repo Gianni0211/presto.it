@@ -14,7 +14,7 @@ class Announcement extends Model
 
 
     protected $fillable = [
-         'title', 'body', 'category_id', 'user_id'    //protezione per il Models per evitare dati indesiderati
+         'title', 'body', 'category_id', 'user_id' , 'img', 'price'   //protezione per il Models per evitare dati indesiderati
     ];                   
 
      public function user()

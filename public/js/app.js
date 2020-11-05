@@ -37388,8 +37388,8 @@ $('.slider-nav').slick({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/sandro_ottoveggio/wa/hack18/presto.it/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/sandro_ottoveggio/wa/hack18/presto.it/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

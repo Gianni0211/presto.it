@@ -1,4 +1,4 @@
-{{-- <x-app>
+<x-app>
     <div class="container top py-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -72,10 +72,10 @@
             </div>
         </div>
     </div>
-</x-app> --}}
+</x-app>
 
 
- <x-app>
+ {{-- <x-app>
     
     <div class="container py-5 top">
         <div class="row justify-content-center">
@@ -132,3 +132,4 @@
         </div> 
         
     </x-app> 
+ --}}
