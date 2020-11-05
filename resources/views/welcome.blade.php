@@ -50,9 +50,7 @@
     </div> --}}
 
     
-{{-- @endforeach
-    </div>
-</div> --}}
+
 
   
  
@@ -62,11 +60,12 @@
     <div class="row h-100 justify-content-center align-items-center">
       <div class="col-12 col-md-8 text-center text-white">
         <h1 class="title-primary font-weight-bold display-4 font-italic txt-shadow mb-5" > presto.it </h1>
-      {{-- <p class="lead txt-shadow font-weight-bold">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-        deserunt ullam officia porro repellat maxime unde tempore labore
-        placeat sapiente inventore.
-      </p> --}}
+      
+        @if(session('access.denied.revisor.only'))
+        <div class="">
+        Accesso non consentito - solo per revisori
+        </div>
+        @endif
       <div class="search-box-layout1 mt-4">
         <form action="#">
           <div class="row no-gutters justify-content-center align-items-center">
@@ -147,6 +146,7 @@
     </div>
   </div>
 </div>
+
 </header>
 
 {{-- <section>
@@ -400,6 +400,7 @@
     <div class="row py-2">
       <div class="col-12 col-lg-12 text-center heading">
         <h3 class="title"> Iscriviti a presto.it</h3>
+    
         <p class="title-desc">Riceverai tutte le news su nuovi annunci e offerte dedicate a te</p>
       </div>
     </div>

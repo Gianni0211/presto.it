@@ -44,6 +44,18 @@
                     </li>
                 </ul>
                 <!-- Authentication Links -->
+                @if (!Auth::user()->is_revisor)
+                    <a class="dropdown-item" href="{{ route('diventa.revisore') }}"                       
+                      >
+                        Diventa revisore
+                    </a>
+                    @else
+                    <a class="dropdown-item" href="{{ route('revisor.home') }}"                       
+                      >
+                        Annunci in sospeso <span class="badge badge-pill badge-warning">{{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
+                    </a>
+                    @endif
+
                 @guest
                 <li class="nav-item mr-3">
                     <a class="nav-link title-primary rounded border-btn" href="{{ route('login') }}">{{ __('Accedi') }}</a>
@@ -65,6 +77,8 @@
                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
+                  
+                  
 
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -79,36 +93,3 @@
 </nav>
 
 
-{{-- <nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-trasparent">
-    <a class="navbar-brand" href="#">
-      <img id="navbarBrand" src="./Media/logo.png" width="190" height="80" class="img-fluid" alt="cerco-fatto.it"/>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCercoFatto" aria-controls="navbarCercoFatto" aria-expanded="false" aria-label="Toggle navigation" >
-    <span class="navbar-toggler-icon bg-orange"></span>
-    </button>
-
-  <div class="collapse navbar-collapse" id="navbarCercoFatto">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link title-primary" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link title-primary" href="#">Link1</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link title-primary" href="#">Link2</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link title-primary" href="#">Link3</a>
-      </li>
-    </ul>
-  </div>
-  <div class="mr-sm-5">
-    <a data-toggle="modal" data-target="#exampleModal" class="float-right user" title="Area Utenti" >
-        <span class="fa-stack title-primary">
-        <i class="fas fa-square fa-stack-2x"></i>
-        <i class="fas fa-user fa-stack-1x fa-inverse"></i>
-        </span>
-    </a>
-    </div>
-</nav> --}}

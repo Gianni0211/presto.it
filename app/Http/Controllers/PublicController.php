@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Schema;
 
@@ -24,6 +26,8 @@ class PublicController extends Controller
         return view('category.announcements' , compact('category', 'announcements'));
         
     }
+
+
 
     public function countCategory()
     {
