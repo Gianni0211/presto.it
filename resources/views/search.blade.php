@@ -19,9 +19,11 @@
               categoryId="{{ $announcement->category->id }}"
               createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
               userName="{{ $announcement->user->name }}"
+              img="{{ Storage::url($announcement->img) }}"
+              price="{{ $announcement->price }}"
               /> 
             @endforeach
-            
+
         </div>
     </div>
 

@@ -2,43 +2,45 @@
 
 // function navbarShowOnScroll() {
 
-//     // navbar scroll
+    // navbar scroll
     
 //     let navbar = document.querySelector('#navbar')
-//     // let navbarBrand = document.querySelector('#navbarBrand')
+    // let navbarBrand = document.querySelector('#navbarBrand')
     
     
     
-//     if (window.innerWidth > 576) {
+//    if (window.innerWidth > 576) {
         
-//         document.addEventListener ('scroll' , () => { //aggiungimi le cose di sotto all'evento scroll 
+//        document.addEventListener ('scroll' , () => { //aggiungimi le cose di sotto all'evento scroll 
             
-//             if (window.pageYOffset > 50) { // se scrolli più di 100 px 
+//            if (window.pageYOffset > 50) { // se scrolli più di 100 px 
     
-//                 navbar.classList.remove('bg-transparent')
-//                 navbar.classList.add('bg-white', 'shadow')
-//                 // navbarBrand.src = "./media/nero.png"
+//                navbar.classList.remove('bg-transparent')
+//                navbar.classList.add('bg-white', 'shadow')
+//                // navbarBrand.src = "./media/nero.png"
     
-//                 // document.getElementById("navbarBrand").style.width = "60px" //intervengo sul CSS
-//                 // document.getElementById("navbarBrand").style.height = "60px" //intervengo sul CSS
+//                // document.getElementById("navbarBrand").style.width = "60px" //intervengo sul CSS
+//                // document.getElementById("navbarBrand").style.height = "60px" //intervengo sul CSS
     
-//             } else {
+//            } else {
     
-//                 navbar.classList.remove('bg-white', 'shadow')
-//                 navbar.classList.add('bg-transparent')
-//                 // navbarBrand.src = "./media/bianco.png"
+//                navbar.classList.remove('bg-white', 'shadow')
+//                navbar.classList.add('bg-transparent')
+//                // navbarBrand.src = "./media/bianco.png"
     
-//             }     
-//         })      
-//     }
+//            }     
+//        })      
+//    }
     
-//     }
+//    }
     
-//     navbarShowOnScroll()
+//    navbarShowOnScroll()
     
     
     // slick carousel
     
+document.addEventListener('DOMContentLoaded' , function() {
+
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -54,3 +56,13 @@
         centerMode: true,
         focusOnSelect: true
     });
+<<<<<<< HEAD
+
+
+   
+=======
+    
+    
+    
+})
+>>>>>>> 1082d61c2b28f1368e49d50047adecc3f5210d7d

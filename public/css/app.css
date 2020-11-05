@@ -10914,7 +10914,7 @@ a.text-dark:focus {
   --text: #232323;
   --minText: 1.125rem;
   /* ca. 18px */
-  --maxText: 1.4rem;
+  --maxText: 1.2rem;
   /* ca. 23px */
   --minLineH: 1.25rem;
   /* ca. 20px */
@@ -10923,8 +10923,6 @@ a.text-dark:focus {
 }
 
 body {
-  line-height: var(--minLineH);
-  font-size: var(--minText);
   font-family: "Noto Sans", sans-serif;
   color: var(--text);
   scroll-behavior: smooth;
@@ -10936,6 +10934,12 @@ input:focus {
   outline: none;
   box-shadow: none;
   border: none;
+}
+
+.img-size {
+  /* custom class for fixed sizing of the card img */
+  height: 250px;
+  max-height: 250px;
 }
 
 /* ============== MEDIA QUERY ================== */
@@ -10999,7 +11003,8 @@ input:focus {
 }
 
 .bg-light1 {
-  background-color: var(--light1);
+  background-color: #fff;
+  box-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
 }
 
 a.linkReset {
@@ -11402,10 +11407,14 @@ a.nav-dettagli {
 }
 
 a.border-btn {
-  border: 1px solid var(--title);
+  border: 1px solid var(--text);
 }
 
 a.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+a.accent:hover {
   color: var(--accent) !important;
 }
 
@@ -11516,5 +11525,57 @@ a#navbarDropdown {
 
 .border-Esterni {
   border-left: 5px solid #c0c05e;
+}
+
+.body-ann {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0.125rem;
+  box-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.875rem;
+}
+
+.btn-border {
+  border: 1px solid var(--accent);
+  background-color: #fbf8f8;
+}
+
+.category-box-layout2 {
+  border: 0.0625rem solid #d8d8d8;
+  border-radius: 0.125rem;
+  height: 100%;
+}
+
+.category-box-layout2 .item-heading-area {
+  display: block;
+  padding: 1.25rem 1.25rem 0.9375rem 1.875rem;
+  background-color: #f5f7fa;
+  border-bottom: 0.0625rem solid #d8d8d8;
+}
+
+.category-box-layout2 .item-sub-category {
+  padding: 1.25rem;
+}
+
+.category-box-layout2 .item-sub-category li a:before {
+  content: "\F105";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 0.625rem;
+  color: var(--title);
+  font-weight: 600;
+}
+
+ul {
+  list-style: outside none none;
+  margin: 0;
+}
+
+.slick-slide img {
+  cursor: pointer !important;
+}
+
+h1.logo {
+  font-family: "Cabin Sketch", cursive;
+  color: var(--title);
 }
 

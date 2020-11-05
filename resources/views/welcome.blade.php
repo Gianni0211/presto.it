@@ -55,13 +55,13 @@
 </div> --}}
 
   
- 
 
 <header class="header overlay">
   <div class="container-fluid h-100">
     <div class="row h-100 justify-content-center align-items-center">
       <div class="col-12 col-md-8 text-center text-white">
-        <h1 class="title-primary font-weight-bold display-4 font-italic txt-shadow mb-5" > presto.it </h1>
+        <img src="{{ asset ('/media/prova.png') }}" alt="" class="img-fluid" width="150">
+        <h1 class="title-primary font-weight-bold display-4 logo txt-shadow mb-5 d-inline" > presto.it </h1>
       {{-- <p class="lead txt-shadow font-weight-bold">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
         deserunt ullam officia porro repellat maxime unde tempore labore
@@ -143,6 +143,8 @@
 </div>
 </header>
 
+
+
 {{-- <section>
   <div class="container-fluid bg-grigio">
     <div class="row justify-content-center align-items-center text-center p-4">
@@ -209,6 +211,8 @@
         categoryId="{{ $announcement->category->id }}"
         createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
         userName="{{ $announcement->user->name }}"
+        img="{{ Storage::url($announcement->img) }}"
+        price="{{ $announcement->price }}"
         /> 
       @endforeach
       
@@ -250,7 +254,7 @@
 
 <!-- Recensioni-->
 
-<div class="container p-3 my-3">
+{{-- <div class="container p-3 my-3">
   <div class="row">
     <div class="card-deck">
       <div class="card shadow recensioni-card">
@@ -385,7 +389,7 @@
 
 
   
-</div>
+</div> --}}
 
 <!--Subscribe-->
 

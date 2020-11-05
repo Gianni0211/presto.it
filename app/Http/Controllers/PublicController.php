@@ -35,6 +35,8 @@ class PublicController extends Controller
         
     }
 
+    
+
     public function countCategory()
     {
         if(Schema::hasTable('categories')){
