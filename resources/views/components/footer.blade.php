@@ -74,6 +74,6 @@
           </div>       
           
           <div class="border-top py-4">
-            <p class="text-center txt-small"> <i class="far fa-copyright mr-1"></i>cerco-fatto.it. Tutti i diritti riservati.</p>
+            <p class="text-center txt-small"> <i class="far fa-copyright mr-1"></i>Presto.it - Tutti i diritti riservati.</p>
           </div>       
         </footer>
