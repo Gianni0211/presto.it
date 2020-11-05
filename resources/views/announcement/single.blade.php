@@ -27,6 +27,15 @@
                             <div>
                                 <img src="https://picsum.photos/1920/1202" alt="" class="img-fluid">
                             </div>
+                            <div>
+                              <img src="https://picsum.photos/1920/1200" alt="" class="img-fluid">
+                          </div>
+                          <div>
+                          <img src="https://picsum.photos/1920/1201" alt="" class="img-fluid"> 
+                          </div>
+                          <div>
+                              <img src="https://picsum.photos/1920/1202" alt="" class="img-fluid">
+                          </div>
                         </div>
                     </div>
                     <div class="col-12">
@@ -54,6 +63,8 @@
                     </div>
                 </div>
                 {{-- end slick carouserl --}}
+                
+                
                 <div class="row p-3 my-4">
                     <h3 class="title-primary">Dettagli annuncio</h3>
                     <p class="lead mt-3">
@@ -113,6 +124,9 @@
                         </div>
                       </div>
                       
+
+
+
                       <div class="row flex-nowrap overflow-auto px-5">
                         
                         <div class="col-6 col-md-6 my-3 p-3">
@@ -143,6 +157,17 @@
                           </div>
                         </div>
                         
+
+                        {{-- @foreach ($announcements as $announcement)
+                            <x-card
+                              title="{{ $announcement['title'] }}"
+                              body="{{ $announcement['body'] }}"
+                              categoryName="{{ $announcement->category->name }}"
+                              categoryId="{{ $announcement->category->id }}"
+                              createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
+                              userName="{{ $announcement->user->name }}"
+                              /> 
+                        @endforeach --}}
                         
                       </div>
                     </section>

@@ -9,12 +9,12 @@
   
   <title>{{ config('app.name', 'Laravel') }}</title>
   
-  <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}" defer></script>
   
   <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+
   
   <!-- cdn slick carousel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
@@ -69,11 +69,12 @@
   </div>
 </div>
 
-<!-- script cdn slick carousel -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
 
+
+{{-- script fontawesome --}}
 <script src="https://kit.fontawesome.com/22648a38fc.js" crossorigin="anonymous"></script>
 
-
+<!-- Scripts mio -->
+<script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

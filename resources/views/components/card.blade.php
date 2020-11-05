@@ -19,53 +19,30 @@
       </div>
       <div class="card-body">
         <h4 class="card-title mb-0">
-          <a href="#" class="linkReset">{{ $title }}</a>
+          <a href="{{ route('announcement.single') }}" class="linkReset">{{ $title }}</a>
         </h4>
         <span class="small text-uppercase">
           <a href="{{ route('category.announcements',[
             $categoryName,
-            $categoryId]) }}" class="linkReset text-info">{{ $categoryName }}</a>
+            $categoryId]) }}" class="linkReset font-weight-bold">{{ $categoryName }}</a>
         </span>
-        <p class="card-text py-3 pt-4">{{ $body }}</p>
+        <p class="card-text py-3 pt-4 lead">{{ $body }}</p>
         <div class="d-flex align-items-center justify-content-between">
           <div>
             <div class="small p-1">
               <i class="fas fa-map-marker-alt"></i> Città
             </div>
             <div class="small p-1">
-              <i class="far fa-calendar-alt"></i>{{ $createdAt }}
+              <i class="far fa-calendar-alt"></i> Pubblicato il <span class="font-italic">{{ $createdAt }}</span>
+            </div>
+            <div class="small p-1">
+              <i class="fas fa-user"></i> Utente: <span class="font-italic"> {{ $userName }}</span>
             </div>
           </div>
           <a href="#" class="btn">&euro; {{ $price }}</a>
         </div>
-        <p class="lead mb-0">
-          {{ $userName }}
-      </p>
       </div>
     </div>
   </div>
-
-
-{{-- I CARD --}}
- {{-- <div class="col-12 col-md-4">
-            <div class="card">
-                <div class="card-header">
-                    {{ $title }}
-                </div>
-                <div class="card-body">
-                    <p>
-                        <img src="https://picsum.photos/200/200" class="rounded float-right img-fluid" alt="">
-                        {{ $body }}
-                    </p>
-                </div>
-                <div class="card-footer d-flex justify-content-between">
-                    <strong>Category: <a href="{{ route('category.announcements',[
-                        $categoryName,
-                        $categoryId]) }}">
-                        {{  $categoryName }}</a></strong>
-                    <i>{{ $createdAt}} - {{ $userName }}</i>
-                </div>
-            </div>
-</div> --}}
 
 
