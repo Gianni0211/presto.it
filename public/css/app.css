@@ -10936,6 +10936,12 @@ input:focus {
   border: none;
 }
 
+.img-size {
+  /* custom class for fixed sizing of the card img */
+  height: 250px;
+  max-height: 250px;
+}
+
 /* ============== MEDIA QUERY ================== */
 
 /* Rimesse in alto per sovrascriverle più facilmente */

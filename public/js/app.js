@@ -40353,45 +40353,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// function navbarShowOnScroll() {
-// navbar scroll
-//     let navbar = document.querySelector('#navbar')
-// let navbarBrand = document.querySelector('#navbarBrand')
-//    if (window.innerWidth > 576) {
-//        document.addEventListener ('scroll' , () => { //aggiungimi le cose di sotto all'evento scroll 
-//            if (window.pageYOffset > 50) { // se scrolli più di 100 px 
-//                navbar.classList.remove('bg-transparent')
-//                navbar.classList.add('bg-white', 'shadow')
-//                // navbarBrand.src = "./media/nero.png"
-//                // document.getElementById("navbarBrand").style.width = "60px" //intervengo sul CSS
-//                // document.getElementById("navbarBrand").style.height = "60px" //intervengo sul CSS
-//            } else {
-//                navbar.classList.remove('bg-white', 'shadow')
-//                navbar.classList.add('bg-transparent')
-//                // navbarBrand.src = "./media/bianco.png"
-//            }     
-//        })      
-//    }
-//    }
-//    navbarShowOnScroll()
-// slick carousel
-document.addEventListener('DOMContentLoaded', function () {
-  $('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.slider-nav'
-  });
-  $('.slider-nav').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true
-  });
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/macbookpro/wa/hack18/presto.it_404/resources/js/scripts.js: Unexpected token (59:0)\n\n\u001b[0m \u001b[90m 57 | \u001b[39m        focusOnSelect\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 58 | \u001b[39m    })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 60 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 61 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 62 | \u001b[39m   \u001b[0m\n    at Parser._raise (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:799:17)\n    at Parser.raiseWithData (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:792:17)\n    at Parser.raise (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:786:17)\n    at Parser.unexpected (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9089:16)\n    at Parser.parseExprAtom (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:10416:20)\n    at Parser.parseExprSubscripts (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9976:23)\n    at Parser.parseUpdate (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9956:21)\n    at Parser.parseMaybeUnary (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9945:17)\n    at Parser.parseExprOps (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9815:23)\n    at Parser.parseMaybeConditional (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9789:23)\n    at Parser.parseMaybeAssign (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9752:21)\n    at Parser.parseExpressionBase (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9696:23)\n    at /Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9690:39\n    at Parser.allowInAnd (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:11442:16)\n    at Parser.parseExpression (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9690:17)\n    at Parser.parseStatementContent (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:11708:23)\n    at Parser.parseStatement (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:11577:17)\n    at Parser.parseBlockOrModuleBlockBody (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:12159:25)\n    at Parser.parseBlockBody (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:12145:10)\n    at Parser.parseBlock (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:12129:10)\n    at Parser.parseFunctionBody (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:11108:24)\n    at Parser.parseFunctionBodyAndFinish (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:11091:10)\n    at /Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:12299:12\n    at Parser.withTopicForbiddingContext (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:11417:14)\n    at Parser.parseFunction (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:12298:10)\n    at Parser.parseFunctionOrFunctionSent (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:10511:17)\n    at Parser.parseExprAtom (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:10336:21)\n    at Parser.parseExprSubscripts (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9976:23)\n    at Parser.parseUpdate (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9956:21)\n    at Parser.parseMaybeUnary (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9945:17)\n    at Parser.parseExprOps (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9815:23)\n    at Parser.parseMaybeConditional (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9789:23)\n    at Parser.parseMaybeAssign (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9752:21)\n    at /Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9718:39\n    at Parser.allowInAnd (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:11448:12)\n    at Parser.parseMaybeAssignAllowIn (/Users/macbookpro/wa/hack18/presto.it_404/node_modules/@babel/parser/lib/index.js:9718:17)");
 
 /***/ }),
 
@@ -40413,8 +40375,8 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/micaelacataldo/wa/hack18/presto.it_404/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/micaelacataldo/wa/hack18/presto.it_404/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

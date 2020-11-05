@@ -4,14 +4,18 @@
  'categoryName',
  'categoryId',
  'createdAt',
- 'userName' 
+ 'userName',
+ 'img',
+ 'price'
 ])
+
+
 
 {{-- II CARD --}}
   <div class="col-6 col-md-4 p-3">
     <div class="card neumorphism">
       <div class="ofs-img-effect">
-        <img class="card-img-top" src="https://picsum.photos/320/201" alt="Card image cap">
+        <img class="card-img-top img-size" src="{{ $img }}" alt="Card image cap">
       </div>
       <div class="card-body">
         <h4 class="card-title mb-0">
@@ -35,11 +39,10 @@
               <i class="fas fa-user"></i> Utente: <span class="font-italic"> {{ $userName }}</span>
             </div>
           </div>
-          <a href="#" class="btn">&euro; 123</a>
+          <a href="#" class="btn">&euro; {{ $price }}</a>
         </div>
       </div>
     </div>
   </div>
-
 
 

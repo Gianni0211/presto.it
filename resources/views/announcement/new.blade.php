@@ -21,24 +21,39 @@ title="Crea il tuo annuncio"
                 </ul>
               </div>
              @endif
+              @if (Session::has('message'))
+                <div class="alert alert-success">{{ session('message') }}</div>
+            @endif
 
 
-            <form method="POST" action="{{ route('announcement.store') }}">
+            <form method="POST" action="{{ route('announcement.store') }}" enctype="multipart/form-data">
                @csrf 
                
                <div class="form-group">
                   <label for="exampleInputEmail1">Nome dell' annuncio</label>
-                   <input name="title" type="text" id="title" class="form-control">
+                   <input name="title" value="{{ old('title') }}" type="text" id="title" class="form-control">
               </div>
 
                 <div class="form-group mt-3">
                   <label>Descrizione</label>
-                  <textarea name="body" id="body" class="form-control"></textarea>
+                  <textarea name="body" id="body" class="form-control">{{ old('body') }}</textarea>
+                </div>
+                <div class="form-group mt-3">
+                  <label>Inserisci un immagine</label>
+
+                  <input type="file" value="{{ old('img') }}" name="img" >
+                  
+                </div>
+                <div class="form-group mt-3">
+                  <label>Inserisci il prezzo</label>
+
+                  <input type="number" value="{{ old('price') }}" name="price" >
+                  
                 </div>
 
                 <div class="form-group mt-3">
                    <label>Scegli la categoria</label>
-                   <select class="form-control" name="category_id" id="category">
+                   <select class="form-control" value="{{ old('category_id') }}"  name="category_id" id="category">
                      @foreach ($categories as $category)
                       <option value="{{ $category->id }}"
                        {{ old('category_id') == $category->id ? 'selected' : '' }}

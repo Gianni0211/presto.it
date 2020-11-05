@@ -17,6 +17,16 @@ class PublicController extends Controller
         return view('welcome', compact('announcements'));
     }
 
+    public function search(Request $request) 
+    {
+    
+        $q = $request->input('q');
+        $announcements = Announcement::search($q)->get();
+        return view('search', compact('q','announcements'));
+
+    }
+
+
     public function announcementsByCategory($name, $category_id){
         
         $category = Category::find($category_id);
@@ -24,6 +34,8 @@ class PublicController extends Controller
         return view('category.announcements' , compact('category', 'announcements'));
         
     }
+
+    
 
     public function countCategory()
     {

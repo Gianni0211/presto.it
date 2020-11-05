@@ -56,7 +56,13 @@ document.addEventListener('DOMContentLoaded' , function() {
         centerMode: true,
         focusOnSelect: true
     });
+<<<<<<< HEAD
+
+
+   
+=======
     
     
     
 })
+>>>>>>> 1082d61c2b28f1368e49d50047adecc3f5210d7d
