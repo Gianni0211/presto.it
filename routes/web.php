@@ -31,3 +31,5 @@ Route::get('/', [PublicController::class, 'index'])->name('home');
 Route::get('/category/{name}/{id}/announcements', [PublicController::class, 'announcementsByCategory'])->name('category.announcements');
 
 Route::get('/category/count', [PublicController::class, 'countCategory'])->name('count.category');
+
+Route::get('/search', [PublicController::class, 'search'])->name('search');

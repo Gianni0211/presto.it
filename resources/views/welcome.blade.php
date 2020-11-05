@@ -68,7 +68,7 @@
         placeat sapiente inventore.
       </p> --}}
       <div class="search-box-layout1 mt-4">
-        <form action="#">
+        <form method="GET" action="{{ route('search') }}">
           <div class="row no-gutters justify-content-center align-items-center">
             <div class="col-lg-2 form-group">
               <div class="input-search-btn search-location">
@@ -118,12 +118,6 @@
   </div>
 </div> --}}
 
-
-
-
-
-
-
             <div class="col-lg-4 form-group">
               <div class="input-search-btn search-keyword">
                 <i class="fas fa-text-width"></i>
@@ -131,7 +125,7 @@
                 type="text"
                 class="form-control"
                 placeholder="Cerca per parola ..."
-                name="keyword"
+                name="q"
                 kl_vkbd_parsed="true"
                 />
               </div>
