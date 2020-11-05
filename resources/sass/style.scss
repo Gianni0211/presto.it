@@ -514,7 +514,7 @@ a.nav-dettagli {
 }
 
 a.border-btn {
-  border: 1px solid var(--title);
+  border: 1px solid var(--text);
 }
 
 a.nav-link:hover {
@@ -664,4 +664,10 @@ ul {
 
 .slick-slide img {
   cursor: pointer !important;
+}
+
+
+h1.logo {
+  font-family: 'Cabin Sketch', cursive;
+  color: var(--title);
 }
