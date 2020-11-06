@@ -44,18 +44,7 @@
                     </li>
                 </ul>
                 <!-- Authentication Links -->
-                @if (!Auth::user()->is_revisor)
-                    <a class="dropdown-item" href="{{ route('diventa.revisore') }}"                       
-                      >
-                        Diventa revisore
-                    </a>
-                    @else
-                    <a class="dropdown-item" href="{{ route('revisor.home') }}"                       
-                      >
-                        Annunci in sospeso <span class="badge badge-pill badge-warning">{{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
-                    </a>
-                    @endif
-
+          
                 @guest
                 <li class="nav-item mr-3">
                     <a class="nav-link title-primary rounded border-btn" href="{{ route('login') }}">{{ __('Accedi') }}</a>
@@ -77,7 +66,18 @@
                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
-                  
+                    @if (!Auth::user()->is_revisor)
+                    <a class="dropdown-item" href="{{ route('diventa.revisore') }}"                       
+                      >
+                        Diventa revisore
+                    </a>
+                    @else
+                    <a class="dropdown-item" href="{{ route('revisor.home') }}"                       
+                      >
+                        Annunci in sospeso <span class="badge badge-pill badge-warning">{{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
+                    </a>
+                    @endif
+
                   
 
 
