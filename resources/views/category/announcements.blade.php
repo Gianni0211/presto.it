@@ -23,7 +23,7 @@ title="{{ $category->name }}"
                 {{-- {{ $announcement->created_at }} --}}
                         <x-card
                         title="{{ $announcement['title'] }}"
-                        body="{{ $announcement['body'] }}"
+                        body="{{ Str::limit($announcement['body'], 50, $end='...') }}"
                         categoryName="{{ $announcement->category->name }}"
                         categoryId="{{ $announcement->category->id }}"
                         createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
