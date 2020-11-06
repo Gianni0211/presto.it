@@ -44,3 +44,10 @@ Route::get('/revisore', function () {
     Mail::to('admin@subito.it')->send(new RevisorMail(Auth::User()));
     return  view('revisor.thankyou')->with('message', "la tua richiesta è stata presa in carico");
  })->name('diventa.revisore')->middleware('auth');
+Route::get('/search', [PublicController::class, 'search'])->name('search');
+
+Route::get('/announcement/single', [AnnouncementController::class, 'single'])->name('announcement.single');
+
+
+
+

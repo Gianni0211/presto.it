@@ -75,7 +75,7 @@
 </x-app>
 
 
- <x-app>
+ {{-- <x-app>
     
     {{-- <div class="container py-5 top">
         <div class="row justify-content-center">
@@ -132,3 +132,4 @@
         </div>  --}}
         
     </x-app> 
+ --}}
