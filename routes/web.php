@@ -30,6 +30,8 @@ Route::get('/announcement/new', [AnnouncementController::class, 'create'])->name
 
 Route::post('/announcement/store', [AnnouncementController::class, 'store'])->name('announcement.store')->middleware('auth');
 
+Route::post('/announcement/images/upload', [AnnouncementController::class, 'imagesUpload'])->name('announcement.images.upload')->middleware('auth');
+
 
 
 Route::get('/category/{name}/{id}/announcements', [PublicController::class, 'announcementsByCategory'])->name('category.announcements');
@@ -40,7 +42,6 @@ Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.
 
 Route::post('/revisor/announcemet/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept');
 Route::post('/revisor/announcemet/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
-
 
 
 

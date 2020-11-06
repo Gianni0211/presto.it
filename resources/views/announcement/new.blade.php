@@ -24,11 +24,12 @@ title="Crea il tuo annuncio"
               @if (Session::has('message'))
                 <div class="alert alert-success">{{ session('message') }}</div>
             @endif
-
-
+      
             <form method="POST" action="{{ route('announcement.store') }}" enctype="multipart/form-data">
                @csrf 
-               
+    
+               <input type="hidden" name="uniqueSecret" value="{{ $uniqueSecret }}">
+
                <div class="form-group">
                   <label for="exampleInputEmail1">Nome dell' annuncio</label>
                    <input name="title" value="{{ old('title') }}" type="text" id="title" class="form-control">
@@ -38,8 +39,10 @@ title="Crea il tuo annuncio"
                   <label>Descrizione</label>
                   <textarea name="body" id="body" class="form-control">{{ old('body') }}</textarea>
                 </div>
+                
                 <div class="form-group mt-3">
-                  <label>Inserisci un immagine</label>
+                  <label>Inserisci immagini</label>
+                  <div class="dropzone" id="drophere"></div>
 
                   <input type="file" value="{{ old('img') }}" name="img" >
                   

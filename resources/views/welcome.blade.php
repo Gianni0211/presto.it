@@ -58,7 +58,7 @@
   <div class="container-fluid h-100">
     <div class="row h-100 justify-content-center align-items-center">
       <div class="col-12 col-md-8 text-center text-white">
-        <h1 class="title-primary font-weight-bold display-4 font-italic txt-shadow mb-5" > presto.it </h1>
+        
       
         @if(session('access.denied.revisor.only'))
         <div class="">
