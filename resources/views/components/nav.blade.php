@@ -65,8 +65,18 @@
                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
+                       
 
-
+                    @if (!Auth::user()->is_revisor)
+                    <a class="dropdown-item" href="{{ route('diventa.revisore') }}">
+                      Diventa revisore
+                    </a>
+                    @else
+                    <a class="dropdown-item" href="{{ route('revisor.index') }}">
+                     Annunci in sospeso   
+                    </a>
+                    @endif
+                    
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>

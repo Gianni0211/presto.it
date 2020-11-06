@@ -1,10 +1,13 @@
 <?php
 
+use App\Mail\RevisorMail;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +34,13 @@ Route::get('/', [PublicController::class, 'index'])->name('home');
 Route::get('/category/{name}/{id}/announcements', [PublicController::class, 'announcementsByCategory'])->name('category.announcements');
 
 Route::get('/category/count', [PublicController::class, 'countCategory'])->name('count.category');
+
+Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+
+
+
+Route::get('/revisore', function () {
+  
+    Mail::to('admin@subito.it')->send(new RevisorMail(Auth::User()));
+    return  view('revisor.thankyou')->with('message', "la tua richiesta è stata presa in carico");
+ })->name('diventa.revisore')->middleware('auth');
