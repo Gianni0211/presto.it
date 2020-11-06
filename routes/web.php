@@ -24,13 +24,13 @@ use App\Http\Controllers\AnnouncementController;
 
 Auth::routes();
 
-
+Route::get('/', [PublicController::class, 'index'])->name('home');//Ti porta a welcom
 
 Route::get('/announcement/new', [AnnouncementController::class, 'create'])->name('announcement.new')->middleware('auth');
 
 Route::post('/announcement/store', [AnnouncementController::class, 'store'])->name('announcement.store')->middleware('auth');
 
-Route::get('/', [PublicController::class, 'index'])->name('home');
+
 
 Route::get('/category/{name}/{id}/announcements', [PublicController::class, 'announcementsByCategory'])->name('category.announcements');
 
@@ -50,7 +50,7 @@ Route::post('/revisor/announcemet/{id}/reject', [RevisorController::class, 'reje
 //rotte di merda
 Route::get('/revisore', function () {
   
-   Mail::to('luigi@luigi.it')->send(new RevisorMail(Auth::User()));
+   Mail::to('accetazioneRevisor@presto.it')->send(new RevisorMail(Auth::User()));
    return  view('revisor.thankyou')->with('message', "la tua richiesta è stata presa in carico");
 })->name('diventa.revisore')->middleware('auth');
 
@@ -60,3 +60,14 @@ Route::get('/tutti', function () {
     $user=User::all();
     return $user;
 })->middleware('auth.revisor');
+Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+
+
+
+Route::get('/search', [PublicController::class, 'search'])->name('search');
+
+Route::get('/announcement/single', [AnnouncementController::class, 'single'])->name('announcement.single');
+
+
+
+

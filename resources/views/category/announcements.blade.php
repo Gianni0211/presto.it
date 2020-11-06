@@ -13,23 +13,31 @@ title="{{ $category->name }}"
         </div>
     </div> --}}
 
+<div class="container my-5">
+    <div class="row">
+        <x-sidebar-category />
 
-    <div class="container my-5">
-        <div class="row">
-            @foreach ($announcements as $announcement)
-            {{-- {{ $announcement->created_at }} --}}
-                    <x-card
-                    title="{{ $announcement['title'] }}"
-                    body="{{ $announcement['body'] }}"
-                    categoryName="{{ $announcement->category->name }}"
-                    categoryId="{{ $announcement->category->id }}"
-                    createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
-                    userName="{{ $announcement->user->name }}"
-                    />
-                @endforeach
+        <div class="col-12 col-md-9 col-xl-9">
+            <div class="row">
+                @foreach ($announcements as $announcement)
+                {{-- {{ $announcement->created_at }} --}}
+                        <x-card
+                        title="{{ $announcement['title'] }}"
+                        body="{{ Str::limit($announcement['body'], 50, $end='...') }}"
+                        categoryName="{{ $announcement->category->name }}"
+                        categoryId="{{ $announcement->category->id }}"
+                        createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
+                        userName="{{ $announcement->user->name }}"
+                        img="{{ Storage::url($announcement->img) }}"
+                        price="{{ $announcement->price }}"
+                        />
+                    @endforeach
+            </div>
+
         </div>
     </div>
-
+</div>
+ 
    
 
    

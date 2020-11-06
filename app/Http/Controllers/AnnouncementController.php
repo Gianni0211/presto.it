@@ -44,19 +44,31 @@ class AnnouncementController extends Controller
      */
     public function store(AnnouncementRequest $request)
     {
-        // dd(Auth::id());
-        // dd($request->input('category_id'));
+        
+        
         $title = $request->input('title');
         $body = $request->input('body');
         $category_id = $request->input('category_id');
+        $img = $request->file('img')->store('public/img');
+        $price = $request->input('price');
+
+       
+            $post = Announcement::create([
 
 
-        $post = Announcement::create([
+            
+
            'title' => $title,
            'body' => $body,
            'category_id' => $category_id,
-           'user_id' => Auth::user()->id
+           'user_id' => Auth::user()->id,
+           'img' => $img,
+           'price' => $price
            ]);
+        
+
+
+        
 
         return redirect(route('home'))->with('message', "il tuo post è stato aggiunto all' elenco");
     }
@@ -104,5 +116,11 @@ class AnnouncementController extends Controller
     public function destroy(announcement $announcement)
     {
         //
+    }
+
+
+
+    public function single () {
+        return view ('announcement.single');
     }
 }

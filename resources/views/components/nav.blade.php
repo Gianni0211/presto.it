@@ -2,7 +2,7 @@
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-white py-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-          <img id="navbarBrand" src="{{ asset('/media/logo1.png') }}" width="190" height="80" class="img-fluid" alt="presto.it"/>
+          <h1 class="logo">PRESTO.IT</h1>
         </a>
         {{-- <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -19,7 +19,7 @@
                     <a class="nav-link dropdown-toggle title-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categorie
                     </a> --}}
-                    <a type="button" class="nav-link title-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    <a type="button" class="nav-link txtTitle" data-toggle="modal" data-target="#exampleModalCenter">
                         <i class="fas fa-tags"></i>
                         Categorie
                       </a>
@@ -44,17 +44,26 @@
                     </li>
                 </ul>
                 <!-- Authentication Links -->
-          
+         
+           
+
                 @guest
                 <li class="nav-item mr-3">
-                    <a class="nav-link title-primary rounded border-btn" href="{{ route('login') }}">{{ __('Accedi') }}</a>
+                    <a class="nav-link txtTitle rounded border-btn" href="{{ route('login') }}">{{ __('Accedi') }}</a>
                 </li>
                 @if (Route::has('register'))
                 <li class="nav-item mr-3">
-                    <a class="nav-link title-primary rounded border-btn" href="{{ route('register') }}">{{ __('Registrati') }}</a>
+                    <a class="nav-link txtTitle rounded border-btn" href="{{ route('register') }}">{{ __('Registrati') }}</a>
                 </li>
                 @endif
                 @else
+                @if (Auth::user()->is_revisor)
+                <li class="nav-item mr-3">
+                <a  href="{{ route('revisor.home') }}" >
+                <span class="badge badge-pill badge-warning">{{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
+                </a>
+                </li>
+                @endif
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
@@ -66,21 +75,20 @@
                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
+                       
+
                     @if (!Auth::user()->is_revisor)
-                    <a class="dropdown-item" href="{{ route('diventa.revisore') }}"                       
-                      >
-                        Diventa revisore
+                    <a class="dropdown-item" href="{{ route('diventa.revisore') }}">
+                      Diventa revisore
                     </a>
                     @else
+               
                     <a class="dropdown-item" href="{{ route('revisor.home') }}"                       
                       >
                         Annunci in sospeso <span class="badge badge-pill badge-warning">{{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
                     </a>
                     @endif
-
-                  
-
-
+                    
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>

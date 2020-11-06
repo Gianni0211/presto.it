@@ -24,18 +24,24 @@ class AnnouncementRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => "required|max:120",
-            'body' => "required|max: 1000",
+            'title' => "required|max:120|min:3",
+            'body' => "required|max:1000|min:10",
+            'img' => 'required',
+            'price' => "required",
         ];
     }
-    public function messages(){
+    
+    public function messages()
+    {
         return [
-            'title.required' => 'Il titolo è obbligatorio',
-            'title.max:120' => 'Il titolo è troppo lungo',
-            'body.required' => 'La descrizione è obbligatoria',
-            'body.max:1000' => 'La descrizione è troppo lunga'
-
-
-        ];
+            'title.required' => "Il titolo è obbligatorio",
+            'title.max' => "Il titolo è troppo lungo",
+            'title.min' => "Il titolo è troppo corto",
+            'body.required' => "La descrizione è obbligatoria",
+            'body.max' => "La descrizione è troppo lunga",
+            'body.min' => "La descrizione è troppo corta",
+            'price.required' => "Il prezzo è obbligatorio",
+            'img.required' => "L'immagine è obbligatoria"
+        ]; 
     }
 }

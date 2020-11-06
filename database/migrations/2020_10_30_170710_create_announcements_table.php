@@ -17,7 +17,10 @@ class CreateAnnouncementsTable extends Migration
             $table->id();
 
             $table->string('title');
-            $table->string('body');
+            $table->text('body');
+            $table->string('img');
+            $table->string('price');
+            
 
             $table->timestamps();
         });

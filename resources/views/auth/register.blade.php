@@ -1,4 +1,4 @@
- <x-app>
+<x-app>
     <div class="container top py-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -72,65 +72,5 @@
             </div>
         </div>
     </div>
-</x-app> 
+</x-app>
 
-{{--
- <x-app>
-    
-    <div class="container py-5 top">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Registrati su presto.it') }}</div>
-                    
-                    <div class="card-body">
-
-                        <form class="text-center border border-light p-5" method="POST" action="{{ route('register') }}">
-                            @csrf   
-                            <div class="form-row mb-4">
-                                <div class="col">
-                                    <input type="text"  class="form-control" placeholder="Nome">
-                                </div>
-                                <div class="col">
-                                    <input type="text"  class="form-control" placeholder="Cognome">
-                                </div>
-                            </div>
-                            <div class="form-row mb-4">
-                                <div class="col">
-                                <input type="email"  class="form-control" placeholder="E-mail">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Cellulare" aria-describedby="defaultRegisterFormPhoneHelpBlock">
-                                </div>
-                            </div>
-                            <div class="form-row mb-4">
-                                <input type="password"  class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-                            </div>
-                            <div class="form-row mb-4">
-                                    <input type="password"  class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-                            </div>
-
-                           <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input">
-                                <label class="custom-control-label">Privacy Policy</label>
-                            </div> 
-                             <button class="btn btn-info my-4 btn-block" type="submit">Registrati</button> 
-
-                            <p>oppure accedi con:</p>
-                            
-                            <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
-                            <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
-                            <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
-                            <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
-
-                                
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-        
-    </x-app> 
-
-    --}}
