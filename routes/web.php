@@ -5,6 +5,7 @@ use App\Mail\RevisorMail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
@@ -44,6 +45,10 @@ Route::post('/revisor/announcemet/{id}/accept', [RevisorController::class, 'acce
 Route::post('/revisor/announcemet/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
 
 
+Route::get('/revisor/uniscita', [AuthController::class, 'toBerevisor'])->name('revisor.toBerevisor');
+Route::post('/revisor/richiedi', [AuthController::class, 'sedMessageToBeRevisor'])->name('revisor.senMessageTobeReviso');
+
+
 
 
 
@@ -61,6 +66,8 @@ Route::get('/tutti', function () {
     $user=User::all();
     return $user;
 })->middleware('auth.revisor');
+
+
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
 
 

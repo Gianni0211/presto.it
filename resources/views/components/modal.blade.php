@@ -21,7 +21,7 @@
         <a href="{{ route('category.announcements', [
         $category->name,
         $category->id
-        ]) }}" class="nav-link border-{{ $category->name }} my-2 txtTitle"><span class="text-modal">{{ $category->name }}</span></a>    
+        ]) }}" class="nav-link border-{{ $category->name }} my-2 txtTitle"><span class="badge badge-pill badge-warning d-none d-md-inline"> {{ $category->announcementCount() }}</span><span class="text-modal">     {{ $category->name }}</span></a>    
         @endforeach
       </div>
       <div class="modal-footer">

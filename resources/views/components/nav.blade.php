@@ -63,7 +63,7 @@
                        
 
                     @if (!Auth::user()->is_revisor)
-                    <a class="dropdown-item" href="{{ route('diventa.revisore') }}">
+                    <a class="dropdown-item" href="{{ route('revisor.toBerevisor') }}">
                       Diventa revisore
                     </a>
                     @else
