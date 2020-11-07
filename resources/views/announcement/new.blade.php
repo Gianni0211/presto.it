@@ -1,16 +1,12 @@
+<div class="d-md-none" style="margin-top: 120px"></div>
+
 <x-app>
 
-<x-header 
+<x-header  title="Crea il tuo annuncio" />
 
-title="Crea il tuo annuncio"
-
-/>
-
-  
 <div class="container my-5 py-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            {{-- <h1>Crea il tuo annuncio</h1> --}}
 
             @if ($errors->any())
               <div class="alert alert-danger">
@@ -18,7 +14,7 @@ title="Crea il tuo annuncio"
             @foreach ($errors->all() as $error)
                    <li>{{ $error }}</li>
             @endforeach
-                </ul>
+                </ul>s
               </div>
              @endif
               @if (Session::has('message'))

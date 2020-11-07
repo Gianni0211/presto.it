@@ -1,3 +1,5 @@
+<div class="d-md-none" style="margin-top: 120px"></div>
+
 <x-app>
 
     <x-header title="Forse  il tuo annuncio" />
