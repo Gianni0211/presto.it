@@ -12,32 +12,38 @@ title="{{ $category->name }}"
             </div>
         </div>
     </div> --}}
-
-<div class="container my-5">
-    <div class="row">
-        <x-sidebar-category />
-
-        <div class="col-12 col-md-9 col-xl-9">
-            <div class="row">
-                @foreach ($announcements as $announcement)
-                {{-- {{ $announcement->created_at }} --}}
-                        <x-card
-                        title="{{ $announcement['title'] }}"
-                        body="{{ Str::limit($announcement['body'], 50, $end='...') }}"
-                        categoryName="{{ $announcement->category->name }}"
-                        categoryId="{{ $announcement->category->id }}"
-                        createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
-                        userName="{{ $announcement->user->name }}"
-                        img="{{ Storage::url($announcement->img) }}"
-                        price="{{ $announcement->price }}"
-                        />
-                    @endforeach
-            </div>
-
+    
+    
+    <div class="container-fluid py-3 overflowSliderBG">{{--  fix carta categorie --}}
+        <div class="container">
+            
+            <section id="overflowSlider" class="w-100">
+                <div class="row py-5">
+                    <div class="col">
+                        <h2 class="txtTitle font-italic h1 text-center">In evidenza</h2>
+                    </div>
+                </div>
+                
+            <div class="row flex-nowrap overflow-auto">
+                    
+                <x-sidebar-category />
+          @foreach ($announcements as $announcement)
+          <x-card
+            title="{{ $announcement['title'] }}"
+            body="{{ Str::limit($announcement['body'], 50, $end='...') }}"
+            categoryName="{{ $announcement->category->name }}"
+            categoryId="{{ $announcement->category->id }}"
+            createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
+            userName="{{ $announcement->user->name }}"
+            img="{{ Storage::url($announcement->img) }}"
+            price="{{ $announcement->price }}"
+            /> 
+          @endforeach
+          
         </div>
+      </section>
+      </div>
     </div>
-</div>
- 
    
 
    
