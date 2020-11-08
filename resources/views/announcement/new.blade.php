@@ -28,6 +28,11 @@ title="Crea il tuo annuncio"
 
             <form method="POST" action="{{ route('announcement.store') }}" enctype="multipart/form-data">
                @csrf 
+               <input type="hidden"
+               name="uniqueSecret"
+               value="{{ $uniqueSecret }}"
+               >
+               
                
                <div class="form-group">
                   <label for="exampleInputEmail1">Nome dell' annuncio</label>

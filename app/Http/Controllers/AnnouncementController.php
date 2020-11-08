@@ -118,9 +118,14 @@ class AnnouncementController extends Controller
         //
     }
 
-
-
     public function single () {
         return view ('announcement.single');
+    }
+
+    public function newAnnouncement(){
+        $uniqueSecret = base_convert(sha1(uniquid(mt_rand())), 16, 36);
+        
+
+        return view('announcement.new', compact("uniqueSecret"));
     }
 }
