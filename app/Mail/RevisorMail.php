@@ -13,16 +13,19 @@ class RevisorMail extends Mailable
    
 
 
-    public $contact;    
+    public $contact;
+    public $message;     
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($contact)
+    public function __construct($contact,$message)
     {
         $this->contact=$contact;
+       
         
+        $this->contact->message=$message;
     }
 
     /**
@@ -31,9 +34,9 @@ class RevisorMail extends Mailable
      */
     public function build()
     {
-
+        //dd($message);
        
-        return $this->from('revisore@subito.it')->
+        return $this->from('info@subito.it')->
         view('revisor.mail');
     }
 }

@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="py-md-0 mt-md-0 py-5 mt-5">
         
         <x-nav />
       
@@ -38,40 +38,7 @@
 
     </div>
 
-
-
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-  
-  
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-  aria-hidden="true">
-  
-  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    
-    
-    <div class="modal-content">
-      <div class="modal-header bg-orange">
-        <h5 class="modal-title text-white text-uppercase offset-3 font-italic font-weight-bold"></i>seleziona la categoria</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        @foreach ($categories as $category)
-        <a href="{{ route('category.announcements', [
-        $category->name,
-        $category->id
-        ]) }}" class="nav-link border-{{ $category->name }} my-2 txtTitle"><span class="text-modal">{{ $category->name }}</span></a>    
-        @endforeach
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="bg-yellow border-0 text-white p-2" data-dismiss="modal">Chiudi</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <x-modal />
 
 
 

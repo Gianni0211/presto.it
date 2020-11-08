@@ -30,10 +30,8 @@ class AnnouncementController extends Controller
 
     public function create()
     {
-        $categories = Category::all();
-        View::share('categories', $categories);
-
-        return view('announcement.new');
+        $uniqueSecret = base_convert(sha1(uniqid(mt_rand())), 16, 36);
+        return view('announcement.new', compact('uniqueSecret'));
     }
 
     /**
@@ -44,8 +42,7 @@ class AnnouncementController extends Controller
      */
     public function store(AnnouncementRequest $request)
     {
-        
-        
+
         $title = $request->input('title');
         $body = $request->input('body');
         $category_id = $request->input('category_id');
@@ -54,8 +51,6 @@ class AnnouncementController extends Controller
 
        
             $post = Announcement::create([
-
-
             
 
            'title' => $title,
@@ -65,9 +60,7 @@ class AnnouncementController extends Controller
            'img' => $img,
            'price' => $price
            ]);
-        
-
-
+    
         
 
         return redirect(route('home'))->with('message', "il tuo post è stato aggiunto all' elenco");
@@ -122,10 +115,16 @@ class AnnouncementController extends Controller
         return view ('announcement.single');
     }
 
-    public function newAnnouncement(){
-        $uniqueSecret = base_convert(sha1(uniquid(mt_rand())), 16, 36);
-        
 
-        return view('announcement.new', compact("uniqueSecret"));
+      public function imagesUpload(Request $request)
+      {
+        $uniqueSecret = $request->input('uniqueSecret');
+        $fileName = $request->file('file')->store("public/media/{$uniqueSecret}");  
+        session()->push("images.{$uniqueSecret}", $fileName);
+
+        return response()->json(
+            session()->get("images.{$uniqueSecret}")
+        );
+      }
+
     }
-}

@@ -5,7 +5,7 @@
         'categoryId'
 ])
 
-<div class="col-md-2 mx-1 my-3">
+<div class="col-9 col-md-2 mx-1 my-3">
     <a href="{{ route('category.announcements',[
             $categoryName,
             $categoryId]) }}" class="d-block w-100 h-100 neumorphism singleCategory bg-{{ $name }}">
@@ -16,4 +16,4 @@
       <p class="mt-3 mb-1 txt-shadow">{{ $name }}</p>
       <p class="text-white font-weight-bold"><span class="font-italic">Annunci:</span> {{ $count }}</p> 
     </a>
-  </div>
+</div>
