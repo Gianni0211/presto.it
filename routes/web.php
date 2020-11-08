@@ -74,7 +74,7 @@ Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor
 
 Route::get('/search', [PublicController::class, 'search'])->name('search');
 
-Route::get('/announcement/single', [AnnouncementController::class, 'single'])->name('announcement.single');
+Route::get('/announcement/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
 
 
 

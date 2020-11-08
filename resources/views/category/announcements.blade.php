@@ -29,14 +29,7 @@ title="{{ $category->name }}"
                 <x-sidebar-category />
           @foreach ($announcements as $announcement)
           <x-card
-            title="{{ $announcement['title'] }}"
-            body="{{ Str::limit($announcement['body'], 50, $end='...') }}"
-            categoryName="{{ $announcement->category->name }}"
-            categoryId="{{ $announcement->category->id }}"
-            createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
-            userName="{{ $announcement->user->name }}"
-            img="{{ Storage::url($announcement->img) }}"
-            price="{{ $announcement->price }}"
+           .announcement="$announcement"
             /> 
           @endforeach
           

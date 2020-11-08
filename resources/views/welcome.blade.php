@@ -104,7 +104,11 @@
         <div class="row flex-nowrap overflow-auto">
           
           @foreach ($announcements as $announcement)
+
           <x-card
+          :announcement="$announcement"
+          />
+          {{-- <x-card
             title="{{ $announcement['title'] }}"
             body="{{ Str::limit($announcement['body'], 50, $end='...') }}"
             categoryName="{{ $announcement->category->name }}"
@@ -113,7 +117,8 @@
             userName="{{ $announcement->user->name }}"
             img="{{ Storage::url($announcement->img) }}"
             price="{{ $announcement->price }}"
-            /> 
+            announcement="{{ $announcement }}"
+            />  --}}
           @endforeach
           
         </div>

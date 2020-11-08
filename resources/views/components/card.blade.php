@@ -1,12 +1,6 @@
 @props([
- 'title',
- 'body',
- 'categoryName',
- 'categoryId',
- 'createdAt',
- 'userName',
- 'img',
- 'price'
+ 
+ 'announcement'
 ])
 
 
@@ -15,31 +9,31 @@
   <div class="col-6 col-md-4 p-3">
     <div class="card neumorphism">
       <div class="ofs-img-effect">
-        <img class="card-img-top img-size" src="{{ $img }}" alt="Card image cap">
+        <img class="card-img-top img-size" src="" alt="Card image cap">
       </div>
       <div class="card-body">
         <h4 class="card-title mb-0">
-          <a href="{{ route('announcement.single') }}" class="linkReset">{{ $title }}</a>
+          <a href="{{ route('announcement.show', ['announcement' => $announcement]) }}" class="linkReset">{{ $announcement->title }}</a>
         </h4>
         <span class="small text-uppercase">
           <a href="{{ route('category.announcements',[
-            $categoryName,
-            $categoryId]) }}" class="linkReset font-weight-bold">{{ $categoryName }}</a>
+            $announcement->category->name,
+            $announcement->category->id]) }}" class="linkReset font-weight-bold">{{ $announcement->category->name }}</a>
         </span>
-        <p class="card-text py-3 pt-4 lead">{{ $body }}</p>
+        <p class="card-text py-3 pt-4 lead">{{ $announcement->body }}</p>
         <div class="d-flex align-items-center justify-content-between">
           <div>
             <div class="small p-1">
               <i class="fas fa-map-marker-alt"></i> Città
             </div>
             <div class="small p-1">
-              <i class="far fa-calendar-alt"></i> Pubblicato il <span class="font-italic">{{ $createdAt }}</span>
+              <i class="far fa-calendar-alt"></i> Pubblicato il <span class="font-italic">{{ $announcement->created_at->format('d/m/y')  }}</span>
             </div>
             <div class="small p-1">
-              <i class="fas fa-user"></i> Utente: <span class="font-italic"> {{ $userName }}</span>
+              <i class="fas fa-user"></i> Utente: <span class="font-italic"> {{ $announcement->user->name  }}</span>
             </div>
           </div>
-          <a href="#" class="btn">&euro; {{ $price }}</a>
+          <a href="#" class="btn">&euro; {{ $announcement->price }}</a>
         </div>
       </div>
     </div>

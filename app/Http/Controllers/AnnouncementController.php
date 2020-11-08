@@ -72,9 +72,11 @@ class AnnouncementController extends Controller
      * @param  \App\Models\announcement  $announcement
      * @return \Illuminate\Http\Response
      */
-    public function show(announcement $announcement)
+    public function show(Announcement $announcement)
     {
-        //
+
+        
+        return view('announcement.show', ["announcement" => $announcement]); //ritorna la vista e i dati del singolo annuncio
     }
 
     /**
