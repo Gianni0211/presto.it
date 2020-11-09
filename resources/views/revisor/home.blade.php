@@ -51,15 +51,11 @@
                         </div>
 
                         <div class="row pt-5 ">
-                            <div class="col-4">
-                                <img src="https://picsum.photos/200/200">
-                            </div>
-                            <div class="col-4">
-                                <img src="https://picsum.photos/200/200">
-                            </div>
-                            <div class="col-4">
-                                <img src="https://picsum.photos/200/200">
-                            </div>
+                        @foreach($announcement->images as $image)
+                          <div>
+                          <img src="{{ Storage::url($image->file)}}" alt="porco" class="img-fluid p-5" >
+                          </div>
+                          @endforeach
                         </div>
 
 
