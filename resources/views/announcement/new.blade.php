@@ -40,9 +40,7 @@
                   <label>Inserisci immagini</label>
                   <div class="dropzone" id="drophere"></div>
 
-                  <input type="file" value="{{ old('img') }}" name="img" >
-                  
-                </div>
+           
                 <div class="form-group mt-3">
                   <label>Inserisci il prezzo</label>
 

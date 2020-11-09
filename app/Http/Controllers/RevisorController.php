@@ -55,9 +55,13 @@ namespace App\Http\Controllers;
 
         
             $lastAnnouncemetRevsioned=session()->get('lastAnnouncemetRevsioned');
+         
             $count = count($lastAnnouncemetRevsioned)-1;
             $idAnnouncement=$lastAnnouncemetRevsioned[$count];
-           
+
+          
+
+         
             $announcement= Announcement::find($idAnnouncement);
             
             return view('revisor.home', compact('announcement'));

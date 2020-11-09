@@ -32,6 +32,8 @@ Route::get('/announcement/new', [AnnouncementController::class, 'create'])->name
 Route::post('/announcement/store', [AnnouncementController::class, 'store'])->name('announcement.store')->middleware('auth');
 
 Route::post('/announcement/images/upload', [AnnouncementController::class, 'imagesUpload'])->name('announcement.images.upload')->middleware('auth');
+Route::delete('/announcement/images/remove', [AnnouncementController::class, 'imagesRemuve'])->name('announcement.images.delete')->middleware('auth');
+
 
 
 

@@ -43822,7 +43822,25 @@ $(function () {
       params: {
         _token: csrfToken,
         uniqueSecret: uniqueSecret
-      }
+      },
+      addRemoveLinks: true
+    });
+    myDropzone.on("success", function (file, response) {
+      file.serverId = response.id;
+      console.log(response.id);
+    });
+    myDropzone.on("removedfile", function (file) {
+      console.log(file.serverId);
+      $.ajax({
+        type: 'DELETE',
+        url: '/announcement/images/remove',
+        data: {
+          _token: csrfToken,
+          id: file.serverId,
+          uniqueSecret: uniqueSecret
+        },
+        dataType: 'json'
+      });
     });
   }
 });
