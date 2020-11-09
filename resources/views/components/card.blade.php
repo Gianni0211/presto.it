@@ -20,7 +20,7 @@
             $announcement->category->name,
             $announcement->category->id]) }}" class="linkReset font-weight-bold">{{ $announcement->category->name }}</a>
         </span>
-        <p class="card-text py-3 pt-4 lead">{{ $announcement->body }}</p>
+        <p class="card-text py-3 pt-4 lead">{{  Str::limit($announcement->body, 50, $end='...') }}</p>
         <div class="d-flex align-items-center justify-content-between">
           <div>
             <div class="small p-1">
