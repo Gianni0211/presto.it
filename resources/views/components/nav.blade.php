@@ -15,7 +15,7 @@
 
         <div class="collapse navbar-collapse" id="#exampleModalCenter">
             <a type="button" class="nav-link txtTitle" data-toggle="modal" data-target="#exampleModalCenter">
-            <i class="fas fa-tags"></i>Categorie</a>
+            <i class="fas fa-tags"></i>{{ __('ui.categories') }}</a>
         </div>
 
 
@@ -25,20 +25,36 @@
 
                 <ul class="navbar-nav mr-right mb-2 mb-md-0">
                     <li class="nav-item mr-3">
-                        <a class="nav-link bg-yellow text-white rounded btn-hover text-center" href="{{ route('announcement.new') }}">Inserisci annuncio  <i class="fas fa-plus"></i></a>
+                        <a class="nav-link bg-yellow text-white rounded btn-hover text-center" href="{{ route('announcement.new') }}">{{ __('ui.add') }}  <i class="fas fa-plus"></i></a>
                     </li>
                 </ul>
 
                  <div class="li nav-item">
-                    <a href="" class="nav-link">
-                        <span class="flag-icon flag-icon-it"></span>
-                    </a>
+                     
+                         <form action="{{ route('local' ,'en') }}" method="POST">
+                @csrf
+                <button type="submit" class="nav-link" style="background-color:transparent; border:none; ">
+                <span class="flag-icon flag-icon-gb"></span>
+                </button>
+                
+                </form>
+
+                     
+                   
                 </div>
 
                 <div class="li nav-item">
-                    <a href="" class="nav-link">
-                        <span class="flag-icon flag-icon-gb"></span>
-                    </a>
+                     
+                         <form action="{{ route('local' ,'it') }}" method="POST">
+                @csrf
+                <button type="submit" class="nav-link" style="background-color:transparent; border:none; ">
+                <span class="flag-icon flag-icon-it"></span>
+                </button>
+                
+                </form>
+
+                     
+                   
                 </div>
 
 

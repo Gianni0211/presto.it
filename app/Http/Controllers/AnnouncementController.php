@@ -114,8 +114,13 @@ class AnnouncementController extends Controller
     }
 
     public function single () {
-        return view ('announcement.single');
+        return view ("announcement.single");
     }
+      public function local($local)
+     {
+          session()->put('local', $local);
+          return redirect()->back();
+     }
 
 
       public function imagesUpload(Request $request)
@@ -128,5 +133,7 @@ class AnnouncementController extends Controller
             session()->get("images.{$uniqueSecret}")
         );
       }
+
+   
 
     }
