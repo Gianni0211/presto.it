@@ -42,6 +42,7 @@ Route::get('/category/count', [PublicController::class, 'countCategory'])->name(
 Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.home');
 
 Route::post('/revisor/announcemet/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept');
+Route::post('/local/{local}', [AnnouncementController::class, 'local'])->name('local');
 Route::post('/revisor/announcemet/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
 Route::get('/revisor/undo', [RevisorController::class, 'unDo'])->name('revisor.undo');
 

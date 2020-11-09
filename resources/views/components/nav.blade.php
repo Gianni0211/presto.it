@@ -29,6 +29,19 @@
                     </li>
                 </ul>
 
+                 <div class="li nav-item">
+                    <a href="" class="nav-link">
+                        <span class="flag-icon flag-icon-it"></span>
+                    </a>
+                </div>
+
+                <div class="li nav-item">
+                    <a href="" class="nav-link">
+                        <span class="flag-icon flag-icon-gb"></span>
+                    </a>
+                </div>
+
+
 
         <!-- Authentication Links -->
                 @guest
