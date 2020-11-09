@@ -29,6 +29,9 @@ namespace App\Http\Controllers;
             $announcement = Announcement::find($announcement_id);
             $announcement->is_accepted =$value;
             $announcement->save();
+           
+            session()->push('lastAnnouncemetRevsioned',$announcement_id);
+            
             return redirect(route('revisor.home'));
 
         }
@@ -41,5 +44,21 @@ namespace App\Http\Controllers;
         public function reject($announcement_id)
         {
             return $this->setAccepted($announcement_id, false);
+        }
+
+
+        public function unDo()
+        {    
+
+        
+            $lastAnnouncemetRevsioned=session()->get('lastAnnouncemetRevsioned');
+            $count = count($lastAnnouncemetRevsioned)-1;
+            $idAnnouncement=$lastAnnouncemetRevsioned[$count];
+           
+            $announcement= Announcement::find($idAnnouncement);
+            
+            return view('revisor.home', compact('announcement'));
+           
+            return null;
         }
 }

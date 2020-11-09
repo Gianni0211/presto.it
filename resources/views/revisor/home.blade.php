@@ -11,7 +11,15 @@
 
 
                 <div class="card">
-                    <div class="card-header"> Annuncio # {{$announcement->id}}</div>
+                    <div class="card-header"> Annuncio # {{$announcement->id}}
+                    <div class="col-6 text-right">
+                             
+                               
+                                    <a class="btn btn-success" href="{{route('revisor.undo')}}">annulla annuncio #{{ session()->get('lastAnnouncemetRevsioned')[count(session()->get('lastAnnouncemetRevsioned'))-1]  }}</a>
+                                
+                              
+                            </div>
+                    </div>
 
 
                     <div class="card-body">
@@ -80,7 +88,14 @@
     </div>
 @else
     <h3>
-        noncisono annunci
+        noncisono annunci 
+        <div class="col-6 text-right">
+                             
+                               
+                             <a class="btn btn-success" href="{{route('revisor.undo')}}">annulla annuncio #{{ session()->get('lastAnnouncemetRevsioned')[count(session()->get('lastAnnouncemetRevsioned'))-1]  }}</a>
+                         
+                       
+                     </div>
     </h3>
 @endif
 

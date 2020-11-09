@@ -43,7 +43,7 @@ Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.
 
 Route::post('/revisor/announcemet/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept');
 Route::post('/revisor/announcemet/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
-
+Route::get('/revisor/undo', [RevisorController::class, 'unDo'])->name('revisor.undo');
 
 Route::get('/revisor/uniscita', [AuthController::class, 'toBerevisor'])->name('revisor.toBerevisor');
 Route::post('/revisor/richiedi', [AuthController::class, 'sedMessageToBeRevisor'])->name('revisor.senMessageTobeReviso');
