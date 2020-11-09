@@ -4,9 +4,10 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\Category;
+use Laravel\Scout\Searchable;
+use App\Models\AnnouncementImages;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Laravel\Scout\Searchable;
 
 class Announcement extends Model
 {
@@ -16,7 +17,7 @@ class Announcement extends Model
 
 
     protected $fillable = [
-        'title', 'body', 'category_id', 'user_id' , 'img', 'price'   //protezione per il Models per evitare dati indesiderati
+        'title', 'body', 'category_id', 'user_id' ,  'price'   //protezione per il Models per evitare dati indesiderati
     ];             
     
     public function toSearchableArray()
@@ -44,6 +45,11 @@ class Announcement extends Model
       public function category()
       {
           return $this->belongsTo(Category::class);
+      }
+
+      public function images()
+      {
+          return $this->hasMany(AnnouncementImages::class);
       }
 
       static public function ToBeRevisionedCount () {
