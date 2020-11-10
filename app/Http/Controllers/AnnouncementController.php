@@ -62,14 +62,14 @@ class AnnouncementController extends Controller
            'user_id' => Auth::user()->id,
          'price' => $price
            ]);
-           $uniqueSecret = $request->input('uniqueSecret');
+        $uniqueSecret = $request->input('uniqueSecret');
         $immages=session()->get("images.{$uniqueSecret}",[]);
         $remuvedImages=session()->get("remuvedImages.{$uniqueSecret}",[]);
-        $immage= array_diff($immages,$remuvedImages);
+        $immages= array_diff($immages,$remuvedImages);
 
         foreach($immages as $image){
             $i = new AnnouncementImages();
-            $fileName= basename( $image);
+            $fileName= basename($image);
             $newfileName= "public/announcementes/{$a->id}/{$fileName}";
             Storage::move($image,$newfileName);
 
@@ -79,7 +79,7 @@ class AnnouncementController extends Controller
             $i->save();
         }
 
-        File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
+      //  File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
         return redirect(route('home'))->with('message', "il tuo post è stato aggiunto all' elenco");
     }
 
@@ -147,9 +147,11 @@ class AnnouncementController extends Controller
         session()->push("images.{$uniqueSecret}", $fileName);
     //  dd( session()->get("images.{$uniqueSecret}"));
       //  return response()->json( session()->get("images.{$uniqueSecret}"));
-        return response()->json([
+        return response()->json(
+            [
             'id'=>$fileName
-        ]);
+        ]
+    );
       }
 
       public function  imagesRemuve(Request $request)
@@ -158,7 +160,7 @@ class AnnouncementController extends Controller
         $fileName = $request->input('id');
 
         session()->push("remuvedImages.{$uniqueSecret}", $fileName);
-        Storege::delete($fileName);
+        Storage::delete($fileName);
         //$fileName = $request->file('file')->delete("public/media/{$uniqueSecret}"); 
         //session()->drop("images.{$uniqueSecret}", $fileName);
         return response()->json('ok');
