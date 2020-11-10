@@ -53,7 +53,7 @@
                         <div class="row pt-5 ">
                         @foreach($announcement->images as $image)
                           <div>
-                          <img src="{{ Storage::url($image->file)}}" alt="porco" class="img-fluid p-5" >
+                          <img src="{{ $image->getUrl(300,150)}}" alt="porco" class="img-fluid p-5" >
                           </div>
                           @endforeach
                         </div>

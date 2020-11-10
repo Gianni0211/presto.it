@@ -9,10 +9,16 @@
     <div class="card neumorphism">
       <div class="ofs-img-effect">
         @if(Count($announcement->images)>0)
-        <img class="card-img-top img-size" src="{{ Storage::url($announcement->images[0]->file)}}" alt="Card image cap">
+        <img class="card-img-top img-size" src="{{ $announcement->images[0]->getUrl(300,150)}}" alt="Card image cap">
         @else
         <img class="card-img-top img-size" src="{{ asset ('/media/prova.png')}}" alt="Card image cap">
         @endif
+
+      {{--   @foreach ($announcement->images as $image)
+
+        <img src="{{ $image->getUrl(300,150) }}" class="rounded float-right" alt="">
+            
+        @endforeach --}}
       </div>
       <div class="card-body">
         <h4 class="card-title mb-0">

@@ -22,7 +22,7 @@
                            
                           @foreach($announcement->images as $image)
                           <div>
-                          <img src="{{ Storage::url($image->file)}}" alt="porco" class="img-fluid" >
+                          <img src="{{ $image->getUrl(900,600) }}" alt="porco" class="img-fluid" >
                           </div>
                           @endforeach
 
@@ -36,8 +36,8 @@
                     <div class="col-12">
                         <div class="slider-nav mt-4">
                               @foreach($announcement->images as $image)
-                                <div>
-                                <img src="{{ Storage::url($image->file)}}" alt="porco" class="img-fluid" >
+                                <div class="px-3">
+                                <img src="{{ $image->getUrl(300,150) }}" alt="porco" class="img-fluid" >
                                 </div>
                                 @endforeach
 

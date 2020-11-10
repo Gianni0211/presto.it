@@ -10,21 +10,17 @@
             </div>
             
             <ul class="item-sub-category">
+
+                @foreach ($categories as $category)
                 <li>
-                    <a href="#">Motorbikes &amp; Scooters (0)</a>
+                    <a href="{{ route('category.announcements', [
+                  $category->name,
+                  $category->id
+                   ]) }}">{{ $category->name }}   ( {{ $category->announcementCount() }})</a>
                 </li>
-                <li>
-                    <a href="#">Trucks, Vans &amp; Buses (0)</a>
-                </li>
-                <li>
-                    <a href="#">Auto Parts &amp; Accessories (0)</a>
-                </li>
-                <li>
-                    <a href="#">Bicycle and Three Wheelers (0)</a>
-                </li>
-                <li>
-                    <a href="#">Cars (0)</a>
-                </li>
+                    
+                @endforeach
+               
             </ul>
         </div>
     

@@ -11,10 +11,15 @@ return [
  'add' => 'Add Announcement',
  'signIn' => 'Sign in',
  'signUp' => 'Register',
- 'searchFor' => 'Cerca per parola',
- 'search' => 'Cerca',
- 'published' => 'Publicato il',
- 'user' => 'Utente',
+
+ //barra di ricerca
+ 'searchFor' => 'Search by word',
+ 
+ 'search' => 'Search',
+
+ //carta
+ 'published' => 'Published',
+ 'user' => 'User',
 
  //Fine vista welcome
 ];

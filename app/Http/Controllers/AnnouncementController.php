@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use App\Models\AnnouncementImages;
@@ -76,12 +77,23 @@ class AnnouncementController extends Controller
             $newfileName= "public/announcementes/{$a->id}/{$fileName}";
             Storage::move($image,$newfileName);
 
+            dispatch(new ResizeImage(
+                $newfileName,
+                300,
+                150
+            ));
+            dispatch(new ResizeImage(
+                $newfileName,
+                900,
+                600
+            ));
+
             $i->file = $newfileName;
             $i->announcement_id=$a->id;
 
             $i->save();
         }
-
+session()->forget("images.{$uniqueSecret}","remuvedImages.{$uniqueSecret}");
 
         return redirect(route('home'))->with('message', "il tuo post è stato aggiunto all' elenco");
     }
@@ -146,7 +158,12 @@ class AnnouncementController extends Controller
       public function imagesUpload(Request $request)
       {
         $uniqueSecret = $request->input("uniqueSecret");
-        $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");  
+        $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}"); 
+        dispatch(new ResizeImage(
+            $fileName,
+            120,
+            120
+        )); 
         session()->push("images.{$uniqueSecret}", $fileName);
     
         return response()->json(
@@ -185,7 +202,7 @@ class AnnouncementController extends Controller
           foreach ($images as $image) {
             $data[] = [
               'id' => $image,
-              'src' => Storage::url($image)
+              'src' => AnnouncementImages::getUrlByFilePath($image,120,120)
             ];
           }
 
