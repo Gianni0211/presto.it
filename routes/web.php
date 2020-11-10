@@ -32,9 +32,10 @@ Route::get('/announcement/new', [AnnouncementController::class, 'create'])->name
 Route::post('/announcement/store', [AnnouncementController::class, 'store'])->name('announcement.store')->middleware('auth');
 
 Route::post('/announcement/images/upload', [AnnouncementController::class, 'imagesUpload'])->name('announcement.images.upload')->middleware('auth');
+
 Route::delete('/announcement/images/remove', [AnnouncementController::class, 'imagesRemuve'])->name('announcement.images.delete')->middleware('auth');
 
-
+Route::get('/announcement/images', [AnnouncementController::class, 'getImages'])->name('announcement.images');
 
 
 Route::get('/category/{name}/{id}/announcements', [PublicController::class, 'announcementsByCategory'])->name('category.announcements');
@@ -44,8 +45,11 @@ Route::get('/category/count', [PublicController::class, 'countCategory'])->name(
 Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.home');
 
 Route::post('/revisor/announcemet/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept');
+
 Route::post('/local/{local}', [AnnouncementController::class, 'local'])->name('local');
+
 Route::post('/revisor/announcemet/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
+
 Route::get('/revisor/undo', [RevisorController::class, 'unDo'])->name('revisor.undo');
 
 Route::get('/revisor/uniscita', [AuthController::class, 'toBerevisor'])->name('revisor.toBerevisor');
@@ -53,10 +57,6 @@ Route::post('/revisor/richiedi', [AuthController::class, 'sedMessageToBeRevisor'
 
 
 
-
-
-
-//rotte di merda
 Route::get('/revisore', function () {
   
    Mail::to('accetazioneRevisor@presto.it')->send(new RevisorMail(Auth::User()));
