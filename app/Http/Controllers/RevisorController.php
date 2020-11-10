@@ -17,6 +17,7 @@ namespace App\Http\Controllers;
 
         public function index()
         {
+             session()->push('lastAnnouncemetRevsioned',0);
             $announcement= Announcement::where('is_accepted',null)
             ->orderBy('created_at','desc')
             ->first();
@@ -50,15 +51,22 @@ namespace App\Http\Controllers;
         public function unDo()
         {    
 
+        if(session()->get('lastAnnouncemetRevsioned')){
+
         
             $lastAnnouncemetRevsioned=session()->get('lastAnnouncemetRevsioned');
+         
             $count = count($lastAnnouncemetRevsioned)-1;
             $idAnnouncement=$lastAnnouncemetRevsioned[$count];
-           
+
+          
+
+         
             $announcement= Announcement::find($idAnnouncement);
             
             return view('revisor.home', compact('announcement'));
-           
-            return null;
+        }
+            
+        
         }
 }

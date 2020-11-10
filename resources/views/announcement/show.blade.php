@@ -18,46 +18,36 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="slider-for">
-                            <div>
-                                <img src="https://picsum.photos/1920/1200" alt="" class="img-fluid">
-                            </div>
-                            <div>
-                            <img src="https://picsum.photos/1920/1201" alt="" class="img-fluid"> 
-                            </div>
-                            <div>
-                                <img src="https://picsum.photos/1920/1202" alt="" class="img-fluid">
-                            </div>
-                            <div>
-                              <img src="https://picsum.photos/1920/1200" alt="" class="img-fluid">
-                          </div>
+                        
+                           
+                          @foreach($announcement->images as $image)
                           <div>
-                          <img src="https://picsum.photos/1920/1201" alt="" class="img-fluid"> 
+                          <img src="{{ Storage::url($image->file)}}" alt="porco" class="img-fluid" >
                           </div>
-                          <div>
-                              <img src="https://picsum.photos/1920/1202" alt="" class="img-fluid">
-                          </div>
+                          @endforeach
+
+
+                            
+                            
+                            
+                         
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="slider-nav mt-4">
-                            <div>
-                                <img src="https://picsum.photos/200" alt="" class="img-fluid">
-                            </div>
-                            <div>
-                            <img src="https://picsum.photos/201" alt="" class="img-fluid"> 
-                            </div>
-                            <div>
-                                <img src="https://picsum.photos/202" alt="" class="img-fluid">
-                            </div>
-                            <div>
-                                <img src="https://picsum.photos/203" alt="" class="img-fluid">
-                            </div>
-                            <div>
-                            <img src="https://picsum.photos/204" alt="" class="img-fluid"> 
-                            </div>
-                            <div>
-                                <img src="https://picsum.photos/204" alt="" class="img-fluid">
-                            </div>
+                              @foreach($announcement->images as $image)
+                                <div>
+                                <img src="{{ Storage::url($image->file)}}" alt="porco" class="img-fluid" >
+                                </div>
+                                @endforeach
+
+
+                           
+                           
+                            
+                            
+                            
+                            
                         </div>
 
                     </div>

@@ -43822,7 +43822,25 @@ $(function () {
       params: {
         _token: csrfToken,
         uniqueSecret: uniqueSecret
-      }
+      },
+      addRemoveLinks: true
+    });
+    myDropzone.on("success", function (file, response) {
+      file.serverId = response.id;
+      console.log(response.id);
+    });
+    myDropzone.on("removedfile", function (file) {
+      console.log(file.serverId);
+      $.ajax({
+        type: 'DELETE',
+        url: '/announcement/images/remove',
+        data: {
+          _token: csrfToken,
+          id: file.serverId,
+          uniqueSecret: uniqueSecret
+        },
+        dataType: 'json'
+      });
     });
   }
 });
@@ -43961,8 +43979,8 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\luigi\wa\presto.it_404\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\luigi\wa\presto.it_404\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

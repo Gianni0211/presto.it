@@ -26,7 +26,7 @@
             <div class="dropdown input-search-btn">
                <button type="button" class="btn btn-white mx-5 font-weight-bold text-muted" data-toggle="modal" data-target="#exampleModalCenter">
                 <i class="fas fa-tags"></i>
-                Categorie
+                {{ __('ui.categories') }}
                 </button>
             </div>
 
@@ -68,7 +68,7 @@
     <section class="container text-center mb-5" id="HomeCategories">
       <div class="row py-5">
         <div class="col">
-          <h2 class="txtTitle h1 font-italic">Esplora le nostre sezioni</h2>
+          <h2 class="txtTitle h1 font-italic">{{ __('ui.explore') }}</h2>
         </div>
       </div>
 
@@ -97,7 +97,7 @@
       <section id="overflowSlider" class="w-100">
         <div class="row py-5">
           <div class="col">
-            <h2 class="txtTitle font-italic h1 text-center">In evidenza</h2>
+            <h2 class="txtTitle font-italic h1 text-center">{{ __('ui.mostPopular') }}</h2>
           </div>
         </div>
         
@@ -105,20 +105,8 @@
           
           @foreach ($announcements as $announcement)
 
-          <x-card
-          :announcement="$announcement"
-          />
-          {{-- <x-card
-            title="{{ $announcement['title'] }}"
-            body="{{ Str::limit($announcement['body'], 50, $end='...') }}"
-            categoryName="{{ $announcement->category->name }}"
-            categoryId="{{ $announcement->category->id }}"
-            createdAt="{{ $announcement->created_at->format('d/m/y')  }}"
-            userName="{{ $announcement->user->name }}"
-            img="{{ Storage::url($announcement->img) }}"
-            price="{{ $announcement->price }}"
-            announcement="{{ $announcement }}"
-            />  --}}
+          <x-card :announcement="$announcement"  />
+       
           @endforeach
           
         </div>

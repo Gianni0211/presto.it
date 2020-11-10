@@ -28,8 +28,8 @@ title="{{ $category->name }}"
                     
                 <x-sidebar-category />
           @foreach ($announcements as $announcement)
-          <x-card
-           .announcement="$announcement"
+          <x-card 
+           :announcement="$announcement"
             /> 
           @endforeach
           

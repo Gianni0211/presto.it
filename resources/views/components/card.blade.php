@@ -1,5 +1,4 @@
-@props([
- 
+@props([ 
  'announcement'
 ])
 
@@ -9,7 +8,11 @@
   <div class="col-6 col-md-4 p-3">
     <div class="card neumorphism">
       <div class="ofs-img-effect">
-        <img class="card-img-top img-size" src="" alt="Card image cap">
+        @if(Count($announcement->images)>0)
+        <img class="card-img-top img-size" src="{{ Storage::url($announcement->images[0]->file)}}" alt="Card image cap">
+        @else
+        <img class="card-img-top img-size" src="{{ asset ('/media/prova.png')}}" alt="Card image cap">
+        @endif
       </div>
       <div class="card-body">
         <h4 class="card-title mb-0">

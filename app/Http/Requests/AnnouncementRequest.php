@@ -26,7 +26,6 @@ class AnnouncementRequest extends FormRequest
         return [
             'title' => "required|max:120|min:3",
             'body' => "required|max:1000|min:10",
-            'img' => 'required',
             'price' => "required",
         ];
     }
@@ -41,7 +40,7 @@ class AnnouncementRequest extends FormRequest
             'body.max' => "La descrizione è troppo lunga",
             'body.min' => "La descrizione è troppo corta",
             'price.required' => "Il prezzo è obbligatorio",
-            'img.required' => "L'immagine è obbligatoria"
+          
         ]; 
     }
 }

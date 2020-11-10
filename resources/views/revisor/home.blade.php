@@ -15,7 +15,7 @@
                     <div class="col-6 text-right">
                              
                                
-                                    <a class="btn btn-success" href="{{route('revisor.undo')}}">annulla annuncio #{{ session()->get('lastAnnouncemetRevsioned')[count(session()->get('lastAnnouncemetRevsioned'))-1]  }}</a>
+                                    <a class="btn btn-success" href="{{route('revisor.undo')}}">annulla annuncio</a>
                                 
                               
                             </div>
@@ -51,15 +51,11 @@
                         </div>
 
                         <div class="row pt-5 ">
-                            <div class="col-4">
-                                <img src="https://picsum.photos/200/200">
-                            </div>
-                            <div class="col-4">
-                                <img src="https://picsum.photos/200/200">
-                            </div>
-                            <div class="col-4">
-                                <img src="https://picsum.photos/200/200">
-                            </div>
+                        @foreach($announcement->images as $image)
+                          <div>
+                          <img src="{{ Storage::url($image->file)}}" alt="porco" class="img-fluid p-5" >
+                          </div>
+                          @endforeach
                         </div>
 
 
@@ -92,7 +88,7 @@
         <div class="col-6 text-right">
                              
                                
-                             <a class="btn btn-success" href="{{route('revisor.undo')}}">annulla annuncio #{{ session()->get('lastAnnouncemetRevsioned')[count(session()->get('lastAnnouncemetRevsioned'))-1]  }}</a>
+                             <a class="btn btn-success" href="{{route('revisor.undo')}}">annulla annuncio</a>
                          
                        
                      </div>
