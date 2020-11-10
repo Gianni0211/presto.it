@@ -176,7 +176,7 @@ class AnnouncementController extends Controller
           $uniqueSecret = $request->input("iniqueSecret");
 
           $images = session()->get("images.{$uniqueSecret}", []);
-          $removedImages = session()->get("removedImages.{$uniqueSecret}", []);
+          $removedImages = session()->get("remuvedImages.{$uniqueSecret}", []);
 
           $images = array_diff($images, $removedImages);
 

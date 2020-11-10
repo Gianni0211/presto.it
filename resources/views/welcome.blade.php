@@ -39,7 +39,7 @@
                 <input
                 type="text"
                 class="form-control"
-                placeholder="Cerca per parola ..."
+                placeholder="{{ __('ui.searchFor') }} "
                 name="q"
                 kl_vkbd_parsed="true"
                 />
@@ -47,7 +47,7 @@
             </div>
             <div class="col-lg-2 form-group overflow-hidden">
               <button type="submit" class="submit-btn">
-                <i class="fas fa-search txt-shadow"></i> <span class="txt-shadow">cerca</span> 
+                <i class="fas fa-search txt-shadow"></i> <span class="txt-shadow">{{ __('ui.search') }}</span> 
               </button>
             </div>
           </div>
