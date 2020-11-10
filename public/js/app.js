@@ -43811,7 +43811,10 @@ module.exports = function(module) {
   !*** ./resources/js/announcementImage.js ***!
   \*******************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"),
+    unique = _require.unique;
 
 $(function () {
   if ($("#drophere").length > 0) {
@@ -43823,7 +43826,25 @@ $(function () {
         _token: csrfToken,
         uniqueSecret: uniqueSecret
       },
-      addRemoveLinks: true
+      addRemoveLinks: true,
+      init: function init() {
+        $.ajax({
+          type: 'GET',
+          url: '/announcement/images',
+          data: {
+            uniqueSecret: uniqueSecret
+          },
+          dataType: 'json'
+        }).done(function (data) {
+          $.each(data, function (key, value) {
+            var file = {
+              serverId: value.id
+            };
+            myDropzone.options.addedfile.call(myDropzone, file);
+            myDropzone.options.thumbnail.call(myDropzone, file, value.src);
+          });
+        });
+      }
     });
     myDropzone.on("success", function (file, response) {
       file.serverId = response.id;
@@ -43979,8 +44000,8 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\ste_f\wa\presto.it_404\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\ste_f\wa\presto.it_404\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
