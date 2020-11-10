@@ -21,7 +21,7 @@
     'title'
 
 ])
-<header class="header-page text-white">
+<header class="header-page text-white ">
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-12 text-center">
