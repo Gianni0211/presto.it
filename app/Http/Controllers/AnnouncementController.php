@@ -145,7 +145,7 @@ class AnnouncementController extends Controller
 
       public function imagesUpload(Request $request)
       {
-        $uniqueSecret = $request->input('uniqueSecret');
+        $uniqueSecret = $request->input("uniqueSecret");
         $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");  
         session()->push("images.{$uniqueSecret}", $fileName);
     
@@ -158,7 +158,7 @@ class AnnouncementController extends Controller
 
       public function  imagesRemuve(Request $request)
       {
-        $uniqueSecret = $request->input('uniqueSecret');
+        $uniqueSecret = $request->input("uniqueSecret");
         $fileName = $request->input('id');
 
         session()->push("remuvedImages.{$uniqueSecret}", $fileName);
@@ -171,10 +171,12 @@ class AnnouncementController extends Controller
 
       public function getImages(Request $request)
       {
-          $uniqueSecret = $request->input('uniqueSecret');
+
+        
+          $uniqueSecret = $request->input("iniqueSecret");
 
           $images = session()->get("images.{$uniqueSecret}", []);
-          $removedImages = session()->get("removedimages.{$uniqueSecret}", []);
+          $removedImages = session()->get("removedImages.{$uniqueSecret}", []);
 
           $images = array_diff($images, $removedImages);
 
