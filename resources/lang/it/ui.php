@@ -4,13 +4,22 @@ return [
 
  //Vista welcome
 
- 'welcome' => 'Benvenuti in presto.it',
+
  'mostPopular' => 'In evidenza',
  'categories' => 'Categorie',
  'explore' => 'Esplora le nostre sezioni',
  'add' => 'inserisci annuncio',
   'signIn' => 'Accedi',
-   'signUp' => 'Registrati'
+   'signUp' => 'Registrati',
+
+   // barra di ricerca
+   'searchFor' => 'Cerca per parola',
+   
+   'search' => 'Cerca',
+
+   //carta
+   'published' => 'Publiccato il',
+   'user' => 'Utente',
 
    //Fine welcome
 

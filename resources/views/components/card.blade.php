@@ -30,10 +30,10 @@
               <i class="fas fa-map-marker-alt"></i> Città
             </div>
             <div class="small p-1">
-              <i class="far fa-calendar-alt"></i> Pubblicato il <span class="font-italic">{{ $announcement->created_at->format('d/m/y')  }}</span>
+              <i class="far fa-calendar-alt"></i> {{ __('ui.published') }} <span class="font-italic">{{ $announcement->created_at->format('d/m/y')  }}</span>
             </div>
             <div class="small p-1">
-              <i class="fas fa-user"></i> Utente: <span class="font-italic"> {{ $announcement->user->name  }}</span>
+              <i class="fas fa-user"></i> {{ __('ui.user') }}: <span class="font-italic"> {{ $announcement->user->name  }}</span>
             </div>
           </div>
           <a href="#" class="btn">&euro; {{ $announcement->price }}</a>
