@@ -23,7 +23,7 @@ class PublicController extends Controller
     {
     
         $q = $request->input('q');
-        $announcements = Announcement::search($q)->get();
+        $announcements = Announcement::search($q)->where('is_accepted',1)->get();
         return view('search', compact('q','announcements'));
 
     }
