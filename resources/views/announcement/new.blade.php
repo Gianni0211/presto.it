@@ -20,10 +20,20 @@
               @if (Session::has('message'))
                 <div class="alert alert-success">{{ session('message') }}</div>
             @endif
-      
+
+
+
+          {{-- schifo di prova --}}
+         
+
+
+
+
             <form method="POST" action="{{ route('announcement.store') }}" enctype="multipart/form-data">
-               @csrf 
-    
+               @csrf
+                 
+               <h1>{{ $uniqueSecret }}</h1>
+
                <input type="hidden" name="uniqueSecret" value="{{ $uniqueSecret }}">
 
                <div class="form-group">
@@ -35,17 +45,19 @@
                   <label>Descrizione</label>
                   <textarea name="body" id="body" class="form-control">{{ old('body') }}</textarea>
                 </div>
-                
+
                 <div class="form-group mt-3">
                   <label>Inserisci immagini</label>
                   <div class="dropzone" id="drophere"></div>
 
-           
+                  <input type="file" value="{{ old('img') }}" name="img" >
+
+                </div>
                 <div class="form-group mt-3">
                   <label>Inserisci il prezzo</label>
 
                   <input type="number" value="{{ old('price') }}" name="price" >
-                  
+
                 </div>
 
                 <div class="form-group mt-3">
@@ -57,14 +69,14 @@
                        >{{ $category->name }}</option>
                      @endforeach
                   </select>
-                   
+
                   @error('category_id')
                    <span class="invalid-feedback" role="alert">
                      <strong>{{ $message }}</strong>
                    </span>
                   @enderror
                 </div>
-                
+
 
 
                 <button type="submit" class="my-3 bg-orange text-white">Inserisci annuncio</button>
