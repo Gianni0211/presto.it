@@ -1,5 +1,5 @@
 
-<nav id="navbar" class="navbar fixed-top  navbar-expand-lg bg-white">
+<nav id="navbar" class="navbar fixed-top navbar-expand-lg bg-white">
     
         <a class="navbar-brand mt-3 mt-md-0 ml-5" href="{{ url('/') }}">
           <h1 class="logo">PRESTO.IT</h1>
@@ -13,7 +13,7 @@
 
 {{-- modale categorie --}}
 
-        <div class="collapse navbar-collapse" id="#exampleModalCenter">
+        <div class="collapse navbar-collapse mr-0" id="#exampleModalCenter">
             <a type="button" class="nav-link txtTitle" data-toggle="modal" data-target="#exampleModalCenter">
             <i class="fas fa-tags"></i>{{ __('ui.categories') }}</a>
         </div>
@@ -21,11 +21,11 @@
 
     <!-- Right Side Of Navbar -->
 
-        <ul class="navbar-nav ml-auto pl-md-5 col-12 col-md-4">
+        <ul class="navbar-nav ml-auto pl-md-5 col-12 col-md-4 align-items-center text-left m-0 d-flex justify-content-left">
 
-                <ul class="navbar-nav mr-right mb-2 mb-md-0">
+                <ul class="navbar-nav mr-right mb-md-0">
                     <li class="nav-item mr-3">
-                        <a class="nav-link bg-yellow text-white rounded btn-hover text-center" href="{{ route('announcement.new') }}">{{ __('ui.add') }}  <i class="fas fa-plus"></i></a>
+                        <a class="nav-link bg-yellow text-white rounded btn-hover text-center lead" href="{{ route('announcement.new') }}">{{ __('ui.add') }}  {{-- <i class="fas fa-plus"></i> --}}</a>
                     </li>
                 </ul>
 
@@ -48,7 +48,7 @@
                          <form action="{{ route('local' ,'it') }}" method="POST">
                 @csrf
                 <button type="submit" class="nav-link" style="background-color:transparent; border:none; ">
-                <span class="flag-icon flag-icon-it"></span>
+                <span class="flag-icon flag-icon-it mr-2"></span>
                 </button>
                 
                 </form>

@@ -11,7 +11,7 @@
     </div>
     <div class="bg-light1 p-3">
         <div class="border-bottom mb-4">
-            <p class="font-italic h3 text-md-center">Inserzionista</p>
+            <p class="font-italic h3 text-md-center">{{ __('ui.utente') }}</p>
         </div>
         <div class="d-block mx-auto text-md-center ">
             <div>
@@ -26,7 +26,7 @@
                   <i class="fas fa-map-marker-alt"></i> Città
                 </div>
                 <div class=" p-1">
-                  <i class="far fa-calendar-alt"></i> Pubblicato il {{ $announcement->created_at->format('d/m/y') }}
+                  <i class="far fa-calendar-alt"></i> {{ __('ui.publicato') }} {{ $announcement->created_at->format('d/m/y') }}
                 </div>
                 <div class=" p-1">
                     <i class="fas fa-bullhorn"></i> 
