@@ -23,4 +23,11 @@ return [
 
    //Fine welcome
 
+   //news letter 
+'register' => 'Iscriviti a presto.it',
+ 'news' => 'Riceverai tutte le news su nuovi annunci e offerte dedicate a te',
+ 'newsletter' => 'Registrati alla newsletter',
+ 'email' => 'Inserisci la tua email',
+   
+
 ];

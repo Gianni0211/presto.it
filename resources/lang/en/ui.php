@@ -22,4 +22,10 @@ return [
  'user' => 'User',
 
  //Fine vista welcome
+
+ //news letter 
+ 'register' => 'Register to presto.it',
+ 'news' => 'You will get all the news on the announcements relevant to you',
+ 'newsletter' => 'Register to the newsletter',
+ 'email' => 'Insert your email'
 ];

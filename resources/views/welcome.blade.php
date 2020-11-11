@@ -118,17 +118,17 @@
       <div class="container">
         <div class="row py-2">
           <div class="col-12 col-lg-12 text-center heading">
-            <h3 class="title"> Iscriviti a presto.it</h3>
+            <h3 class="title"> {{ __('ui.register') }}</h3>
         
-            <p class="title-desc">Riceverai tutte le news su nuovi annunci e offerte dedicate a te</p>
+            <p class="title-desc">{{ __('ui.news') }}</p>
           </div>
         </div>
         <div class="row p-3">
           <div class="col-12 col lg-12 align-items-center rounded-0">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Inserisci la tua e-mail" aria-label="Inserisci la tua e-mail" aria-describedby="basic-addon2">
+              <input type="text" class="form-control" placeholder="{{ __('ui.email') }}" aria-label="Inserisci la tua e-mail" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn text-white btn-iscriviti" type="button">Iscriviti alla newsletter</button>
+                <button class="btn text-white btn-iscriviti" type="button">{{ __('ui.newsletter') }}</button>
               </div>
             </div>
           </div>
