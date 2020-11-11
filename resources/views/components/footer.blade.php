@@ -49,7 +49,7 @@
         </div> 
 
         <div class="col-4 col-md-4 col-lg-4 col-xl-4 mb-3">
-          <h4 class="text-uppercase font-weight-bold mb-4 title-primary">Servizi</h4>
+          <h4 class="text-uppercase font-weight-bold mb-4 title-primary">{{ __('ui.service') }}</h4>
           <p>
             <a class="a linkReset" href="#">Inserisci annuncio</a>
           </p>
@@ -65,7 +65,7 @@
         </div>
         
         <div class="col-4 col-md-4 col-lg-4 col-xl-4 mb-3">
-          <h4 class="text-uppercase font-weight-bold mb-4 title-primary">Assistenza</h4>
+          <h4 class="text-uppercase font-weight-bold mb-4 title-primary">{{ __('ui.help') }}</h4>
           <p>
             <a class="a linkReset" href="#">Domande frequenti</a>
           </p>

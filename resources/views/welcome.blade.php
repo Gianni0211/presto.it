@@ -118,7 +118,7 @@
       <div class="container">
         <div class="row py-2">
           <div class="col-12 col-lg-12 text-center heading">
-            <h3 class="title"> {{ __('ui.register') }}</h3>
+            <h3 class="title"> {{ __('ui.signup') }}</h3>
         
             <p class="title-desc">{{ __('ui.news') }}</p>
           </div>
