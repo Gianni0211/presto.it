@@ -44000,8 +44000,8 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/macbookpro/wa/hack18/presto.it_404/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\luigi\wa\presto.it_404\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\luigi\wa\presto.it_404\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

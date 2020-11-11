@@ -93,8 +93,8 @@ class AnnouncementController extends Controller
 
             $i->save();
         }
-session()->forget("images.{$uniqueSecret}","remuvedImages.{$uniqueSecret}");
-
+        
+        session()->forget("images.{$uniqueSecret}","remuvedImages.{$uniqueSecret}");
         return redirect(route('home'))->with('message', "il tuo post è stato aggiunto all' elenco");
     }
 
