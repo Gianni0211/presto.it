@@ -11399,7 +11399,7 @@ a.nav-dettagli {
   height: 30vh;
   background: linear-gradient(black, rgba(1, 0, 0, 0.5), lightgrey), url(/media/bg-header.jpg);
   background-size: cover;
-  background-position: center;
+  -background-position: center;
   background-repeat: no-repeat;
 }
 

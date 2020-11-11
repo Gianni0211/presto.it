@@ -14,6 +14,6 @@
         <i class="fas fa-building fa-stack-1x text-white"></i>
       </span>
       <p class="mt-3 mb-1 txt-shadow">{{ $name }}</p>
-      <p class="text-white font-weight-bold"><span class="font-italic">Annunci:</span> {{ $count }}</p> 
+      <p class="text-white font-weight-bold"><span class="font-italic">{{ __('ui.annunci') }}:</span> {{ $count }}</p> 
     </a>
 </div>
