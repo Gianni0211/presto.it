@@ -12,6 +12,10 @@ return [
    'signIn' => 'Accedi',
    'signUp' => 'Registrati',
    'annunci' => 'Annunci',
+   'payOf' => 'Il migiore sito di annunci',
+
+    //registrati
+ 'Name' => 'Nome',
 
    // barra di ricerca
    'searchFor' => 'Cerca per parola',

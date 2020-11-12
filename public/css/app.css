@@ -11580,6 +11580,16 @@ h1.logo {
   color: var(--title);
 }
 
+input.input-search {
+  width: 80% !important;
+  height: 50px !important;
+}
+
+button.btn-search {
+  width: 20% !important;
+  height: 50px !important;
+}
+
 /*
  * The MIT License
  * Copyright (c) 2012 Matias Meno <m@tias.me>

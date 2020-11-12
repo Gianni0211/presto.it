@@ -15,7 +15,7 @@
 
         <div class="collapse navbar-collapse mr-0" id="#exampleModalCenter">
             <a type="button" class="nav-link txtTitle" data-toggle="modal" data-target="#exampleModalCenter">
-            <i class="fas fa-tags"></i>{{ __('ui.categories') }}</a>
+            <i class="fas fa-tags"></i> {{ __('ui.categories') }}</a>
         </div>
 
 

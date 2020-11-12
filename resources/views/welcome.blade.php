@@ -13,27 +13,33 @@
         </div>
       @endif
 
-        <img src="{{ asset ('/media/prova.png') }}" alt="" class="img-fluid" width="150">
-        <h1 class="title-primary font-weight-bold display-4 logo txt-shadow mb-5 d-inline" > presto.it </h1>
+        
+        <h1 class=" text-white font-weight-bold display-4 txt-shadow mb-5 d-inline" > {{ __('ui.payOf') }}</h1>
       
-      <div class="search-box-layout1 mt-4">
-        <form method="GET" action="{{ route('search') }}">
-          <div class="row no-gutters justify-content-center align-items-center">
+      <div class="search-box-layout1 mt-5 rounded">
+        <form class="form-inline" method="GET" action="{{ route('search') }}">
+          <input class="form-control input-search" name="q" type="search" placeholder="{{ __('ui.searchFor') }}" aria-label="Search">
+          <button class="bg-orange my-2 my-sm-0 btn-search text-white border-0 rounded" type="submit">
+            <i class="fas fa-search txt-shadow"></i> <span class="txt-shadow">{{ __('ui.search') }}</span>
+          </button>
+        </form>
+        {{-- <form method="GET" action="{{ route('search') }}">
+          <div class="row no-gutters justify-content-center align-items-center"> --}}
             
 
-      <!-- Button trigger modal -->
+        <!-- Button trigger modal -->
 
-            <div class="dropdown input-search-btn">
+            {{-- <div class="dropdown input-search-btn">
                <button type="button" class="btn btn-white mx-5 font-weight-bold text-muted" data-toggle="modal" data-target="#exampleModalCenter">
                 <i class="fas fa-tags"></i>
                 {{ __('ui.categories') }}
                 </button>
-            </div>
+            </div> --}}
 
             
 
 
-            <div class="col-lg-4 form-group">
+            {{-- <div class="col-lg-4 form-group">
               <div class="input-search-btn search-keyword">
                 <i class="fas fa-text-width"></i>
                 <input
@@ -51,7 +57,7 @@
               </button>
             </div>
           </div>
-        </form>
+        </form> --}}
       </div>
 
     </div>
@@ -113,7 +119,8 @@
       </section>
       </div>
     </div>
-
+    
+    {{-- newsletter --}}
     <div class="container-fluid subscribe p-5 h-100">
       <div class="container">
         <div class="row py-2">
