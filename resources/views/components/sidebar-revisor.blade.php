@@ -15,14 +15,14 @@
             </div>
             <div class="text-left mt-4">
                 <div class=" p-1">
-                    <i class="far fa-envelope font-weight-bold"></i></i> Email: <span class="font-italic small"><a class="text-decoration-none title-primary hover-a" href="mailto:{{$announcement->user->email}}">{{$announcement->user->email}}</a>  </span>
+                    <i class="far fa-envelope font-weight-bold"></i></i><span class="font-weight-bold"> Email:</span> <span class="font-italic"><a class="text-decoration-none txtTitle hover-a" href="mailto:{{$announcement->user->email}}">{{$announcement->user->email}}</a>  </span>
                 </div>
                 <div class=" p-1">
-                  <i class="far fa-calendar-alt font-weight-bold"></i> {{ __('ui.publicato') }}: <span class="font-italic"> {{ $announcement->created_at->format('d/m/y')}} </span>
+                  <i class="far fa-calendar-alt font-weight-bold"></i><span class="font-weight-bold"> {{ __('ui.publicato') }}:</span> <span class="font-italic"> {{ $announcement->created_at->format('d/m/y')}} </span>
                 </div>
                 
                 <div class="p-1 mt-2">
-                    <i class="fas fa-user-check"></i> <p class="lead d-inline">Affidabilità:</p>
+                    <i class="fas fa-user-check"></i> <p class="lead d-inline"><span class="font-weight-bold">Affidabilità:</span></p>
                     <i class="fas fa-star star" aria-hidden="true"></i>
                     <i class="fas fa-star star" aria-hidden="true"></i>
                     <i class="fas fa-star star" aria-hidden="true"></i>
