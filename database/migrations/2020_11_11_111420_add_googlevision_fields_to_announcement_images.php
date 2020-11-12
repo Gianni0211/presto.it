@@ -15,7 +15,7 @@ class AddGooglevisionFieldsToAnnouncementImages extends Migration
     {
         Schema::table('announcement_images', function (Blueprint $table) {
             $table->text('labels')->nullable();
-            $table->string('audlt')->nullable();
+            $table->string('adult')->nullable();
             $table->string('spoof')->nullable();
             $table->string('medical')->nullable();
             $table->string('violence')->nullable();

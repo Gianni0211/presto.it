@@ -2,8 +2,9 @@
 
 namespace App\Jobs;
 
-use Illuminate\Bus\Queueable;
 use App\Models\hp ;
+use Illuminate\Bus\Queueable;
+use App\Models\AnnouncementImages;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -11,7 +12,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
-class GoogleVisionImage implements ShouldQueue
+class GoogleVisionSafeSearchImage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -40,26 +41,26 @@ class GoogleVisionImage implements ShouldQueue
         if(!$i){return;}
         $image=file_get_contents(storage_path('/app/'. $i->file));
 
-        putenv('GOOGLE_APPLICATION_CGRDENTIALS=' . base_path('google_credential.json'));
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
         $imageAnnotator=new ImageAnnotatorClient();
-        $response=$imageAnnotator->safeSerchDetection($image);
+        $response=$imageAnnotator->safeSearchDetection($image);
         $imageAnnotator->close();
 
         $safe=$response->getSafeSearchAnnotation();
     
-        $audlt=$safe->getAdult();
+        $adult=$safe->getAdult();
         $spoof=$safe->getSpoof();
         $medical=$safe->getMedical();
         $violence=$safe->getViolence();
         $racy=$safe->getRacy();
 
-        echo json_encode([$audlt, $spoof,$medical,$violence,$racy]);
+        
         $likelihoodName=[
             'UNKNOW','VERY_UNLIKELY','UNLIKELY','POSSIBLE','LIKELY','VERY_LIKELY'
         ];
 
-         $i->audlt=$likelihoodName[$audlt];
+         $i->adult=$likelihoodName[$adult];
          $i->spoof=$likelihoodName[$spoof];
          $i->medical=$likelihoodName[$medical];
          $i->violence=$likelihoodName[$violence];

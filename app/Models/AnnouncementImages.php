@@ -9,8 +9,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class AnnouncementImages extends Model
 {
-    use HasFactory;
 
+    
+    use HasFactory;
+    protected $casts = ['labels' => 'array'];
 
     
     protected $fillable = [

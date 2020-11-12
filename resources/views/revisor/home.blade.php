@@ -2,7 +2,7 @@
 
 <x-app>
 
-    <x-header title="Forse  il tuo annuncio" />
+    <x-header title="Annuncio da revisionare" />
 
 @if($announcement)
     <div class="container my-5 py-5">
@@ -51,11 +51,45 @@
                         </div>
 
                         <div class="row pt-5 ">
-                        @foreach($announcement->images as $image)
-                          <div>
-                          <img src="{{ $image->getUrl(300,150)}}" alt="porco" class="img-fluid p-5" >
-                          </div>
-                          @endforeach
+
+                  
+                                @foreach($announcement->images as $image)
+                       
+                                    <div class="col-6">
+                                      
+                                        <img src="{{ $image->getUrl(300,150)}}" alt="Sto elaborando le immagini" class="img-fluid p-5" >
+                                       
+                                    </div>
+                                    <div class="col-6">
+                                    <div class="row pt-5 ">
+                                    <div class="col-6">
+                                        <ul >
+                                            <li class="d-flex flex-direction-row">  Adult :    <div class="semaforo {{ $image->adult }}"> </div></li>
+                                            <li class="d-flex flex-direction-row">  Spoof :     <div class="semaforo {{ $image->spoof }}"> </div></li>
+                                            <li class="d-flex flex-direction-row">  Medical :    <div class="semaforo {{ $image->medical }}"> </div></li>
+                                            <li class="d-flex flex-direction-row">  Violence :      <div class="semaforo {{ $image->violence }}"> </div></li>
+                                            <li class="d-flex flex-direction-row">    Racy :     <div class="semaforo {{ $image->racy }}"> </div>  </li>
+                                        </ul>
+                            
+                                        </div>
+                                         <div class="col-6">
+                                   
+                                    @if ($image->labels)
+                                           
+                                            @foreach ($image->labels as $label)
+
+                                           
+                                                <span class="badge badge-pill badge-warning">{{ $label }}</span>
+                                            @endforeach
+                                           
+                                        @endif
+                                        </div >
+                                        </div >
+                                        </div >
+                                  
+                                @endforeach
+
+                                
                         </div>
 
 

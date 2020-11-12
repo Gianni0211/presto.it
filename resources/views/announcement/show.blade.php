@@ -10,8 +10,7 @@
     <div class="row">
         <div class="col-12 col-md-12 col-lg-9 ">
           
-            
-            
+                    
             <div class="body-ann">
             
                 <!-- slick carousel  -->
@@ -22,32 +21,18 @@
                            
                           @foreach($announcement->images as $image)
                           <div>
-                          <img src="{{ $image->getUrl(900,600) }}" alt="porco" class="img-fluid" >
+                          <img src="{{ $image->getUrl(900,600) }}" alt="image" class="img-fluid" >
                           </div>
                           @endforeach
-
-
-                            
-                            
-                            
-                         
+                     
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="slider-nav mt-4">
                               @foreach($announcement->images as $image)
                                 <div class="px-3">
-                                <img src="{{ $image->getUrl(300,150) }}" alt="porco" class="img-fluid" >
-                                </div>
-                                @endforeach
-
-
-                           
-                           
-                            
-                            
-                            
-                            
+                                              
+                                @endforeach     
                         </div>
 
                     </div>
@@ -109,9 +94,6 @@
                           <h2 class="txtTitle font-italic h1 text-center">{{__('ui.correlati')}}</h2>
                         </div>
                       </div>
-                      
-
-
 
                       <div class="row flex-nowrap overflow-auto px-5">
                         

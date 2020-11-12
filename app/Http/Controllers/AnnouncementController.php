@@ -8,10 +8,12 @@ use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use App\Models\AnnouncementImages;
+use App\Jobs\GoogleVisionLableImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Storage;
+use App\Jobs\GoogleVisionSafeSearchImage;
 use App\Http\Requests\AnnouncementRequest;
 
 class AnnouncementController extends Controller
@@ -88,10 +90,15 @@ class AnnouncementController extends Controller
                 600
             ));
 
+            
+
             $i->file = $newfileName;
             $i->announcement_id=$a->id;
 
             $i->save();
+
+            dispatch(new GoogleVisionSafeSearchImage($i->id));
+            dispatch(new GoogleVisionLableImage($i->id));
         }
         
         session()->forget("images.{$uniqueSecret}","remuvedImages.{$uniqueSecret}");
