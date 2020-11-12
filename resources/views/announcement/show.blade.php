@@ -38,18 +38,8 @@
                               @foreach($announcement->images as $image)
                                 <div class="px-3">
 
-                                  Adult : {{ $image->audlt }} <br>
-                                  Racy: {{ $image->racy }}
-                                <img src="{{ $image->getUrl(300,150) }}" alt="porco" class="img-fluid" >
-                                </div>
-
-                                @if ($image->labels)
-                                <ul>
-                                  @foreach ($image->labels as $label)
-                                      <li> Labels: {{ $label }}</li>
-                                  @endforeach
-                                </ul>
-                                @endif
+                                 
+                                
                                 @endforeach
 
 

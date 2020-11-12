@@ -55,6 +55,20 @@
                           <div>
                           <img src="{{ $image->getUrl(300,150)}}" alt="porco" class="img-fluid p-5" >
                           </div>
+                          Adult : {{ $image->adult }} <br>
+                          Spoof : {{ $image->spoof }} <br>
+                          Medical : {{ $image->medical }} <br>
+                          Violence : {{ $image->violence }} <br>
+                          Racy : {{ $image->racy }} <br>
+
+                          @if ($image->labels)
+                                <ul>
+                                  @foreach ($image->labels as $label)
+                                      <li> Labels: {{ $label }}</li>
+                                  @endforeach
+                                </ul>
+                             @endif
+                          
                           @endforeach
                         </div>
 
