@@ -44,4 +44,5 @@ return [
  'correlati' => 'Related ads',
  'utente' => 'User',
  'publicato' => 'Published on',
+
 ];

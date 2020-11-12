@@ -23,41 +23,7 @@
             <i class="fas fa-search txt-shadow"></i> <span class="txt-shadow">{{ __('ui.search') }}</span>
           </button>
         </form>
-        {{-- <form method="GET" action="{{ route('search') }}">
-          <div class="row no-gutters justify-content-center align-items-center"> --}}
-            
-
-        <!-- Button trigger modal -->
-
-            {{-- <div class="dropdown input-search-btn">
-               <button type="button" class="btn btn-white mx-5 font-weight-bold text-muted" data-toggle="modal" data-target="#exampleModalCenter">
-                <i class="fas fa-tags"></i>
-                {{ __('ui.categories') }}
-                </button>
-            </div> --}}
-
-            
-
-
-            {{-- <div class="col-lg-4 form-group">
-              <div class="input-search-btn search-keyword">
-                <i class="fas fa-text-width"></i>
-                <input
-                type="text"
-                class="form-control"
-                placeholder="{{ __('ui.searchFor') }} "
-                name="q"
-                kl_vkbd_parsed="true"
-                />
-              </div>
-            </div>
-            <div class="col-lg-2 form-group overflow-hidden">
-              <button type="submit" class="submit-btn">
-                <i class="fas fa-search txt-shadow"></i> <span class="txt-shadow">{{ __('ui.search') }}</span> 
-              </button>
-            </div>
-          </div>
-        </form> --}}
+        
       </div>
 
     </div>

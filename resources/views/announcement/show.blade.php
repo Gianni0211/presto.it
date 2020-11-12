@@ -66,7 +66,7 @@
                     <section id="overflowSlider" class="w-100">
                               <div class="row py-5">
                                   <div class="col">
-                                      <h2 class="txtTitle font-italic h1 text-center">annunci correlati</h2>
+                                      <h2 class="txtTitle font-italic h1 text-center">{{ __('ui.correlati') }}</h2>
                                   </div>
                               </div>
                               
