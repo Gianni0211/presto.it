@@ -15,7 +15,7 @@
 
         <div class="collapse navbar-collapse mr-0" id="#exampleModalCenter">
             <a type="button" class="nav-link txtTitle" data-toggle="modal" data-target="#exampleModalCenter">
-            <i class="fas fa-tags"></i>{{ __('ui.categories') }}</a>
+            <i class="fas fa-tags"></i> {{ __('ui.categories') }}</a>
         </div>
 
 
@@ -72,8 +72,9 @@
                 @else
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item mr-3">
-                <a  href="{{ route('revisor.home') }}" >
-                <span class="badge badge-pill badge-warning d-none d-md-inline">{{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
+                <a  href="{{ route('revisor.home') }}" class="text-decoration-none" >
+                    <span class="badge badge-pill badge-warning d-none d-md-inline title-primary">
+                        <i class="fas fa-bell title-primary"></i> {{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
                 </a>
                 </li>
                 @endif

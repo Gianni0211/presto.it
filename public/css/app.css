@@ -11383,8 +11383,6 @@ div#modList .modListActions span.fa-stack:hover i.fa-stack-1x {
   border-bottom: none;
 }
 
-/*USER PAGE ALY*/
-
 a.nav-description {
   background-color: var(--title) !important;
   color: #ffffff !important;
@@ -11395,7 +11393,7 @@ a.nav-dettagli {
 }
 
 .header-page {
-  margin-top: 100px;
+  margin-top: 80px;
   height: 30vh;
   background: linear-gradient(black, rgba(1, 0, 0, 0.5), lightgrey), url(/media/bg-header.jpg);
   background-size: cover;
@@ -11580,6 +11578,16 @@ h1.logo {
   color: var(--title);
 }
 
+input.input-search {
+  width: 80% !important;
+  height: 50px !important;
+}
+
+button.btn-search {
+  width: 20% !important;
+  height: 50px !important;
+}
+
 .UNKNOW {
   background-color: #757575;
 }
@@ -11605,9 +11613,9 @@ h1.logo {
 }
 
 .semaforo {
-  border-radius: 10%;
+  border-radius: 50%;
   height: 20px;
-  width: 20px;
+  widows: 2px;
 }
 
 /*

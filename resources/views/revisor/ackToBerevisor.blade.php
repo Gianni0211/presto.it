@@ -17,7 +17,7 @@ title="Unisciti al nostro team"
 
             <textarea name="message" id="body" rows="10" cols="50" class="form-control">{{ old('body') }}</textarea>
 
-            <button type="submit" class="my-3 nav-link bg-yellow text-white rounded btn-hover text-center">invia la tua richiesta</button>
+            <button type="submit" class="my-3 nav-link bg-yellow text-white rounded btn-hover text-center">Invia la tua richiesta</button>
 
               </form>
         </div>

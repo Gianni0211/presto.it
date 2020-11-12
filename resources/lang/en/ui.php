@@ -11,7 +11,11 @@ return [
  'add' => 'Add Announcement',
  'signIn' => 'Sign in',
  'signUp' => 'Register',
- 'annunci' => 'Ads',
+ 'annunci' => 'Announcements',
+ 'payOf' => 'The best announcements site',
+
+ //registrati
+ 'Name' => 'Name',
 
  //barra di ricerca
  'searchFor' => 'Search by word',

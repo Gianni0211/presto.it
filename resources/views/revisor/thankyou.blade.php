@@ -2,7 +2,7 @@
 
 <x-header 
 
-title="Forse  il tuo annuncio"
+title="Il tuo annuncio"
 
 />
 <div class="container my-5 py-5">

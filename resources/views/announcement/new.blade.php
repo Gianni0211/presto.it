@@ -48,15 +48,15 @@
 
                 <div class="form-group mt-3">
                   <label>Inserisci immagini</label>
-                  <div class="dropzone" id="drophere"></div>
+                  <div class="dropzone" id="drophere" class="rounded"></div>
 
-                  <input type="file" value="{{ old('img') }}" name="img" >
+                  {{-- <input type="file" value="{{ old('img') }}" name="img" > --}}
 
                 </div>
                 <div class="form-group mt-3">
                   <label>Inserisci il prezzo</label>
 
-                  <input type="number" value="{{ old('price') }}" name="price" >
+                  <input type="number" value="{{ old('price') }}" name="price" class="rounded" >
 
                 </div>
 
@@ -79,7 +79,7 @@
 
 
 
-                <button type="submit" class="my-3 bg-orange text-white">Inserisci annuncio</button>
+                <button type="submit" class=" mt-5 my-3 bg-yellow text-white py-2 px-3 border-0 rounded">Inserisci annuncio</button>
 
               </form>
         </div>

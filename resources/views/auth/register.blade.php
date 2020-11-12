@@ -1,6 +1,6 @@
 <x-app>
     <div class="container top py-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center align-items-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="header-login font-italic">{{ __('Registrati su presto.it') }}</div>
@@ -10,7 +10,7 @@
                             @csrf
                             
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
                                 
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -73,6 +73,6 @@
         </div>
     </div>
 
-<div style="margin-top: 95px"></div>
+<div style="margin-top: 170px"></div>
 </x-app>
 

@@ -490,8 +490,6 @@ div#modList .modListActions span.fa-stack:hover i.fa-stack-1x {
     border-bottom: none;
 }
 
-/*USER PAGE ALY*/
-
 a.nav-description {
     background-color: var(--title) !important;
     color: #ffffff !important;
@@ -502,7 +500,7 @@ a.nav-dettagli {
 }
 
 .header-page {
-    margin-top: 100px;
+    margin-top: 80px;
     height: 30vh;
     background: linear-gradient(black, rgb(0.5 0 0.2 / 0.5), lightgrey),
         url(/media/bg-header.jpg);
@@ -668,28 +666,38 @@ h1.logo {
     font-family: "Cabin Sketch", cursive;
     color: var(--title);
 }
-.UNKNOW{
+
+input.input-search {
+    width: 80% !important;
+    height: 50px !important;
+}
+
+button.btn-search {
+    width: 20% !important;
+    height: 50px !important;
+}
+
+.UNKNOW {
     background-color: #757575;
 }
-.VERY_UNLIKELY{
+.VERY_UNLIKELY {
     background-color: #00ff6a;
 }
-.UNLIKELY{
+.UNLIKELY {
     background-color: #1e4d31;
 }
-.POSSIBLE{
+.POSSIBLE {
     background-color: #ffd001;
 }
-.LIKELY{
+.LIKELY {
     background-color: #c9720f;
 }
-.VERY_LIKELY{
+.VERY_LIKELY {
     background-color: #ff0000;
 }
 
-.semaforo{
-    border-radius:10%;
+.semaforo {
+    border-radius: 50%;
     height: 20px;
-    width: 20px;
-
+    widows: 2px;
 }

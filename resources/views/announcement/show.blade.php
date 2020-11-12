@@ -11,6 +11,78 @@
       <div class="col-12 col-md-12 col-lg-9 ">
         
           
+                    
+            <div class="body-ann">
+            
+                <!-- slick carousel  -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="slider-for">
+                        
+                           
+                          @foreach($announcement->images as $image)
+                          <div>
+                          <img src="{{ $image->getUrl(900,600) }}" alt="image" class="img-fluid" >
+                          </div>
+                          @endforeach
+                     
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="slider-nav mt-4">
+                              @foreach($announcement->images as $image)
+                                <div class="px-3">
+                                              
+                                @endforeach     
+                        </div>
+
+                    </div>
+                </div>
+                {{-- end slick carouserl --}}
+                
+                
+                <div class="row p-3 my-4">
+                    <h3 class="title-primary">{{ $announcement->title }}</h3>
+                    <p class="lead mt-3">
+                        {{ $announcement->body }}
+                    </p> 
+                </div>
+
+            </div>
+            
+            {{-- <div class="description mt-5">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active nav-description" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                        aria-selected="true">Dettagli annuncio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-dettagli" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                        aria-selected="false">Dettagli</a>
+                    </li>
+                </ul>
+                <div class="tab-content p-2 mt-3" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <p class="lead">
+                            probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
+                            cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                            keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip
+                            placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi
+                            qui.
+                        </p> 
+                        <p class="lead">
+                            probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
+                            cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                            keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip
+                            placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi
+                            qui.
+                        </p> 
+
+                </div>
+
+                    </div> --}}
+                        
+            {{-- </div>
           
           <div class="body-ann">
           
