@@ -11383,8 +11383,6 @@ div#modList .modListActions span.fa-stack:hover i.fa-stack-1x {
   border-bottom: none;
 }
 
-/*USER PAGE ALY*/
-
 a.nav-description {
   background-color: var(--title) !important;
   color: #ffffff !important;
@@ -11395,7 +11393,7 @@ a.nav-dettagli {
 }
 
 .header-page {
-  margin-top: 100px;
+  margin-top: 80px;
   height: 30vh;
   background: linear-gradient(black, rgba(1, 0, 0, 0.5), lightgrey), url(/media/bg-header.jpg);
   background-size: cover;

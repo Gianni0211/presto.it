@@ -73,7 +73,8 @@
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item mr-3">
                 <a  href="{{ route('revisor.home') }}" >
-                <span class="badge badge-pill badge-warning d-none d-md-inline">{{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
+                    <span class="badge badge-pill badge-warning d-none d-md-inline title-primary">
+                        <i class="fas fa-bell title-primary"></i> {{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
                 </a>
                 </li>
                 @endif
