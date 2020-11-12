@@ -13,6 +13,8 @@
     --maxLineH: 1.6rem; /* ca. 26 px */
 }
 
+
+
 body {
     // line-height: var(--minLineH);
     // font-size: var(--minText);
@@ -667,4 +669,31 @@ ul {
 h1.logo {
     font-family: "Cabin Sketch", cursive;
     color: var(--title);
+}
+
+
+.UNKNOW{
+    background-color: #757575;
+}
+.VERY_UNLIKELY{
+    background-color: #00ff6a;
+}
+.UNLIKELY{
+    background-color: #1e4d31;
+}
+.POSSIBLE{
+    background-color: #ffd001;
+}
+.LIKELY{
+    background-color: #c9720f;
+}
+.VERY_LIKELY{
+    background-color: #ff0000;
+}
+
+.semaforo{
+    border-radius:50%;
+    height: 20px;
+    widows: 2px;
+
 }
