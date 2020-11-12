@@ -25,7 +25,7 @@ use App\Http\Controllers\AnnouncementController;
 
 Auth::routes();
 
-Route::get('/', [PublicController::class, 'index'])->name('home');//Ti porta a welcom
+Route::get('/', [PublicController::class, 'index'])->name('home');//Ti porta a welcome
 
 Route::get('/announcement/new', [AnnouncementController::class, 'create'])->name('announcement.new')->middleware('auth');
 

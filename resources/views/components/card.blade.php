@@ -33,9 +33,6 @@
         <div class="d-flex align-items-center justify-content-between">
           <div>
             <div class="small p-1">
-              <i class="fas fa-map-marker-alt"></i> Città
-            </div>
-            <div class="small p-1">
               <i class="far fa-calendar-alt"></i> {{ __('ui.published') }} <span class="font-italic">{{ $announcement->created_at->format('d/m/y')  }}</span>
             </div>
             <div class="small p-1">

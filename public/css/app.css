@@ -11618,6 +11618,10 @@ button.btn-search {
   widows: 2px;
 }
 
+a.hover-a:hover {
+  color: var(--accent) !important;
+}
+
 /*
  * The MIT License
  * Copyright (c) 2012 Matias Meno <m@tias.me>

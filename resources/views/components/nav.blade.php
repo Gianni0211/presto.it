@@ -2,7 +2,7 @@
 <nav id="navbar" class="navbar fixed-top navbar-expand-lg bg-white">
     
         <a class="navbar-brand mt-3 mt-md-0 ml-5" href="{{ url('/') }}">
-          <h1 class="logo">PRESTO.IT</h1>
+          <h1 class="logo txt-shadow">Presto.it</h1>
         </a>
         
 
@@ -98,8 +98,8 @@
                     </a>
                     @else
                
-                    <a class="dropdown-item" href="{{ route('revisor.home') }}"
-                    >Annunci in sospeso <span class="badge badge-pill badge-warning">{{\App\Models\Announcement::ToBeRevisionedCount()}}</span>
+                    <a class="dropdown-item text-decoration-none" href="{{ route('revisor.home') }}"
+                    >Annunci in sospeso <span class="badge badge-pill badge-warning title-primary"><i class="fas fa-bell title-primary"></i> {{\App\Models\Announcement::ToBeRevisionedCount()}}</span>
                     </a>
                     @endif
                     

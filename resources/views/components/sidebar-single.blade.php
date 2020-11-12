@@ -23,9 +23,6 @@
             </div>
             <div class="text-left mt-4">
                 <div class=" p-1">
-                  <i class="fas fa-map-marker-alt"></i> Città
-                </div>
-                <div class=" p-1">
                   <i class="far fa-calendar-alt"></i> {{ __('ui.publicato') }} {{ $announcement->created_at->format('d/m/y') }}
                 </div>
                 <div class=" p-1">

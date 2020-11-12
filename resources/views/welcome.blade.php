@@ -14,7 +14,7 @@
       @endif
 
         
-        <h1 class=" text-white font-weight-bold display-4 txt-shadow mb-5 d-inline" > {{ __('ui.payOf') }}</h1>
+        <h1 class=" text-white font-weight-bold display-4 txt-shadow mb-5 d-inline txt-shadow" > {{ __('ui.payOf') }}</h1>
       
       <div class="search-box-layout1 mt-5 rounded">
         <form class="form-inline" method="GET" action="{{ route('search') }}">
@@ -119,7 +119,7 @@
       </section>
       </div>
     </div>
-    
+
     {{-- newsletter --}}
     <div class="container-fluid subscribe p-5 h-100">
       <div class="container">

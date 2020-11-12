@@ -2,12 +2,12 @@
 
 <x-app>
 
-    <x-header title="Annuncio da revisionare" />
+    <x-header title="Annunci da revisionare" />
 
 @if($announcement)
     <div class="container my-5 py-5">
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-md-12 col-md-12 col-lg-8">
 
 
                 <div class="card">
@@ -94,7 +94,7 @@
 
 
 
-                        <div class="row pt-5">
+                        {{-- <div class="row pt-5">
                             <div class="col-6">
                                 <form action="{{route('revisor.reject',$announcement->id)}}" method="POST">
                                     @csrf
@@ -105,30 +105,41 @@
                             <div class="col-6 text-right">
                                 <form action="{{route('revisor.accept',$announcement->id)}}" method="POST">
                                     @csrf
-                                    <button type="submit" class="btn btn-success">accetta</button>
+                                    <button type="submit" class="btn btn-success">Accetta</button>
                                 </form>
                               
                             </div>
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>
             </div>
+            <x-sidebar-revisor
+                :announcement="$announcement"
+            />
         </div>
     </div>
 @else
-    <h3>
-        noncisono annunci 
-        <div class="col-6 text-right">
-                             
-                               
-                             <a class="btn btn-success" href="{{route('revisor.undo')}}">annulla annuncio</a>
-                         
-                       
-                     </div>
-    </h3>
+    
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="font-italic text-center">Complimenti, hai finito di revisionare tutti gli annunci.</h3>
+            <div class="mt-5">
+                <p class="lead d-inline mr-4">Se per errore hai accettato un annuncio e vuoi annullare l'operazione</p>
+                <a class="bg-orange py-2 px-3 text-decoration-none text-white rounded" href="{{route('revisor.undo')}}">Annulla annuncio</a>
+            </div>
+            <div class="mt-5">
+                <a href="{{route('home')}}" class="text-decoration-none title-primary hover-a">Altrimenti torna alla home</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-3 col-xl-3">
+        </div>
+    </div>
+</div>
+
 @endif
 
 
-
+<div style="margin-top:120px;"></div>
 </x-app>
