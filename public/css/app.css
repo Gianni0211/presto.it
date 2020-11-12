@@ -11580,36 +11580,6 @@ h1.logo {
   color: var(--title);
 }
 
-.UNKNOW {
-  background-color: #757575;
-}
-
-.VERY_UNLIKELY {
-  background-color: #00ff6a;
-}
-
-.UNLIKELY {
-  background-color: #1e4d31;
-}
-
-.POSSIBLE {
-  background-color: #ffd001;
-}
-
-.LIKELY {
-  background-color: #c9720f;
-}
-
-.VERY_LIKELY {
-  background-color: #ff0000;
-}
-
-.semaforo {
-  border-radius: 50%;
-  height: 20px;
-  widows: 2px;
-}
-
 /*
  * The MIT License
  * Copyright (c) 2012 Matias Meno <m@tias.me>

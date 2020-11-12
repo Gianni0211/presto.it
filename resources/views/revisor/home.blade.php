@@ -64,11 +64,11 @@
                                     <div class="row pt-5 ">
                                     <div class="col-6">
                                         <ul >
-                                            <li class="d-flex flex-direction-row">  Adult :    <div class="semaforo {{ $image->adult }}"> </div></li>
-                                            <li class="d-flex flex-direction-row">  Spoof :     <div class="semaforo {{ $image->spoof }}"> </div></li>
-                                            <li class="d-flex flex-direction-row">  Medical :    <div class="semaforo {{ $image->medical }}"> </div></li>
-                                            <li class="d-flex flex-direction-row">  Violence :      <div class="semaforo {{ $image->violence }}"> </div></li>
-                                            <li class="d-flex flex-direction-row">    Racy :     <div class="semaforo {{ $image->racy }}"> </div>  </li>
+                                            <li class="semaforo {{ $image->adult }}" >  Adult :   </li>
+                                            <li class="semaforo {{ $image->spoof }}">  Spoof :    </li>
+                                            <li class="semaforo {{ $image->medical }}">  Medical : </li>
+                                            <li class="semaforo {{ $image->violence }}">  Violence :     </li>
+                                            <li class="semaforo {{ $image->racy }}">    Racy :    </li>
                                         </ul>
                             
                                         </div>
