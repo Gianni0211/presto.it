@@ -12,6 +12,7 @@ use App\Jobs\GoogleVisionLableImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\View;
+use App\Jobs\GoogleVisionRemoveFaces;
 use Illuminate\Support\Facades\Storage;
 use App\Jobs\GoogleVisionSafeSearchImage;
 use App\Http\Requests\AnnouncementRequest;
@@ -97,8 +98,12 @@ class AnnouncementController extends Controller
 
             $i->save();
 
-            dispatch(new GoogleVisionSafeSearchImage($i->id));
-            dispatch(new GoogleVisionLableImage($i->id));
+            GoogleVisionSafeSearchImage::withChain([
+                new GoogleVisionLableImage($i->id),
+                new GoogleVisionRemoveFaces($i->id),
+                new ResizeImage($i->file, 300, 150),
+                new ResizeImage($i->file, 900, 600)
+            ])->dispatch($i->id);
         }
         
         session()->forget("images.{$uniqueSecret}","remuvedImages.{$uniqueSecret}");
