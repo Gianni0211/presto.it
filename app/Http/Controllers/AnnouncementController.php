@@ -81,16 +81,7 @@ class AnnouncementController extends Controller
             $newfileName= "public/announcementes/{$a->id}/{$fileName}";
             Storage::move($image,$newfileName);
 
-            dispatch(new ResizeImage(
-                $newfileName,
-                300,
-                150
-            ));
-            dispatch(new ResizeImage(
-                $newfileName,
-                900,
-                600
-            ));
+           
 
             
 
