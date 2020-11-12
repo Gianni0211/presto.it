@@ -637,7 +637,7 @@ a#navbarDropdown {
 .category-box-layout2 .item-heading-area {
     display: block;
     padding: 1.25rem 1.25rem 0.9375rem 1.875rem;
-    background-color: #f5f7fa;
+    background-color: var(--title);
     border-bottom: 0.0625rem solid #d8d8d8;
 }
 
@@ -696,11 +696,11 @@ button.btn-search {
     background-color: #ff0000;
 }
 
-.semaforo {
-    border-radius: 50%;
-    height: 20px;
-    widows: 2px;
-}
+// .semaforo {
+//     border-radius: 50%;
+//     height: 20px;
+//     widows: 2px;
+// }
 
 a.hover-a:hover {
     color: var(--accent) !important;
