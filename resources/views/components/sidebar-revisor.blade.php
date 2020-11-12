@@ -32,30 +32,5 @@
             
         </div>
     </div>
-            {{-- <div class="d-block mx-auto">
-                        <div class="row pt-5">
-                            <div class="col-12 w-100">
-                                <form action="{{route('revisor.accept',$announcement->id)}}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Accetta annuncio</button>
-                                </form>
-                              
-                            </div>
-                            {{-- <div class="col-12 w-100">
-                                <form action="{{route('revisor.reject',$announcement->id)}}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn badge-warning text-white"><i class="fas fa-undo-alt"></i> Annulla annuncio</button>
-                                </form>
-                           
-                            </div> --}}
-                            {{-- <div class="col-12 w-100">
-                                <form action="{{route('revisor.reject',$announcement->id)}}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i> Rifiuta annuncio</button>
-                                </form>
-                           
-                            </div>
-                        </div> --}}
-    
-            {{-- </div>  --}}
+
 </div>

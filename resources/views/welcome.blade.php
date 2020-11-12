@@ -23,7 +23,6 @@
             <i class="fas fa-search txt-shadow"></i> <span class="txt-shadow">{{ __('ui.search') }}</span>
           </button>
         </form>
-
       </div>
 
     </div>
@@ -61,7 +60,7 @@
 
 
 
-{{-- SEZIONE NEWS LETTER --}}
+{{-- SEZIONE card annunci --}}
 
     <div class="container-fluid py-3 overflowSliderBG">
       <div class="container">
