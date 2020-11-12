@@ -45,5 +45,5 @@ return [
    //annuncio
  'correlati' => 'Annunci correlati',
  'utente' => 'Inserzionista',
- 'publicato' => 'Publicato il',
+ 'publicato' => 'Data pubblicazione',
 ];
