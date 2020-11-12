@@ -95,7 +95,7 @@ class AnnouncementController extends Controller
                 new GoogleVisionRemoveFaces($i->id),
                 new AddWaterMark($i->id),
                 new ResizeImage($i->file, 300, 150),
-                new ResizeImage($i->file, 900, 600)
+                new ResizeImage($i->file, 700, 400)
             ])->dispatch($i->id);
         }
         

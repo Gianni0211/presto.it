@@ -14,11 +14,7 @@
         <img class="card-img-top img-size" src="{{ asset ('/media/prova.png')}}" alt="Card image cap">
         @endif
 
-      {{--   @foreach ($announcement->images as $image)
-
-        <img src="{{ $image->getUrl(300,150) }}" class="rounded float-right" alt="">
-            
-        @endforeach --}}
+      
       </div>
       <div class="card-body">
         <h4 class="card-title mb-0">

@@ -5,13 +5,6 @@
 title="{{ $category->name }}"
 
 />
-    {{-- <div class="container my-5 py-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
-                <h1>Annunci per categoria: {{ $category->name }}</h1>
-            </div>
-        </div>
-    </div> --}}
     
     
     <div class="container-fluid py-3 overflowSliderBG">{{--  fix carta categorie --}}
