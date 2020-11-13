@@ -45,14 +45,14 @@ title="{{ $category->name }}"
         </div>
         <div class="col-12 col-md-9">
             
-                <div class="row">
-                    @foreach ($announcements as $announcement)
-                    <x-category-card 
-                     :announcement="$announcement"
-                      /> 
-                    @endforeach
-                  </div>
-           
+          <div class="row">
+              @foreach ($announcements as $announcement)
+              <x-card 
+               :announcement="$announcement"
+                /> 
+              @endforeach
+            </div>
+          
         </div>
     </div>
 </div>

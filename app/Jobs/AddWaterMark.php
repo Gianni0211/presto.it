@@ -46,6 +46,10 @@ class AddWaterMark implements ShouldQueue
             $image=Image::load($srcPath);
             $image->watermark(base_path('resources/img/marker.png'))
             ->watermarkPosition('top-left');
+            // ->watermarkPadding(10, 10);
+            // ->watermarkWidth(20,Manipulations::UNIT_PIXELS)
+            // ->watermarkHeight(20,Manipulations::UNIT_PIXELS)
+            // ->watermarkFit(Manipulations::FIT_STRETCH);
            
            
             $image->save($srcPath);

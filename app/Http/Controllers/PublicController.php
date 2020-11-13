@@ -23,8 +23,20 @@ class PublicController extends Controller
     {
     
         $q = $request->input('q');
+        
+        
         $announcements = Announcement::search($q)->where('is_accepted',1)->get();
+        
+        if (count($announcements) == 0) {
+            
+            $announcements = Announcement::where('is_accepted',1)->orderBy('created_at', 'desc')->take(5)->get();
+        
+            $q = 'Non ci sono risultati per : '. $q; 
+        }
+    
         return view('search', compact('q','announcements'));
+
+        
 
     }
 
