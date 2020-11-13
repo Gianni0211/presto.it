@@ -90,7 +90,17 @@
                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                       </a>
+
+
+
+                      <a class="dropdown-item" href="{{ route('ann.for.user', ['user_id'=>Auth::user()->id ]) }}"
+                        >
+                        i tuoi annunci
+                      </a>
                        
+
+
+
 
                     @if (!Auth::user()->is_revisor)
                     <a class="dropdown-item" href="{{ route('revisor.toBerevisor') }}">

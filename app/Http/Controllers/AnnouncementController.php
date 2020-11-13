@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\User;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
 use App\Jobs\AddWaterMark;
@@ -100,7 +101,8 @@ class AnnouncementController extends Controller
         }
         
         session()->forget("images.{$uniqueSecret}","remuvedImages.{$uniqueSecret}");
-        return redirect(route('home'))->with('message', "il tuo post è stato aggiunto all' elenco");
+
+        return redirect(route('components.thankyouP'))->with('message', "il tuo post è stato aggiunto all' elenco");
     }
 
     /**
@@ -213,6 +215,21 @@ class AnnouncementController extends Controller
 
           return response()->json($data);
       }
+
+
+      public function thankyouP() {
+
+        return view('components.thankyouP')->with('message', "il tuo annuncio è in fase di elaborazione, sarà disponibile non appena verrà rivisionato.");
+
+      }
+
+
+      public function annForUserId($user_id)
+    {
+       $announcements = User::find($user_id)->announcements;
+
+       return view('announcement.annUser', compact('announcements'));
+    }
 
 }
 

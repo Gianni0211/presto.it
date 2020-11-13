@@ -81,4 +81,10 @@ Route::get('/announcement/{announcement}', [AnnouncementController::class, 'show
 
 
 
+Route::get('/components/thankyouP', [AnnouncementController::class, 'thankyouP'])->name('components.thankyouP');
+
+Route::get('/ann/user/{user_id}', [AnnouncementController::class, 'annForUserId'])->name('ann.for.user');
+
+
+
 
