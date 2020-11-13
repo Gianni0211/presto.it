@@ -28,9 +28,9 @@
                   
                                 @foreach($announcement->images as $image)
                        
-                                    <div class="col-6">
+                                    <div class="col-6 mt-4">
                                       
-                                        <img src="{{ $image->getUrl(300,150)}}" alt="Sto elaborando le immagini" class="img-fluid p-3" >
+                                        <img src="{{ $image->getUrl(300,150)}}" alt="Sto elaborando le immagini" class="img-fluid" >
                                        
                                     </div>
                                     <div class="col-6">
@@ -108,7 +108,7 @@
             <p class="lead text-center mt-4">Complimenti, hai finito di revisionare tutti gli annunci.</p>
 
             <div class="mt-5 text-center">
-                <a href="{{route('home')}}" class="text-decoration-none text-white py-2 px-3 bg-orange btn-hoverh3">Torna alla home</a>
+                <a href="{{route('home')}}" class="text-decoration-none text-white py-2 px-3 bg-orange btn-hoverh3 rounded">Torna alla home</a>
             </div>
         </div>
         <div class="col-12 col-md-3 col-xl-3">
