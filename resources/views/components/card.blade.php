@@ -14,22 +14,18 @@
         <img class="card-img-top img-size" src="{{ asset ('/media/prova.png')}}" alt="Card image cap">
         @endif
 
-      {{--   @foreach ($announcement->images as $image)
-
-        <img src="{{ $image->getUrl(300,150) }}" class="rounded float-right" alt="">
-            
-        @endforeach --}}
+      
       </div>
       <div class="card-body">
         <h4 class="card-title mb-0">
-          <a href="{{ route('announcement.show', ['announcement' => $announcement]) }}" class="linkReset">{{ $announcement->title }}</a>
+          <a href="{{ route('announcement.show', ['announcement' => $announcement]) }}" class="linkReset">{{  Str::limit($announcement->title, 15, $end='...') }}</a>
         </h4>
         <span class="small text-uppercase">
           <a href="{{ route('category.announcements',[
             $announcement->category->name,
             $announcement->category->id]) }}" class="linkReset font-weight-bold">{{ $announcement->category->name }}</a>
         </span>
-        <p class="card-text py-3 pt-4 lead">{{  Str::limit($announcement->body, 50, $end='...') }}</p>
+        <p class="card-text py-3 pt-4 lead">{{  Str::limit($announcement->body, 25, $end='...') }}</p>
         <div class="d-flex align-items-center justify-content-between">
           <div>
             <div class="small p-1">
