@@ -4,7 +4,7 @@
 <header class="header overlay">
   <div class="container-fluid h-100">
     <div class="row h-100 justify-content-center align-items-center">
-      <div class="col-7 col-md-6 text-center text-white">
+      <div class="col-12 col-md-6 text-center text-white">
         
       
       @if(session('access.denied.revisor.only'))
@@ -13,14 +13,14 @@
         </div>
       @endif
 
-      <img src="{{ asset('/media/logo-bianco.png')}}" alt="" class="img-fluid" width="150">
-        <h1 class=" text-white font-weight-bold txt-shadow mb-5 d-inline txt-shadow title" > {{ __('ui.payOf') }}</h1>
+      <img src="{{ asset('/media/logo-bianco.png')}}" alt="" class="img-fluid d-inline" width="150">
+        <h1 class=" text-white font-weight-bold txt-shadow mb-5 txt-shadow title" > {{ __('ui.payOf') }}</h1>
       
       <div class="search-box-layout1 mt-5 rounded">
         
         <form class="form-inline" method="GET" action="{{ route('search') }}">
           <input class="form-control input-search" name="q" type="search" placeholder="{{ __('ui.searchFor') }}" aria-label="Search">
-          <button class="bg-orange my-2 my-sm-0 btn-search text-white border-0 rounded" type="submit">
+          <button class="bg-orange my-sm-0 btn-search text-white border-0 rounded" type="submit">
             <i class="fas fa-search txt-shadow"></i> <span class="txt-shadow">{{ __('ui.search') }}</span>
           </button>
         </form>
@@ -66,7 +66,7 @@
     <div class="container-fluid py-3 overflowSliderBG">
       <div class="container">
 
-      <section id="overflowSlider" class="w-100">
+      <section id="overflowSlider" class="w-100 mb-5">
         <div class="row py-5">
           <div class="col">
             <h2 class="txtTitle font-italic h1 text-center">{{ __('ui.mostPopular') }}</h2>
@@ -87,7 +87,7 @@
     </div>
 
     {{-- newsletter --}}
-    <div class="container-fluid subscribe p-5 h-100">
+    {{-- <div class="container-fluid subscribe p-5 h-100">
       <div class="container">
         <div class="row py-2">
           <div class="col-12 col-lg-12 text-center heading">
@@ -108,7 +108,7 @@
         </div>
         
       </div>
-      </div>
+      </div> --}}
     </div>
     </div>
 

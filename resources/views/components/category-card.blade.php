@@ -5,7 +5,7 @@
         'categoryId'
 ])
 
-<div class="col-9 col-md-2 mx-1 my-3">
+<div class="col-12 col-lg-2 mx-1 my-3">
     <a href="{{ route('category.announcements',[
             $categoryName,
             $categoryId]) }}" class="d-block w-100 h-100 neumorphism singleCategory bg-{{ $name }}">

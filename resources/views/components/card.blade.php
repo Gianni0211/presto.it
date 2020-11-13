@@ -5,7 +5,7 @@
 
 
 {{-- II CARD --}}
-  <div class="col-6 col-md-4 p-3">
+  <div class="col-12 col-md-4 p-3">
     <div class="card neumorphism">
       <div class="ofs-img-effect">
         @if(Count($announcement->images)>0)

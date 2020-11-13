@@ -17,7 +17,7 @@ namespace App\Http\Controllers;
 
         public function index()
         {
-             session()->push('lastAnnouncemetRevsioned',0);
+        // session()->forget("lastAnnouncemetRevsioned");
             $announcement= Announcement::where('is_accepted',null)
             ->orderBy('created_at','desc')
             ->first();
@@ -53,9 +53,11 @@ namespace App\Http\Controllers;
 
         if(session()->get('lastAnnouncemetRevsioned')){
 
-        
+     
             $lastAnnouncemetRevsioned=session()->get('lastAnnouncemetRevsioned');
          
+         
+         //dd($lastAnnouncemetRevsioned);
             $count = count($lastAnnouncemetRevsioned)-1;
             $idAnnouncement=$lastAnnouncemetRevsioned[$count];
 

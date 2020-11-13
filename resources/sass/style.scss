@@ -31,12 +31,14 @@ input:focus {
 
 .img-size {
     /* custom class for fixed sizing of the card img */
-    height: 250px;
-    max-height: 250px;
+
 }
 
 /* ============== MEDIA QUERY ================== */
 /* Rimesse in alto per sovrascriverle più facilmente */
+
+
+
 
 @media screen and (min-width: 576px) {
     body {
@@ -50,6 +52,22 @@ input:focus {
         );
     }
 }
+@media screen and (max-width: 576) {
+    .langNone{
+    display: none !important;
+    }
+    h1.title {
+        font-size: 45px !important;
+    }
+    input.input-search {
+        width: 100% !important;
+    }
+    button.btn-search {
+        width: 100% !important;
+        height: 40px !important;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     body {
         line-height: var(--maxLineH);
@@ -208,7 +226,6 @@ a.singleCategory {
     color: inherit;
     text-decoration: none;
     transition: 0.2s;
-    width: 125% !important;
 }
 @media screen and (min-width: 319px) {
     section#HomeCategories div.col-sm-3 {
@@ -679,21 +696,27 @@ button.btn-search {
 
 .UNKNOW {
     background-color: #757575;
+    width: 0%;
 }
 .VERY_UNLIKELY {
     background-color: #00ff6a;
+    width: 20%;
 }
 .UNLIKELY {
     background-color: #1e4d31;
+    width: 40%;
 }
 .POSSIBLE {
     background-color: #ffd001;
+    width: 60%;
 }
 .LIKELY {
     background-color: #c9720f;
+    width: 80%;
 }
 .VERY_LIKELY {
     background-color: #ff0000;
+    width: 100%;
 }
 
 // .semaforo {
@@ -708,4 +731,9 @@ a.hover-a:hover {
 
 h1.title {
     font-size: 50px;
+}
+
+.awesome-menu {
+    color: var(--title);
+    border: 1px solid var(--title);
 }

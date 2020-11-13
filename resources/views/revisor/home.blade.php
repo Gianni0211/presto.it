@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="card-header">
 
-                        <h2 class=""><span class="font-weight-bold">Titolo:</span> {{$announcement->title}}</h2>
+                        <h2 class=""><span class="font-weight-bold">Titolo:</span> #{{$announcement->id}} : {{$announcement->title}}</h2>
                     </div>
 
 
@@ -38,20 +38,20 @@
                                     
                                         <div>
                                             <div>Adult: <span class="progress">
-                                                <div class="progress-bar progress-bar-striped {{ $image->adult }}" role="progressbar" style="width: 25%"></div>
+                                                <div class="progress-bar progress-bar-striped {{ $image->adult }}" role="progressbar" ></div>
                                               </span>
                                             </div>
                                             <div>Spoof: <span class="progress">
-                                                <div class="progress-bar progress-bar-striped {{ $image->spoof }}" role="progressbar" style="width: 25%"></div>
+                                                <div class="progress-bar progress-bar-striped {{ $image->spoof }}" role="progressbar" ></div>
                                             </div>
                                             <div>Medical:<span class="progress">
-                                                <div class="progress-bar progress-bar-striped {{ $image->medical }}" role="progressbar" style="width: 25%"></div>
+                                                <div class="progress-bar progress-bar-striped {{ $image->medical }}" role="progressbar"></div>
                                             </div>
                                             <div>Violence:<span class="progress">
-                                                <div class="progress-bar progress-bar-striped {{ $image->violence }}" role="progressbar" style="width: 25%"></div>
+                                                <div class="progress-bar progress-bar-striped {{ $image->violence }}" role="progressbar" ></div>
                                             </div>
                                             <div>Racy:<span class="progress">
-                                                <div class="progress-bar progress-bar-striped {{ $image->racy }}" role="progressbar" style="width: 25%"></div>
+                                                <div class="progress-bar progress-bar-striped {{ $image->racy }}" role="progressbar" ></div>
                                             </div>
                                         </div>
                             
@@ -82,7 +82,7 @@
                             @csrf
                             <button type="submit" class="btn btn-success txt-shadow"><i class="fas fa-check"></i> Accetta annuncio</button>
                     </form>
-                    <form action="{{route('revisor.undo',$announcement->id)}}" method="POST">
+                    <form action="{{route('revisor.undo',$announcement->id)}}" method="GET">
                         @csrf
                         <button type="submit" class="btn bg-orange text-white txt-shadow"><i class="fas fa-undo-alt"></i> Annulla annuncio</button>
                     </form>
