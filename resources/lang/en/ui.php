@@ -45,4 +45,19 @@ return [
  'utente' => 'User',
  'publicato' => 'Published on',
 
+ //sidebar categorie
+
+ 'contact' => 'Contact the advertiser',
+
+ //pagina di creazione 
+
+ 'create' => 'Create your announcement',
+ 'announcementName' => 'Name of the announcement',
+ 'description' => 'Description',
+ 'insertImages' => 'Insert images',
+ 'insertPrice' => 'Insert price',
+ 'chooseCat' => 'Scegli la categoria',
+ 'insertLocation' => 'Insert the location',
+ 'insertAnnouncement' => 'Insert announcement',
+
 ];

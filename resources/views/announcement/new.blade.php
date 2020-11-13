@@ -2,7 +2,7 @@
 
 <x-app>
 
-<x-header  title="Crea il tuo annuncio" />
+<x-header  title="{{ __('ui.create') }}" />
 
 <div class="container my-5 py-5">
     <div class="row justify-content-center">
@@ -37,31 +37,31 @@
                <input type="hidden" name="uniqueSecret" value="{{ $uniqueSecret }}">
 
                <div class="form-group">
-                  <label for="exampleInputEmail1">Nome dell' annuncio</label>
+                  <label for="exampleInputEmail1">{{ __('ui.announcementName') }}</label>
                    <input name="title" value="{{ old('title') }}" type="text" id="title" class="form-control">
               </div>
 
                 <div class="form-group mt-3">
-                  <label>Descrizione</label>
+                  <label>{{ __('ui.description') }}</label>
                   <textarea name="body" id="body" class="form-control">{{ old('body') }}</textarea>
                 </div>
 
                 <div class="form-group mt-3">
-                  <label>Inserisci immagini</label>
+                  <label>{{ __('ui.insertImages') }}</label>
                   <div class="dropzone" id="drophere" class="rounded"></div>
 
                   {{-- <input type="file" value="{{ old('img') }}" name="img" > --}}
 
                 </div>
                 <div class="form-group mt-3">
-                  <label>Inserisci il prezzo</label>
+                  <label>{{ __('ui.insertPrice')}}</label>
 
                   <input type="number" value="{{ old('price') }}" name="price" class="rounded" >
 
                 </div>
 
                 <div class="form-group mt-3">
-                   <label>Scegli la categoria</label>
+                   <label>{{ __('ui.chooseCat') }}</label>
                    <select class="form-control" value="{{ old('category_id') }}"  name="category_id" id="category">
                      @foreach ($categories as $category)
                       <option value="{{ $category->id }}"
@@ -77,13 +77,13 @@
                   @enderror
                 </div>
                 <div class="form-group mt-3">
-                <label>Inserisci il luogo</label>
+                <label>{{ __('ui.insertLocation') }}</label>
                 <input type="search" id="address" class="form-control" placeholder="Where are we going?" />
                 <p>Selected: <strong id="address-value">none</strong></p>
                 </div>
 
 
-                <button type="submit" class=" mt-5 my-3 bg-yellow text-white py-2 px-3 border-0 rounded">Inserisci annuncio</button>
+                <button type="submit" class=" mt-5 my-3 bg-yellow text-white py-2 px-3 border-0 rounded">{{ __('ui.insertAnnouncement') }}</button>
 
               </form>
         </div>

@@ -46,4 +46,19 @@ return [
  'correlati' => 'Annunci correlati',
  'utente' => 'Inserzionista',
  'publicato' => 'Data pubblicazione',
+
+ //sidebar categorie
+
+ 'contact' => 'Contatta inserzionista',
+
+ //pagina di creazione 
+
+ 'create' => 'Crea il tuo annuncio',
+ 'announcementName' => 'Nome dell\' annuncio',
+ 'description' => 'Descrizione',
+ 'insertImages' => 'Inserisci immagini',
+ 'insertPrice' => 'Inserisci il prezzo',
+ 'chooseCat' => 'Scegli la categoria',
+ 'insertLocation' => 'Inserisci il la località',
+ 'insertAnnouncement' => 'Inserisci annuncio',
 ];
