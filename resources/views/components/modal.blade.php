@@ -8,7 +8,7 @@
     
     <div class="modal-content">
       <div class="modal-header bg-orange">
-        <h5 class="modal-title text-white text-uppercase offset-3 font-italic font-weight-bold"></i>seleziona la categoria</h5>
+        <h5 class="modal-title text-white text-uppercase offset-3 font-italic font-weight-bold"></i>{{ __('ui.chooseCat') }}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -22,7 +22,7 @@
         @endforeach
       </div>
       <div class="modal-footer">
-        <button type="button" class="bg-yellow border-0 text-white p-2" data-dismiss="modal">Chiudi</button>
+        <button type="button" class="bg-yellow border-0 text-white p-2" data-dismiss="modal">{{ __('ui.close') }}</button>
       </div>
     </div>
   </div>

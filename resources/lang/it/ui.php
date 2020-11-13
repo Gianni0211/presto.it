@@ -61,4 +61,22 @@ return [
  'chooseCat' => 'Scegli la categoria',
  'insertLocation' => 'Inserisci il la località',
  'insertAnnouncement' => 'Inserisci annuncio',
+
+ // vista cerca
+
+ 'results' => 'Risultati Ricerca per:',
+
+ //modale 
+ 'close' => 'Chiudi',
+
+ //footer 
+
+ 'aboutUs' => 'Il miglior sito di annunci sul territorio nazionale. Su Presto si possono trovare i più affidabili inserzionisti presenti su internet.',
+
+ 'manage' => 'Gestione annunci',
+ 'promote' => 'Promuovi annuncio',
+ 'rules' => 'Regole di pubblicazione',
+ 'faq' => 'Domande frequenti',
+ 'contactUs' => 'Contattaci',
+ 'copy' => 'presto.it - Tutti i diritti riservati. Privacy Policy. Cookie Policy.',
 ];

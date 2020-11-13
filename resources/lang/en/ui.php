@@ -60,4 +60,24 @@ return [
  'insertLocation' => 'Insert the location',
  'insertAnnouncement' => 'Insert announcement',
 
+ // vista cerca
+
+ 'results' => 'Risult Search for:',
+
+ //modale 
+ 'close' => 'Close',
+
+  'aboutUs' => 'The best announcements\' website in the nation. On Presto you can find the most reliable announcements on the internet.',
+  'manage' => 'Manage your announcements',
+  'promote' => 'Promote announcement',
+  'rules' => 'Rules for publishing',
+  'faq' => 'FAQ',
+  'contactUs' => 'Contact Us',
+  'copy' => 'presto.it - All rights reserved.
+  Privacy Policy. Cookie Policy.'
+
+
+
+ 
+
 ];
