@@ -52,9 +52,11 @@ class Announcement extends Model
           return $this->hasMany(AnnouncementImages::class);
       }
 
-      static public function ToBeRevisionedCount () {
+      static public function ToBeRevisionedCount() {
 
         return Announcement::where('is_accepted',null)->count();
 
       }
+
+     
 }

@@ -44,11 +44,9 @@
                     <i class="fas fa-phone-volume text-white"></i><a href="#" class="text-white rounded text-decoration-none"> +39 3439374638</a>
                 </div>
                 <div class="btn-border py-4">
-                    <i class="fas fa-envelope title-secondary"></i> <a href="#" class="title-secondary rounded text-decoration-none accent"> Contatta inserzionista</a>
+                    <i class="fas fa-envelope title-secondary"></i> <a href="#" class="title-secondary rounded text-decoration-none accent"> {{ __('ui.conatact') }}</a>
                 </div>
         </div>
     </div>
-    {{-- <div class="row cta-sidebar mt-4 text-center ">
-
-    </div> --}}
+  
 </div>

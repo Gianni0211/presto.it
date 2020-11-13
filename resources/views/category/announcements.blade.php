@@ -25,7 +25,7 @@ title="{{ $category->name }}"
             <div class="category-box-layout2">
                 <div class="item-heading-area">
                     
-                    <h3 class="item-title text-white">Categorie</h3>
+                    <h3 class="item-title text-white">{{ __('ui.categories') }}</h3>
                 </div>
                 
                 <ul class="item-sub-category">
