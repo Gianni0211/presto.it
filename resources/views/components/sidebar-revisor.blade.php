@@ -21,7 +21,7 @@
                   <i class="far fa-calendar-alt font-weight-bold"></i><span class="font-weight-bold"> {{ __('ui.publicato') }}:</span> <span class="font-italic"> {{ $announcement->created_at->format('d/m/y')}} </span>
                 </div>
                 
-                <div class="p-1 mt-2">
+                <div class="p-1">
                     <i class="fas fa-user-check"></i> <p class="lead d-inline"><span class="font-weight-bold">Affidabilità:</span></p>
                     <i class="fas fa-star star" aria-hidden="true"></i>
                     <i class="fas fa-star star" aria-hidden="true"></i>

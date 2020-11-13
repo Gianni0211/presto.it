@@ -13,10 +13,11 @@
         </div>
       @endif
 
-        
-        <h1 class=" text-white font-weight-bold display-4 txt-shadow mb-5 d-inline txt-shadow" > {{ __('ui.payOf') }}</h1>
+      <img src="{{ asset('/media/logo-bianco.png')}}" alt="" class="img-fluid" width="150">
+        <h1 class=" text-white font-weight-bold txt-shadow mb-5 d-inline txt-shadow title" > {{ __('ui.payOf') }}</h1>
       
       <div class="search-box-layout1 mt-5 rounded">
+        
         <form class="form-inline" method="GET" action="{{ route('search') }}">
           <input class="form-control input-search" name="q" type="search" placeholder="{{ __('ui.searchFor') }}" aria-label="Search">
           <button class="bg-orange my-2 my-sm-0 btn-search text-white border-0 rounded" type="submit">
@@ -45,12 +46,12 @@
 
       <div class="row justify-content-between">
         @foreach ($categories as $category)
-            <x-category-card 
+             <x-category-card 
             name="{{ $category->name }}"
             count="{{ $category->announcementCount() }}"
             categoryName="{{ $category->name }}"
             categoryId="{{ $category->id }}"
-            />
+            /> 
         @endforeach
       </div>
 

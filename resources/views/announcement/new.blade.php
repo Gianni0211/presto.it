@@ -76,7 +76,11 @@
                    </span>
                   @enderror
                 </div>
-
+                <div class="form-group mt-3">
+                <label>Inserisci il luogo</label>
+                <input type="search" id="address" class="form-control" placeholder="Where are we going?" />
+                <p>Selected: <strong id="address-value">none</strong></p>
+                </div>
 
 
                 <button type="submit" class=" mt-5 my-3 bg-yellow text-white py-2 px-3 border-0 rounded">Inserisci annuncio</button>
@@ -90,3 +94,24 @@
 
 
 </x-app>
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+
+<script>
+(function() {
+  var placesAutocomplete = places({
+    appId: 'plHF6WXD0XQW',
+    apiKey: 'cd0a5a9a9ef8f43580d9435a7868e73e',
+    container: document.querySelector('#address')
+  });
+
+  var $address = document.querySelector('#address-value')
+  placesAutocomplete.on('change', function(e) {
+    $address.textContent = e.suggestion.value
+  });
+
+  placesAutocomplete.on('clear', function() {
+    $address.textContent = 'none';
+  });
+
+})();
+</script>
